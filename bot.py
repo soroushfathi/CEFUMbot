@@ -121,7 +121,7 @@ def src_ds_file_handler(update, context):
         context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
         context.bot.send_document(chat_id=update.effective_chat.id, document=f,
                                   filename='The Art of Computer Programming',
-                                  caption='منبع در ساختمان داده', timeout=6000)
+                                  caption='منبع در ساختمان داده', timeout=300)
 
 
 def exam_discrete_file_handler(update, context):
@@ -129,7 +129,7 @@ def exam_discrete_file_handler(update, context):
     with open('./exams/Discrete Mathematics.zip', 'rb') as file:
         context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT, timeout=30)
         context.bot.send_document(chat_id=update.effective_chat.id, document=file, filename='Discrete exams & exe',
-                                  caption='تمرینات و امتحانات ریاضیات گسسته', timeout=600)
+                                  caption='تمرینات و امتحانات ریاضیات گسسته', timeout=300)
 
 
 def main():
