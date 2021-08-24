@@ -1,5 +1,6 @@
 def func(a, b):
-    import pdb; pdb.set_trace()
+    import pdb;
+    pdb.set_trace()
     s = a + b
     print(s)
     print(a * b)
