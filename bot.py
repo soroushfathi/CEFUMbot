@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
-from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler
+from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, CallbackQueryHandler
 from telegram.ext.filters import Filters
 import logging
 from telegram.chataction import ChatAction
-from telegram import ReplyKeyboardMarkup,  InlineKeyboardMarkup, InlineKeyboardButton
+from telegram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 import requests
 
 BASE_URL = 'http://ce.um.ac.ir/index.php?lang=fa'
@@ -23,6 +23,26 @@ messages = {
  📠نمابر: ۰۵۱-۳۸۸۰۷۱۸۱
 📭كدپستی: ۹۱۷۷۹۴۸۹۷۴
 📧پست الکترونیک: ce.um.ac.ir''',
+    'msg_masters_noriBaigi': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_sedaghat': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_nori': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_bafghi': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_tosi': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_ensan': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_paydar': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_ghiasi': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_fazlErsi': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_abrishami': '👨🏻‍🏫استاد سعید ابریشمی\n'
+                             '۰۵۱-۳۸۸۰۵۱۲۱ ☎️\n'
+                             's-abrishami@um.ac.ir 📧\n'
+                             '🗄تحصیلات: \n'
+                             '\t🔰مرتبه علمی: استادیار\n'
+                             '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - نرم افزار\n'
+                             '\n✅سطح تدریس : پیشرفته\n'
+                             '✅نمره دهی : خوب\n'
+                             '\nنظرات دانشجویان💡 : \n'
+                             'https://t.me/ashnayi_ba_asatid/358\n'
+                             'https://t.me/Comp_Professors/63\n',
 
     'btn_college': 'گروه مهندسی کامپیوتر🏫',
     'btn_exams_exe': 'تمرین و امتحانات📑',
@@ -33,7 +53,7 @@ messages = {
 
     'btn_college_masters': 'اساتید👨🏻‍🏫',
     'btn_college_news': 'اخبار📰',
-    'btn_college_notification': 'اعلان ها🔖',
+    'btn_college_notification': 'اطلاعیه ها🔖',
     'btn_college_conference': 'کنفرانس ها و همایش ها🎥',
     'btn_college_about': 'درباره ما',
     'btn_college_contact': 'راه های ارتباطی دانشکده📞',
@@ -143,13 +163,13 @@ def college_news_handler(update, context):
     url = BASE_URL
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
-    title_result = soup.find_all('div', attrs={'class': 'aidanews2_positions' })
+    title_result = soup.find_all('div', attrs={'class': 'aidanews2_positions'})
     title = [item.h1.a.text for item in title_result]
     date_time_result = soup.find_all('div', attrs={'class': 'aidanews2_botL'})
     date_time = [item.span.text for item in date_time_result]
     txt = ''
-    for i in range(len(date_time)):
-        txt += '{}📌'.format(i+1) + title[i] + '\n\t' + date_time[i] + '\n'
+    for i in range(len(date_time) - 1):
+        txt += '{}📌'.format(i + 1) + title[i] + '\n\t' + date_time[i] + '\n'
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     button = [
         [InlineKeyboardButton('مشاهده همه ی اخبار', 'http://ce.um.ac.ir/index.php?option=com_content&view=category'
@@ -159,6 +179,91 @@ def college_news_handler(update, context):
         text=txt,
         reply_markup=InlineKeyboardMarkup(button)
     )
+
+
+def college_notification_handler(update, context):
+    chat_id = update.message.chat_id
+    url = BASE_URL
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    title_result = soup.find_all('div', attrs={'class': 'aidanews2_positions'})
+    title = [item.h1.a.text for item in title_result]
+    date_time_result = soup.find_all('span', attrs={'class': 'aidanews2_date'})
+    date_time = [item.text for item in date_time_result]
+    txt = ''
+    for i in range(5, len(date_time)):
+        txt += '{}📌'.format(i - 4) + title[i] + '\n\t' + date_time[i] + '\n'
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    button = [
+        [InlineKeyboardButton('مشاهده همه ی اطلاعیه ها', 'http://ce.um.ac.ir/index.php?option=com_content&view=category'
+                                                         '&id=113&Itemid=540&lang=fa')],
+    ]
+    update.message.reply_text(
+        text=txt,
+        reply_markup=InlineKeyboardMarkup(button)
+    )
+
+
+def college_masters_handler(update, context):
+    chat_id = update.message.chat_id
+    #  buttons for linking DS videos to programming telegram channel
+    buttons = [
+        [  # first row
+            InlineKeyboardButton('دکتر ابریشمی', callback_data='abrishami'),
+            InlineKeyboardButton('دکتر نوری بایگی', callback_data='noriBaigi'),
+        ], [
+            InlineKeyboardButton('سارا ارشادی نسب', callback_data='ershadi'),
+            InlineKeyboardButton('دکتر صداقت', callback_data='sedaghat'),
+        ], [
+            InlineKeyboardButton('دکتر غیاثی شیرازی', callback_data='ghiasi'),
+            InlineKeyboardButton('دکتر فضل ارثی', callback_data='fazlErsi'),
+        ], [
+            InlineKeyboardButton('دکتر بافقی', callback_data='bafghi'),
+            InlineKeyboardButton('دکتر امین طوسی', callback_data='tosi'),
+        ], [
+            InlineKeyboardButton('دکتر پایدار', callback_data='paydar'),
+            InlineKeyboardButton('دکتر انسان', callback_data='ensan'),
+        ],
+    ]
+    update.message.reply_text(
+        text='برای دریافت اطلاعات، استاد مورد نظر را انتخاب کنید:',
+        reply_markup=InlineKeyboardMarkup(buttons)
+    )
+
+
+def college_masters_keyboard(update, context):
+    query = update.callback_query
+    data = query.data
+    chat_id = query.message.chat_id
+    message_id = query.message.message_id
+    if data == 'abrishami':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_abrishami'])
+        # context.bot.editMessageText(text=messages['msg_masters_abrishami'], chat_id=chat_id, message_id=message_id)
+    elif data == 'noriBaigi':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_noriBaigi'])
+    elif data == 'paydar':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_paydar'])
+    elif data == 'fazlErsi':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_fazlErsi'])
+    elif data == 'sedaghat':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_sedaghat'])
+    elif data == 'bafghi':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_bafghi'])
+    elif data == 'ghiasi':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_ghiasi'])
+    elif data == 'ensan':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_ensan'])
+    elif data == 'tosi':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_tosi'])
 
 
 def college_contact_handler(update, context):
@@ -226,8 +331,9 @@ def src_ap_file_handler(update, context):
 
 def src_ds_file_handler(update, context):
     chat_id = update.message.chat_id
+    #  buttons for linking DS videos to programming telegram channel
     buttons = [
-        [
+        [  # first row
             InlineKeyboardButton('قسمت1', 'https://t.me/Azad_Developers/17205'),
             InlineKeyboardButton('قسمت2', 'https://t.me/Azad_Developers/17209'),
         ], [
@@ -274,7 +380,8 @@ def exam_discrete_bafghi_file_handler(update, context):
     with open('./exams/discrete_bafghi.zip', 'rb') as file:
         context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT, timeout=300)
         context.bot.send_document(chat_id=update.effective_chat.id, document=file, filename='Discrete exams & exe '
-                                  '(Bafghi)', caption='تمرینات و امتحانات ریاضیات گسسته استاد بافقی', timeout=200)
+                                                                                            '(Bafghi)',
+                                  caption='تمرینات و امتحانات ریاضیات گسسته استاد بافقی', timeout=200)
 
 
 def exam_discrete_structure_file_handler(update, context):
@@ -325,8 +432,12 @@ def main():
 
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college']), college_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_news']), college_news_handler))
+    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_notification']),
+                                          college_notification_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_press']), college_press_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_contact']), college_contact_handler))
+    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler))
+    dispatcher.add_handler(CallbackQueryHandler(college_masters_keyboard))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_back_college']), back_college_handler))
 
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_back_home']), back_home_handler))
