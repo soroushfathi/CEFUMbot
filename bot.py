@@ -10,9 +10,7 @@ BASE_URL = 'http://ce.um.ac.ir/index.php?lang=fa'
 
 messages = {
     'msg_start': 'سلام {}، \n خوش امدی به ربات🙂، امیدوارم بتونم کمکت کنم🤠',
-    'msg_contact': 'سروش فتحی 👨🏻‍💻، دانشجوی مهندسی کامپیوتر فردوسی ورودی 99🧑🏻‍🎓\n'
-                   'telegram = @soroush_fathi\n'
-                   'instagram = soroushfathi.pb\n',
+    'msg_contact': 'سروش فتحی 👨🏻‍💻، دانشجوی مهندسی کامپیوتر فردوسی ورودی 99🧑🏻‍🎓\n',
     'msg_main_handler': 'منوی اصلی🗂️:',
     'msg_select_src_subject': 'درس مورد نظر را انتخاب کنید(تمرین و امتحانات):',
     'msg_select_exe_subject': ' درس مورد نظر را انتخاب کنید(منابع و جزوات):',
@@ -23,17 +21,48 @@ messages = {
  📠نمابر: ۰۵۱-۳۸۸۰۷۱۸۱
 📭كدپستی: ۹۱۷۷۹۴۸۹۷۴
 📧پست الکترونیک: ce.um.ac.ir''',
-    'msg_masters_noriBaigi': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_sedaghat': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_nori': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_bafghi': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_tosi': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_ensan': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_paydar': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_ghiasi': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_fazlErsi': '🔎اطلاعات مربوطه استاد، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_noriBaigi': '🔎اطلاعات مربوطه استاد نوری بایگی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_sedaghat': '👨🏻‍🏫استاد یاصر صداقت\n'
+                             ' ۰۵۱-۳۸۸۰۵۱۴۸ ☎️\n'
+                             'y_sedaghat@um.ac.ir 📧\n'
+                             '🗄تحصیلات: \n'
+                             '\t🔰مرتبه علمی: استادیار\n'
+                             '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - معماری کامپیوتر\n'
+                             '\t🔰محل اخذ آخرین مدرک تحصیلی: دانشگاه صنعتی شریف، تهران، ایران\n'
+                             '\n✅سطح تدریس : پیشرفته\n'
+                             '✅نمره دهی : خوب\n'
+                        '🏷توضیحات: \n بجز حساسیت های الکیی ک داره دقیقا رو نظم و با برنامه و خیلی هم خوب تدریس میکنه n\
+                            در این حد ک ارشادی جزوه صداقت رو درس میداد(۳ فصل آخرشو) \n '
+                            'کلی هم نمره اضافه داره صداقت، کلاسای حل تمرینش همش امتیازیه 4و5 تا کوییز امتیازی داره \n '
+                            'از اول ترم مشخص میکنه برنامشو طبق همون میره جلو\n '
+                             '\nنظرات دانشجویان💡 : \n'
+                             'https://t.me/ashnayi_ba_asatid/483\n'
+                             'https://t.me/Comp_Professors/21\n'
+                             'https://t.me/Comp_Professors/36\n',
+    'msg_masters_nori': '🔎اطلاعات مربوطه استاد نوری، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_bafghi': '👨🏻‍🏫استاد قائمی بافقی\n'
+                             '۰۵۱-۳۸۸۰۵۰۶۲ ☎️\n'
+                             ' ghaemib@um.ac.ir 📧\n'
+                             '🗄تحصیلات: \n'
+                             '\t\t\t🔰مرتبه علمی: دانشیار\n'
+                             '\t\t\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - نرم افزار\n'
+                             '\t\t\t🔰محل اخذ آخرین مدرک تحصیلی: دانشگاه صنعتی امیرکبیر، تهران، ایران\n\n'
+                             '🏷توضیحات : \n استاد بیشترِ مباحث رو تدریس می کنه، یعنی از هر چیزی در حد نیاز میگه، مثلا '
+                             'در درس گسسته مباحثی مانند مرتبه زمانی و ساختمان داده هم بیان میکنه. در بیان مطلب و تدریس '
+                             'ضعیف هستند، در حدی که باید خودت بخونی 🙃 سرعت تدریسشون هم بالاس و رو یه مبحث نمیمونن\n'
+                          'در ضمن تلگرام هم ندارن:) راه های ارتباطی ایمیل و سروش و واتس اپ :) \n'
+                             '\nنظرات دانشجویان💡 : \n'
+                             'https://t.me/Comp_Professors/58\n'
+                             'https://t.me/Comp_Professors/64\n'
+                             'https://t.me/Comp_Professors/31\n',
+    'msg_masters_tosi': '🔎اطلاعات مربوطه استاد طوسی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_harati': '🔎اطلاعات مربوطه استاد هراتی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_paydar': '🔎اطلاعات مربوطه استاد پایدار، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_ghiasi': '🔎اطلاعات مربوطه استاد غیاثی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_fazlErsi': '🔎اطلاعات مربوطه استادفضل ارثی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
     'msg_masters_abrishami': '👨🏻‍🏫استاد سعید ابریشمی\n'
                              '۰۵۱-۳۸۸۰۵۱۲۱ ☎️\n'
+                             'تلگرام : @Sabrishami\n'
                              's-abrishami@um.ac.ir 📧\n'
                              '🗄تحصیلات: \n'
                              '\t🔰مرتبه علمی: استادیار\n'
@@ -207,6 +236,7 @@ def college_notification_handler(update, context):
 def college_masters_handler(update, context):
     chat_id = update.message.chat_id
     #  buttons for linking DS videos to programming telegram channel
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     buttons = [
         [  # first row
             InlineKeyboardButton('دکتر ابریشمی', callback_data='abrishami'),
@@ -222,7 +252,7 @@ def college_masters_handler(update, context):
             InlineKeyboardButton('دکتر امین طوسی', callback_data='tosi'),
         ], [
             InlineKeyboardButton('دکتر پایدار', callback_data='paydar'),
-            InlineKeyboardButton('دکتر انسان', callback_data='ensan'),
+            InlineKeyboardButton('دکتر هراتی', callback_data='harati'),
         ],
     ]
     update.message.reply_text(
@@ -238,32 +268,42 @@ def college_masters_keyboard(update, context):
     message_id = query.message.message_id
     if data == 'abrishami':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_abrishami'])
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://s-abrishami.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_abrishami'], reply_markup=InlineKeyboardMarkup(button))
+        # context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_abrishami'])
         # context.bot.editMessageText(text=messages['msg_masters_abrishami'], chat_id=chat_id, message_id=message_id)
     elif data == 'noriBaigi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_noriBaigi'])
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://nouribaygi.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_noriBaigi'], reply_markup=InlineKeyboardMarkup(button))
     elif data == 'paydar':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_paydar'])
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://s-paydar.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_paydar'], reply_markup=InlineKeyboardMarkup(button))
     elif data == 'fazlErsi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_fazlErsi'])
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://fazlersi.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_fazlErsi'], reply_markup=InlineKeyboardMarkup(button))
     elif data == 'sedaghat':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_sedaghat'])
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://y_sedaghat.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_sedaghat'], reply_markup=InlineKeyboardMarkup(button))
     elif data == 'bafghi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_bafghi'])
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://ghaemib.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_bafghi'], reply_markup=InlineKeyboardMarkup(button))
     elif data == 'ghiasi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_ghiasi'])
-    elif data == 'ensan':
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://profsite.um.ac.ir/~k.ghiasi/')]]
+        query.message.reply_text(text=messages['msg_masters_ghiasi'], reply_markup=InlineKeyboardMarkup(button))
+    elif data == 'harati':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_ensan'])
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://a.harati.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_harati'], reply_markup=InlineKeyboardMarkup(button))
     elif data == 'tosi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_tosi'])
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://amintoosi.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_tosi'], reply_markup=InlineKeyboardMarkup(button))
 
 
 def college_contact_handler(update, context):
@@ -282,16 +322,21 @@ def college_contact_handler(update, context):
                                                               '%D9%87-%D9%87%D8%A7/%D8%AF%D8%A7%D9%86%D8%B4%DA%A9%D8%AF'
                                                               '%D9%87-%D9%85%D9%87%D9%86%D8%AF%D8%B3%DB%8C.html')],
     ]
-    update.message.reply_text(
-        text='پیوندها: ',
-        reply_markup=InlineKeyboardMarkup(buttons)
-    )
+    update.message.reply_text(text='پیوندها: ', reply_markup=InlineKeyboardMarkup(buttons))
 
 
 def contact_handler(update, context):
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_contact'])
+    buttons = [
+        [
+            InlineKeyboardButton('telegram', 'https://telegram.me/soroush_fathi'),
+            InlineKeyboardButton('instagram', 'https://instagram.com/soroushfathi.pb')
+        ], [
+            InlineKeyboardButton('LinkedIn', 'www.linkedin.com/in/soroush-fathi-45aa07201'),
+        ]
+    ]
+    update.message.reply_text(text=messages['msg_contact'], reply_markup=InlineKeyboardMarkup(buttons))
 
 
 def help_handler(update, context):
@@ -336,18 +381,54 @@ def src_ds_file_handler(update, context):
         [  # first row
             InlineKeyboardButton('قسمت1', 'https://t.me/Azad_Developers/17205'),
             InlineKeyboardButton('قسمت2', 'https://t.me/Azad_Developers/17209'),
-        ], [
             InlineKeyboardButton('قسمت3', 'https://t.me/Azad_Developers/17214'),
-            InlineKeyboardButton('قسمت4', 'https://t.me/Azad_Developers/17229'),
         ], [
+            InlineKeyboardButton('قسمت4', 'https://t.me/Azad_Developers/17229'),
             InlineKeyboardButton('قسمت5', 'https://t.me/Azad_Developers/17235'),
             InlineKeyboardButton('قسمت6', 'https://t.me/Azad_Developers/17243'),
         ], [
             InlineKeyboardButton('قسمت7', 'https://t.me/Azad_Developers/17248'),
             InlineKeyboardButton('قسمت8', 'https://t.me/Azad_Developers/17264'),
+            InlineKeyboardButton('قسمت9', 'https://t.me/Azad_Developers/17279'),
         ], [
-            InlineKeyboardButton('قسمت7', 'https://t.me/Azad_Developers/17279'),
-            InlineKeyboardButton('قسمت8', 'https://t.me/Azad_Developers/17298'),
+            InlineKeyboardButton('قسمت10', 'https://t.me/Azad_Developers/17298'),
+            InlineKeyboardButton('قسمت11', 'https://t.me/Azad_Developers/17318'),
+            InlineKeyboardButton('قسمت12', 'https://t.me/Azad_Developers/17328'),
+        ], [
+            InlineKeyboardButton('قسمت13', 'https://t.me/Azad_Developers/17344'),
+            InlineKeyboardButton('قسمت14', 'https://t.me/Azad_Developers/17361'),
+            InlineKeyboardButton('قسمت15', 'https://t.me/Azad_Developers/17373'),
+        ], [
+            InlineKeyboardButton('قسمت16', 'https://t.me/Azad_Developers/17386'),
+            InlineKeyboardButton('قسمت17', 'https://t.me/Azad_Developers/17401'),
+            InlineKeyboardButton('قسمت18', 'https://t.me/Azad_Developers/17415'),
+        ], [
+            InlineKeyboardButton('قسمت19', 'https://t.me/Azad_Developers/17428'),
+            InlineKeyboardButton('قسمت20', 'https://t.me/Azad_Developers/17448'),
+            InlineKeyboardButton('قسمت21', 'https://t.me/Azad_Developers/17464'),
+        ], [
+            InlineKeyboardButton('قسمت22', 'https://t.me/Azad_Developers/17479'),
+            InlineKeyboardButton('قسمت23', 'https://t.me/Azad_Developers/17493'),
+            InlineKeyboardButton('قسمت24', 'https://t.me/Azad_Developers/17505'),
+        ], [
+            InlineKeyboardButton('قسمت25', 'https://t.me/Azad_Developers/17537'),
+            InlineKeyboardButton('قسمت26', 'https://t.me/Azad_Developers/17584'),
+            InlineKeyboardButton('قسمت27', 'https://t.me/Azad_Developers/17595'),
+        ], [
+            InlineKeyboardButton('قسمت28', 'https://t.me/Azad_Developers/17602'),
+            InlineKeyboardButton('قسمت29', 'https://t.me/Azad_Developers/17629'),
+            InlineKeyboardButton('قسمت30', 'https://t.me/Azad_Developers/17633'),
+        ], [
+            InlineKeyboardButton('قسمت31', 'https://t.me/Azad_Developers/17647'),
+            InlineKeyboardButton('قسمت32', 'https://t.me/Azad_Developers/17660'),
+            InlineKeyboardButton('قسمت33', 'https://t.me/Azad_Developers/17670'),
+        ], [
+            InlineKeyboardButton('قسمت34', 'https://t.me/Azad_Developers/17727'),
+            InlineKeyboardButton('قسمت35', 'https://t.me/Azad_Developers/17738'),
+            InlineKeyboardButton('قسمت36', 'https://t.me/Azad_Developers/17755'),
+        ], [
+            InlineKeyboardButton('قسمت37', 'https://t.me/Azad_Developers/17765'),
+            InlineKeyboardButton('قسمت38', 'https://t.me/Azad_Developers/17773'),
         ]
     ]
     update.message.reply_text(
