@@ -17,6 +17,19 @@ messages = {
     'msg_help': 'کار با ربات سادس😌 نیازی به راهنمایی نیست😜😆',
     'msg_college': 'گروه مهندسی کامپیوتر🖥 : ',
     'msg_college_press': 'انتشارات مهندسی کامپیوتر فردوسی مشهد: ',
+    'msg_college_about': 'در سال ۱۳۴۹ هجری خورشیدی همزمان با دانشگاه تهران و دانشگاه صنعتی شریف، '
+                         'رشته آمار و ماشین های حسابگر در مقطع کارشناسی در دانشکده علوم دانشگاه فردوسی مشهد تأسیس شد.'
+                         ' بعدها این رشته به نام کامپیوتر تغییر نام یافت تا اینکه در سال ۱۳۶۷ گروه مهندسی کامپیوتر'
+                         ' در دانشکده مهندسی شکل گرفت و پذیرش دانشجو در مقطع کارشناسی رشته مهندسی کامپیوتر گرایش نرم '
+                         'افزار در دانشکده مهندسی آغاز گردید. گروه مهندسی کامپیوتر در سال ۱۳۷۴ پذیرش دانشجو در مقطع'
+                         ' کارشناسی ارشد مهندسی کامپیوتر گرایش نرم افزار را آغاز کرد. در سال ۱۳۷۹ گرایش سخت افزار'
+                         ' به گرایش های رشته مهندسی کامپیوتر گروه اضافه شد و پذیرش دانشجو در مقطع کارشناسی گرایش '
+                         'سخت افزار شروع شد. گروه مهندسی کامپیوتر در سال ۱۳۸۵ پذیرش دانشجو در مقطع دکترای تخصصی '
+                         'مهندسی کامپیوتر گرایش نرم افزار را شروع کرد. پذیرش دانشجو در مقاطع کارشناسی ارشد و دکترای'
+                         ' تخصصی مهندسی کامپیوتر گرایش هوش مصنوعی به ترتیب در سال های ۱۳۸۷ و ۱۳۹۴ آغاز شد. گروه مهندسی '
+                         'کامپیوتر از سال ۱۳۹۳ اقدام به پذیرش دانشجو در مقطع کارشناسی ارشد مهندسی فناوری اطلاعات گرایش '
+                         'شبکه های کامپیوتری کرده است. علاوه بر این، گروه مهندسی کامپیوتر از مهرماه ۱۳۹۶ پذیرش دانشجو'
+                         ' در مقطع کارشناسی ارشد مهندسی کامپیوتر گرایش معماری کامپیوتر (سخت افزار) را شروع خواهد کرد. ',
     'msg_college_contact': '''☎️تلفن:۰۵۱-۳۸۸۰۶۰۵۹
  📠نمابر: ۰۵۱-۳۸۸۰۷۱۸۱
 📭كدپستی: ۹۱۷۷۹۴۸۹۷۴
@@ -325,6 +338,22 @@ def college_contact_handler(update, context):
     update.message.reply_text(text='پیوندها: ', reply_markup=InlineKeyboardMarkup(buttons))
 
 
+def college_about_handler(update, context):
+    # todo fix web scraping
+    # url = BASE_URL
+    # response = requests.get(url)
+    # soup = BeautifulSoup(response.content, 'html.parser')
+    # about_result = soup.find_all('div', attrs={'class': 'item-page'})
+    # about_txt = [item.text for item in about_result]
+    chat_id = update.message.chat_id
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    button = [
+        [InlineKeyboardButton('اطلاعات بیشتر', 'http://ce.um.ac.ir/index.php?option=com_content&view=article&id=134&'
+                                               'Itemid=521&lang=fa')],
+    ]
+    update.message.reply_text(text=messages['msg_college_about'], reply_markup=InlineKeyboardMarkup(button))
+
+
 def contact_handler(update, context):
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
@@ -517,6 +546,7 @@ def main():
                                           college_notification_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_press']), college_press_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_contact']), college_contact_handler))
+    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_about']), college_about_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler))
     dispatcher.add_handler(CallbackQueryHandler(college_masters_keyboard))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_back_college']), back_college_handler))
