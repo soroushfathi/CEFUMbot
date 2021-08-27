@@ -1,10 +1,32 @@
-from bs4 import BeautifulSoup
-from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, CallbackQueryHandler
-from telegram.ext.filters import Filters
 import logging
+
+from telegram.ext import (
+    Updater,
+    CommandHandler,
+    CallbackContext,
+    MessageHandler,
+    CallbackQueryHandler,
+    InlineQueryHandler,
+)
+from telegram import (
+    ReplyKeyboardMarkup,
+    InlineKeyboardMarkup,
+    InlineKeyboardButton,
+    InlineQueryResultArticle,
+    InlineQueryResultDocument,
+    InlineQueryResultCachedGif,
+    InlineQueryResultGif,
+    InputTextMessageContent,
+    Update,
+    ParseMode,
+    error,
+)
+from telegram.ext.filters import Filters
 from telegram.chataction import ChatAction
-from telegram import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
+from bs4 import BeautifulSoup
+from uuid import uuid4
 import requests
+from telegram.utils.helpers import escape_markdown
 
 BASE_URL = 'http://ce.um.ac.ir/index.php?lang=fa'
 
@@ -17,6 +39,13 @@ messages = {
     'msg_help': 'کار با ربات سادس😌 نیازی به راهنمایی نیست😜😆',
     'msg_college': 'گروه مهندسی کامپیوتر🖥 : ',
     'msg_college_press': 'انتشارات مهندسی کامپیوتر فردوسی مشهد: ',
+    'msg_network_error': 'به دلیل سرعت پایین شبکه، ارسال فایل با مشکل مواجه شد😣 \n '
+                         'به زودی مشکل را حل خواهیم کرد🤠\n'
+                         'با تشکر از صبر شما🙏🏻',
+    'msg_sending_time': 'به دلیل سرعت پایین شبکه، ارسال فایل ممکن '
+                 'است پنج دقیقه طول بکشد😣 \n '
+                 'به زودی مشکل را حل خواهیم کرد🤠\n'
+                 'با تشکر از صبر شما🙏🏻',
     'msg_college_about': 'در سال ۱۳۴۹ هجری خورشیدی همزمان با دانشگاه تهران و دانشگاه صنعتی شریف، '
                          'رشته آمار و ماشین های حسابگر در مقطع کارشناسی در دانشکده علوم دانشگاه فردوسی مشهد تأسیس شد.'
                          ' بعدها این رشته به نام کامپیوتر تغییر نام یافت تا اینکه در سال ۱۳۶۷ گروه مهندسی کامپیوتر'
@@ -98,6 +127,7 @@ messages = {
     'btn_college_notification': 'اطلاعیه ها🔖',
     'btn_college_conference': 'کنفرانس ها و همایش ها🎥',
     'btn_college_about': 'درباره ما',
+    'btn_college_pack': '📦بسته های کارشناسی',
     'btn_college_contact': 'راه های ارتباطی دانشکده📞',
     'btn_college_teach': 'آموزش',
     'btn_college_press': 'انتشارات📑',
@@ -154,7 +184,7 @@ def exe_subject_handler(update, context):
         [messages['btn_exe_fundamental_programming'], messages['btn_exe_advance_programming']],
         [messages['btn_exe_discrete_bafghi'], messages['btn_exe_discrete_structure']],
         [messages['btn_exe_data_structure']],
-        [messages['btn_back_home']]
+        [messages['btn_back_home']],
     ]
     update.message.reply_text(
         text=messages['msg_select_exe_subject'],
@@ -174,7 +204,7 @@ def src_subject_handler(update, context):
     )
 
 
-# TODO add conference & plans button (web scraping)
+# TODO add conference & plans button (web scraping) & Packs
 def college_handler(update, context):
     buttons = [
         [messages['btn_college_news'], messages['btn_college_press']],
@@ -368,42 +398,42 @@ def contact_handler(update, context):
     update.message.reply_text(text=messages['msg_contact'], reply_markup=InlineKeyboardMarkup(buttons))
 
 
-def help_handler(update, context):
+def help_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_help'])
 
 
-def back_home_handler(update, context):
+def back_home_handler(update: Update, context: CallbackContext) -> None:
     main_menu_handler(update, context)
 
 
-def back_college_handler(update, context):
+def back_college_handler(update: Update, context: CallbackContext) -> None:
     college_handler(update, context)
 
 
-def src_fp_file_handler(update, context):
+def src_fp_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text='این بخش در حال بروزرسانی است، به زودی فایل های'
                                                                     ' مربوطه قرار خواهند گرفت')
 
 
-def src_discrete_file_handler(update, context):
+def src_discrete_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text='این بخش در حال بروزرسانی است، به زودی فایل های'
                                                                     ' مربوطه قرار خواهند گرفت')
 
 
-def src_ap_file_handler(update, context):
+def src_ap_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text='این بخش در حال بروزرسانی است، به زودی فایل های'
                                                                     ' مربوطه قرار خواهند گرفت')
 
 
-def src_ds_file_handler(update, context):
+def src_ds_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     #  buttons for linking DS videos to programming telegram channel
     buttons = [
@@ -455,19 +485,25 @@ def src_ds_file_handler(update, context):
             InlineKeyboardButton('قسمت34', 'https://t.me/Azad_Developers/17727'),
             InlineKeyboardButton('قسمت35', 'https://t.me/Azad_Developers/17738'),
             InlineKeyboardButton('قسمت36', 'https://t.me/Azad_Developers/17755'),
-        ], [
-            InlineKeyboardButton('قسمت37', 'https://t.me/Azad_Developers/17765'),
-            InlineKeyboardButton('قسمت38', 'https://t.me/Azad_Developers/17773'),
-        ]
+        ],
+        # [
+        #     InlineKeyboardButton('قسمت37', 'https://t.me/Azad_Developers/17765'),
+        #     InlineKeyboardButton('قسمت38', 'https://t.me/Azad_Developers/17773'),
+        # ]
     ]
     update.message.reply_text(
         text='آموزش ساختمان داده(مدرس : سعید شهریوری):\n',
         reply_markup=InlineKeyboardMarkup(buttons)
     )
-    with open('./sources/DS/DS & Algorithms by Weiss.pdf') as f:
-        context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-        context.bot.send_document(chat_id=update.effective_chat.id, document=f, filename='DS & Algorithm by Weiss',
-                                  caption='منبع درس ساختمان داده', timeout=600)
+    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
+    update.message.reply_text(text=messages['msg_sending_time'])
+    try:
+        with open('./sources/DS/DS & Algorithms by Weiss.pdf') as f:
+            context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
+            context.bot.send_document(chat_id=update.effective_chat.id, document=f, filename='DS & Algorithm by Weiss',
+                                      caption='منبع درس ساختمان داده', timeout=600)
+    except error.NetworkError as e:
+        update.message.reply_text(text=messages['msg_network_error'])
     # with open('./sources/DS/The Art of Computer Programming (vol. 3_ Sorting and Searching) (2nd ed.) [Knuth '
     #           '1998-05-04].pdf') as f:
     #     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
@@ -477,52 +513,131 @@ def src_ds_file_handler(update, context):
 
 
 # start exam file handlers
-def exam_ap_file_handler(update, context):
+def exam_ap_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
-    with open('./exams/AP.zip', 'rb') as file:
-        context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-        context.bot.send_document(chat_id=update.effective_chat.id, document=file, filename='AP exams.zip',
-                                  caption='سوالات امتحانی برنامه سازی پیشرفته دکتر پایدار', timeout=30)
+    try:
+        with open('./exams/AP.zip', 'rb') as file:
+            context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
+            context.bot.send_document(chat_id=update.effective_chat.id, document=file, filename='AP exams.zip',
+                                      caption='سوالات امتحانی برنامه سازی پیشرفته دکتر پایدار', timeout=60)
+    except error.NetworkError as e:
+        update.message.reply_text(text=messages['msg_network_error'])
 
 
-def exam_discrete_bafghi_file_handler(update, context):
+def exam_discrete_bafghi_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
-    with open('./exams/discrete_bafghi.zip', 'rb') as file:
-        context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT, timeout=300)
-        context.bot.send_document(chat_id=update.effective_chat.id, document=file, filename='Discrete exams & exe '
-                                                                                            '(Bafghi)',
-                                  caption='تمرینات و امتحانات ریاضیات گسسته استاد بافقی', timeout=200)
+    try:
+        with open('./exams/discrete_bafghi.zip', 'rb') as file:
+            context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT, timeout=300)
+            context.bot.send_document(chat_id=update.effective_chat.id, document=file, filename='Discrete exams & exe '
+                                                                                                '(Bafghi)',
+                                      caption='تمرینات و امتحانات ریاضیات گسسته استاد بافقی', timeout=200)
+    except error.NetworkError as e:
+        update.message.reply_text(text=messages['msg_network_error'])
 
 
-def exam_discrete_structure_file_handler(update, context):
+def exam_discrete_structure_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
-    with open('./exams/discrete_structure.zip', 'rb') as file:
-        context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT, timeout=300)
-        context.bot.send_document(chat_id=update.effective_chat.id, document=file, filename='Discrete Structure',
-                                  caption='تمرینات ساختمان داده', timeout=300)
+    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
+    context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_sending_time'])
+    try:
+        with open('./exams/discrete_structure.zip', 'rb') as file:
+            context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT, timeout=300)
+            context.bot.send_document(chat_id=update.effective_chat.id, document=file, filename='Discrete Structure',
+                                      caption='تمرینات ساختمان داده', timeout=300)
+    except error.NetworkError as e:
+        update.message.reply_text(text=messages['msg_network_error'])
 
 
-def exam_fp_file_handler(update, context):
+def exam_fp_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text='این بخش در حال بروزرسانی است، به زودی فایل های'
                                                                     ' مربوطه قرار خواهند گرفت')
 
 
-def exam_ds_file_handler(update, context):
+def exam_ds_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text='این بخش در حال بروزرسانی است، به زودی فایل های'
                                                                     ' مربوطه قرار خواهند گرفت')
 
+# TODO InlineQueryResultGif
+# def inlinequery(update: Update, context: CallbackContext) -> None:
+#     query = update.inline_query.query
+#     result = [
+#         InlineQueryResultGif(
+#             type='gif',
+#             id=str(uuid4()),
+#             gif_url='https://t.me/c/1342044227/478459',
+#             # gif_width=7,
+#             # gif_height=10,
+#             # gif_duration=3,
+#             thumb_url='https://t.me/c/1342044227/478459',
+#             thumb_mime_type='video/mp4',
+#             title='nori',
+#             input_message_content=InputTextMessageContent(query),
+#         )
+#     ]
+#     update.inline_query.answer(result)
 
-def main():
+
+def inlinequery(update: Update, context: CallbackContext) -> None:
+    """Handle the inline query."""
+    query = update.inline_query.query
+
+    if query == "":
+        return
+
+    results = [
+        InlineQueryResultArticle(
+            id=str(uuid4()),
+            title="Title",
+            input_message_content=InputTextMessageContent(query.title()),
+        ),
+        InlineQueryResultArticle(
+            id=str(uuid4()),
+            title="Caps",
+            input_message_content=InputTextMessageContent(query.upper()),
+        ),
+        InlineQueryResultArticle(
+            id=str(uuid4()),
+            title="Bold",
+            input_message_content=InputTextMessageContent(
+                f"*{escape_markdown(query)}*", parse_mode=ParseMode.MARKDOWN
+            ),
+        ),
+        InlineQueryResultArticle(
+            id=str(uuid4()),
+            title="Italic",
+            input_message_content=InputTextMessageContent(
+                # f"_{escape_markdown(query)}_", parse_mode=ParseMode.MARKDOWN
+                '<i>{}</i>'.format(query), parse_mode=ParseMode.HTML
+            ),
+        ),
+        InlineQueryResultArticle(
+            id=str(uuid4()),
+            title="Poem",
+            input_message_content=InputTextMessageContent('<pre>{}</pre>'.format(query), parse_mode=ParseMode.HTML),
+        ),
+    ]
+
+    update.inline_query.answer(results)
+
+
+def main() -> None:
+    """Run the Bot."""
+    # Create the Updater and pass it your bot's token.
     updater = Updater(token='1914222564:AAFl7vn1ESo3oT9_65IicNKEWntq5RFuJOc', use_context=True)
+    # request_kwargs={'proxy_url': 'https://t.me/proxy?server=162.55.171.113&port=443&secret=EE00000'
+    #                                                    '000000000000000000000000000646c2e676f6f676c652e636f6d'}
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+    # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
+
     dispatcher.add_handler(CommandHandler('start', start))
     dispatcher.add_handler(CommandHandler('exams_ap', exam_ap_file_handler))
-    # dispatcher.add_handler(CommandHandler('menu', main_menu_handler))
+
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_exams_exe']), exe_subject_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_exe_advance_programming']), exam_ap_file_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_exe_discrete_bafghi']),
@@ -554,7 +669,10 @@ def main():
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_back_home']), back_home_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_contact']), contact_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_help']), help_handler))
+
+    dispatcher.add_handler(InlineQueryHandler(inlinequery))
     # dispatcher.add_handler(MessageHandler(Filters.text & (~Filters.command), echo))
+    # Start hte Bot
     updater.start_polling()
     updater.idle()
 
