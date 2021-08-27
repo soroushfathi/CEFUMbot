@@ -150,6 +150,9 @@ messages = {
     'btn_back_college': 'بازگشت🔙',
 }
 
+logging.basicConfig(filename='info.log', filemode='a', level=logging.INFO,
+                    format='%(asctime)s-%(filename)s-%(message)s-%(funcName)s')
+
 
 def start(update, context):
     chat_id = update.message.chat_id
@@ -161,6 +164,7 @@ def start(update, context):
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start'].format(first_name))
     main_menu_handler(update, context)
+    logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
 
 
 # def echo(update, context):
@@ -386,6 +390,8 @@ def college_about_handler(update, context):
 
 def contact_handler(update, context):
     chat_id = update.message.chat_id
+    first_name = update.message.chat.first_name
+    last_name = update.message.chat.last_name
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     buttons = [
         [
@@ -396,6 +402,7 @@ def contact_handler(update, context):
         ]
     ]
     update.message.reply_text(text=messages['msg_contact'], reply_markup=InlineKeyboardMarkup(buttons))
+    logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
 
 
 def help_handler(update: Update, context: CallbackContext) -> None:
@@ -435,6 +442,8 @@ def src_ap_file_handler(update: Update, context: CallbackContext) -> None:
 
 def src_ds_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
+    first_name = update.message.chat.first_name
+    last_name = update.message.chat.last_name
     #  buttons for linking DS videos to programming telegram channel
     buttons = [
         [  # first row
@@ -504,6 +513,7 @@ def src_ds_file_handler(update: Update, context: CallbackContext) -> None:
                                       caption='منبع درس ساختمان داده', timeout=600)
     except error.NetworkError as e:
         update.message.reply_text(text=messages['msg_network_error'])
+    logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     # with open('./sources/DS/The Art of Computer Programming (vol. 3_ Sorting and Searching) (2nd ed.) [Knuth '
     #           '1998-05-04].pdf') as f:
     #     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
@@ -512,7 +522,7 @@ def src_ds_file_handler(update: Update, context: CallbackContext) -> None:
     #                               caption='منبع در ساختمان داده', timeout=300)
 
 
-# start exam file handlers
+# Start exam file handlers
 def exam_ap_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     try:
@@ -621,7 +631,6 @@ def inlinequery(update: Update, context: CallbackContext) -> None:
             input_message_content=InputTextMessageContent('<pre>{}</pre>'.format(query), parse_mode=ParseMode.HTML),
         ),
     ]
-
     update.inline_query.answer(results)
 
 
