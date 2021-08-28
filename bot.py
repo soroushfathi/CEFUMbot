@@ -29,6 +29,7 @@ import requests
 from telegram.utils.helpers import escape_markdown
 
 BASE_URL = 'http://ce.um.ac.ir/index.php?lang=fa'
+ARTICLES_URL = 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&edugroups=3105&cur_stu_title=&Itemid=694&lang=fa'
 
 messages = {
     'msg_start': 'سلام {}، \n خوش امدی به ربات🙂، امیدوارم بتونم کمکت کنم🤠',
@@ -43,9 +44,9 @@ messages = {
                          'به زودی مشکل را حل خواهیم کرد🤠\n'
                          'با تشکر از صبر شما🙏🏻',
     'msg_sending_time': 'به دلیل سرعت پایین شبکه، ارسال فایل ممکن '
-                 'است پنج دقیقه طول بکشد😣 \n '
-                 'به زودی مشکل را حل خواهیم کرد🤠\n'
-                 'با تشکر از صبر شما🙏🏻',
+                        'است پنج دقیقه طول بکشد😣 \n '
+                        'به زودی مشکل را حل خواهیم کرد🤠\n'
+                        'با تشکر از صبر شما🙏🏻',
     'msg_college_about': 'در سال ۱۳۴۹ هجری خورشیدی همزمان با دانشگاه تهران و دانشگاه صنعتی شریف، '
                          'رشته آمار و ماشین های حسابگر در مقطع کارشناسی در دانشکده علوم دانشگاه فردوسی مشهد تأسیس شد.'
                          ' بعدها این رشته به نام کامپیوتر تغییر نام یافت تا اینکه در سال ۱۳۶۷ گروه مهندسی کامپیوتر'
@@ -65,38 +66,38 @@ messages = {
 📧پست الکترونیک: ce.um.ac.ir''',
     'msg_masters_noriBaigi': '🔎اطلاعات مربوطه استاد نوری بایگی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
     'msg_masters_sedaghat': '👨🏻‍🏫استاد یاصر صداقت\n'
-                             ' ۰۵۱-۳۸۸۰۵۱۴۸ ☎️\n'
-                             'y_sedaghat@um.ac.ir 📧\n'
-                             '🗄تحصیلات: \n'
-                             '\t🔰مرتبه علمی: استادیار\n'
-                             '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - معماری کامپیوتر\n'
-                             '\t🔰محل اخذ آخرین مدرک تحصیلی: دانشگاه صنعتی شریف، تهران، ایران\n'
-                             '\n✅سطح تدریس : پیشرفته\n'
-                             '✅نمره دهی : خوب\n'
-                        '🏷توضیحات: \n بجز حساسیت های الکیی ک داره دقیقا رو نظم و با برنامه و خیلی هم خوب تدریس میکنه n\
+                            ' ۰۵۱-۳۸۸۰۵۱۴۸ ☎️\n'
+                            'y_sedaghat@um.ac.ir 📧\n'
+                            '🗄تحصیلات: \n'
+                            '\t🔰مرتبه علمی: استادیار\n'
+                            '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - معماری کامپیوتر\n'
+                            '\t🔰محل اخذ آخرین مدرک تحصیلی: دانشگاه صنعتی شریف، تهران، ایران\n'
+                            '\n✅سطح تدریس : پیشرفته\n'
+                            '✅نمره دهی : خوب\n'
+                            '🏷توضیحات: \n بجز حساسیت های الکیی ک داره دقیقا رو نظم و با برنامه و خیلی هم خوب تدریس میکنه n\
                             در این حد ک ارشادی جزوه صداقت رو درس میداد(۳ فصل آخرشو) \n '
                             'کلی هم نمره اضافه داره صداقت، کلاسای حل تمرینش همش امتیازیه 4و5 تا کوییز امتیازی داره \n '
                             'از اول ترم مشخص میکنه برنامشو طبق همون میره جلو\n '
-                             '\nنظرات دانشجویان💡 : \n'
-                             'https://t.me/ashnayi_ba_asatid/483\n'
-                             'https://t.me/Comp_Professors/21\n'
-                             'https://t.me/Comp_Professors/36\n',
+                            '\nنظرات دانشجویان💡 : \n'
+                            'https://t.me/ashnayi_ba_asatid/483\n'
+                            'https://t.me/Comp_Professors/21\n'
+                            'https://t.me/Comp_Professors/36\n',
     'msg_masters_nori': '🔎اطلاعات مربوطه استاد نوری، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
     'msg_masters_bafghi': '👨🏻‍🏫استاد قائمی بافقی\n'
-                             '۰۵۱-۳۸۸۰۵۰۶۲ ☎️\n'
-                             ' ghaemib@um.ac.ir 📧\n'
-                             '🗄تحصیلات: \n'
-                             '\t\t\t🔰مرتبه علمی: دانشیار\n'
-                             '\t\t\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - نرم افزار\n'
-                             '\t\t\t🔰محل اخذ آخرین مدرک تحصیلی: دانشگاه صنعتی امیرکبیر، تهران، ایران\n\n'
-                             '🏷توضیحات : \n استاد بیشترِ مباحث رو تدریس می کنه، یعنی از هر چیزی در حد نیاز میگه، مثلا '
-                             'در درس گسسته مباحثی مانند مرتبه زمانی و ساختمان داده هم بیان میکنه. در بیان مطلب و تدریس '
-                             'ضعیف هستند، در حدی که باید خودت بخونی 🙃 سرعت تدریسشون هم بالاس و رو یه مبحث نمیمونن\n'
+                          '۰۵۱-۳۸۸۰۵۰۶۲ ☎️\n'
+                          ' ghaemib@um.ac.ir 📧\n'
+                          '🗄تحصیلات: \n'
+                          '\t\t\t🔰مرتبه علمی: دانشیار\n'
+                          '\t\t\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - نرم افزار\n'
+                          '\t\t\t🔰محل اخذ آخرین مدرک تحصیلی: دانشگاه صنعتی امیرکبیر، تهران، ایران\n\n'
+                          '🏷توضیحات : \n استاد بیشترِ مباحث رو تدریس می کنه، یعنی از هر چیزی در حد نیاز میگه، مثلا '
+                          'در درس گسسته مباحثی مانند مرتبه زمانی و ساختمان داده هم بیان میکنه. در بیان مطلب و تدریس '
+                          'ضعیف هستند، در حدی که باید خودت بخونی 🙃 سرعت تدریسشون هم بالاس و رو یه مبحث نمیمونن\n'
                           'در ضمن تلگرام هم ندارن:) راه های ارتباطی ایمیل و سروش و واتس اپ :) \n'
-                             '\nنظرات دانشجویان💡 : \n'
-                             'https://t.me/Comp_Professors/58\n'
-                             'https://t.me/Comp_Professors/64\n'
-                             'https://t.me/Comp_Professors/31\n',
+                          '\nنظرات دانشجویان💡 : \n'
+                          'https://t.me/Comp_Professors/58\n'
+                          'https://t.me/Comp_Professors/64\n'
+                          'https://t.me/Comp_Professors/31\n',
     'msg_masters_tosi': '🔎اطلاعات مربوطه استاد طوسی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
     'msg_masters_harati': '🔎اطلاعات مربوطه استاد هراتی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
     'msg_masters_paydar': '🔎اطلاعات مربوطه استاد پایدار، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
@@ -222,7 +223,77 @@ def college_handler(update, context):
     )
 
 
-def college_press_handler(update, context):
+# ToDo get persian articles and books
+def college_getLatinArticles():
+    url = ARTICLES_URL
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    number_result = soup.find_all('td', attrs={
+        'style': 'padding:5px; border:1px solid #E6E6E6; text-align:center !important;'})
+    title_result = soup.find_all('td', attrs={
+        'style': 'padding:5px; border:1px solid #E6E6E6; text-align: justify !important; direction: ltr; '})
+    date_result = soup.find_all('td', attrs={'style': 'padding:5px; border:1px solid #E6E6E6;'})
+    author_result = soup.find_all('td', attrs={'style': 'padding:5px; border:1px solid #E6E6E6;'})
+    authors = [item.text for item in author_result]  # odds
+    date = [item.text for item in date_result]  # even
+    titles = [item.text for item in title_result]
+    links = [item.a['href'] for item in title_result]
+    return authors, titles, date, links
+
+
+def college_latinArticles_handler(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    authors, titles, date, links = college_getLatinArticles()
+    txt = ''
+    for t, a, d, l in list(zip(titles[:10], authors[1:20:2], date[0:20:2], links[:10])):
+        txt += '📝{0} - <a href="{3}">{1}</a> - {2} \n'.format(a, t, d, l)
+    buttons = [
+        [InlineKeyboardButton('مقالات بیشتر+', callback_data='extraArticles'),
+         InlineKeyboardButton('مراجعه به سایت', 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&'
+                                                'edugroups=3105&cur_stu_title=&Itemid=694&lang=fa')],
+    ]
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    update.message.reply_text(text=txt, parse_mode=ParseMode.HTML, reply_markup=InlineKeyboardMarkup(buttons))
+
+
+def college_articles_keyboard(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
+    data = query.data
+    chat_id = query.message.chat_id
+    message_id = query.message.message_id
+    authors, titles, date, links = college_getLatinArticles()
+    txt = ''
+    for t, a, d, l in list(zip(titles[:15], authors[1:30:2], date[0:30:2], links[:15])):
+        txt += '📝{0} - <a href="{3}">{1}</a> - {2} \n'.format(a, t, d, l)
+    txt += '\n<a href="{}">مراجعه به سایت</a>\n'.format(ARTICLES_URL)
+    # button = [
+    #     [InlineKeyboardButton('مراجعه به سایت', 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&'
+    #                                             'edugroups=3105&cur_stu_title=&Itemid=694&lang=fa')],
+    # ]
+    if data == 'extraArticles':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.editMessageText(text=txt, chat_id=chat_id, message_id=message_id)
+        # context.bot.editMessageReplyMarkup(text=txt + '\n<a href="{}">مقالات بیشتر</a>\n'.format(ARTICLES_URL),
+        #                                    parse_mode=ParseMode.HTML,
+        #                                    reply_markup=InlineKeyboardMarkup(button),
+        #                                    chat_id=chat_id, message_id=message_id)
+
+
+def college_persianArticles_handler(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    context.bot.send_message(chat_id=update.effective_chat.id, text='به زودی فایل های مربوطه در این بخش قرار خواهند '
+                                                                    'گرفت،\n با تشکر🙏🏻 ')
+
+
+def college_books_handler(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    context.bot.send_message(chat_id=update.effective_chat.id, text='به زودی فایل های مربوطه در این بخش قرار خواهند '
+                                                                    'گرفت،\n با تشکر🙏🏻 ')
+
+
+def college_press_handler(update: Update, context: CallbackContext) -> None:
     buttons = [
         [messages['btn_college_press_latinArticle'], messages['btn_college_press_books']],
         [messages['btn_college_press_persianArticle']],
@@ -243,21 +314,22 @@ def college_news_handler(update, context):
     title = [item.h1.a.text for item in title_result]
     date_time_result = soup.find_all('div', attrs={'class': 'aidanews2_botL'})
     date_time = [item.span.text for item in date_time_result]
+    links = [item.h1.a['href'] for item in title_result]
     txt = ''
     for i in range(len(date_time) - 1):
-        txt += '{}📌'.format(i + 1) + title[i] + '\n\t' + date_time[i] + '\n'
+        txt += '{}📌'.format(i + 1) + '<a href="ce.um.ac.ir{}">{}</a>'.format(links[i], title[i]) + '\n\t' + date_time[i] + '\n'
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     button = [
         [InlineKeyboardButton('مشاهده همه ی اخبار', 'http://ce.um.ac.ir/index.php?option=com_content&view=category'
                                                     '&id=102&Itemid=634&lang=fa')],
     ]
     update.message.reply_text(
-        text=txt,
+        text=txt, parse_mode=ParseMode.HTML,
         reply_markup=InlineKeyboardMarkup(button)
     )
 
 
-def college_notification_handler(update, context):
+def college_notification_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     url = BASE_URL
     response = requests.get(url)
@@ -280,7 +352,14 @@ def college_notification_handler(update, context):
     )
 
 
-def college_masters_handler(update, context):
+def college_teach_handler(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    context.bot.send_message(chat_id=update.effective_chat.id, text='به زودی فایل های مربوطه در این بخش قرار خواهند '
+                                                                    'گرفت،\n با تشکر🙏🏻 ')
+
+
+def college_masters_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     #  buttons for linking DS videos to programming telegram channel
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
@@ -308,7 +387,7 @@ def college_masters_handler(update, context):
     )
 
 
-def college_masters_keyboard(update, context):
+def college_masters_keyboard(update: Update, context: CallbackContext) -> None:
     query = update.callback_query
     data = query.data
     chat_id = query.message.chat_id
@@ -353,7 +432,7 @@ def college_masters_keyboard(update, context):
         query.message.reply_text(text=messages['msg_masters_tosi'], reply_markup=InlineKeyboardMarkup(button))
 
 
-def college_contact_handler(update, context):
+def college_contact_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     URL = BASE_URL
     response = requests.get(URL)
@@ -572,6 +651,7 @@ def exam_ds_file_handler(update: Update, context: CallbackContext) -> None:
     context.bot.send_message(chat_id=update.effective_chat.id, text='این بخش در حال بروزرسانی است، به زودی فایل های'
                                                                     ' مربوطه قرار خواهند گرفت')
 
+
 # TODO InlineQueryResultGif
 # def inlinequery(update: Update, context: CallbackContext) -> None:
 #     query = update.inline_query.query
@@ -669,9 +749,16 @@ def main() -> None:
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_notification']),
                                           college_notification_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_press']), college_press_handler))
+    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_press_latinArticle']),
+                                          college_latinArticles_handler))
+    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_press_persianArticle']),
+                                          college_persianArticles_handler))
+    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_press_books']),
+                                          college_books_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_contact']), college_contact_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_about']), college_about_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler))
+    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_teach']), college_teach_handler))
     dispatcher.add_handler(CallbackQueryHandler(college_masters_keyboard))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_back_college']), back_college_handler))
 
