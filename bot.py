@@ -29,6 +29,7 @@ import requests
 from telegram.utils.helpers import escape_markdown
 # TODO dockerized
 # TODO file id
+# TODO file get file
 BASE_URL = 'http://ce.um.ac.ir/index.php?lang=fa'
 ARTICLES_URL = 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&edugroups=3105&cur_stu_title=&Itemid=694&lang=fa'
 
@@ -68,10 +69,24 @@ messages = {
  📠نمابر: ۰۵۱-۳۸۸۰۷۱۸۱
 📭كدپستی: ۹۱۷۷۹۴۸۹۷۴
 📧پست الکترونیک: ce.um.ac.ir''',
-    'msg_masters_noriBaigi': '🔎اطلاعات مربوطه استاد نوری بایگی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_noriBaigi': '👨🏻‍🏫مصطفی نوری بایگی\n'
+                            ' ۰۵۱-۳۸۸۰۵۱۷۲ ☎️\n'
+                            'nouribaygi@um.ac.ir 📧\n'
+                            'تلگرام : @nourii\n'
+                            '🗄تحصیلات: \n'
+                            '\t🔰مرتبه علمی: استادیار\n'
+                            '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - نرم افزار\n'
+                            '\t🔰محل اخذ آخرین مدرک تحصیلی: دانشگاه صنعتی شریف، تهران، ایران\n'
+                            '🏷توضیحات: \n استادی هستن که زیاد سطح بالا تدریس نمیکنن ولی از دانشجو سطح بالا میخواد.\n'
+                            'در مجازی تدریس به صورت افلاین و آنلاین انجام میشه\n'
+                            '\nنظرات دانشجویان💡 : \n'
+                            'https://t.me/Comp_Professors/86\n'
+                            'https://t.me/Comp_Professors/84\n'
+                            'https://t.me/Comp_Professors/35\n',
     'msg_masters_sedaghat': '👨🏻‍🏫استاد یاصر صداقت\n'
                             ' ۰۵۱-۳۸۸۰۵۱۴۸ ☎️\n'
                             'y_sedaghat@um.ac.ir 📧\n'
+                            'تلگرام : @y_sedaghat\n'
                             '🗄تحصیلات: \n'
                             '\t🔰مرتبه علمی: استادیار\n'
                             '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - معماری کامپیوتر\n'
@@ -85,7 +100,9 @@ messages = {
                             '\nنظرات دانشجویان💡 : \n'
                             'https://t.me/ashnayi_ba_asatid/483\n'
                             'https://t.me/Comp_Professors/21\n'
-                            'https://t.me/Comp_Professors/36\n',
+                            'https://t.me/Comp_Professors/36\n'
+                            'https://t.me/Comp_Professors/25 (روش پژوهش)\n'
+                            'https://t.me/Comp_Professors/48 (روش پژوهش)\n',
     'msg_masters_nori': '🔎اطلاعات مربوطه استاد نوری، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
     'msg_masters_bafghi': '👨🏻‍🏫استاد قائمی بافقی\n'
                           '۰۵۱-۳۸۸۰۵۰۶۲ ☎️\n'
@@ -102,14 +119,88 @@ messages = {
                           'https://t.me/Comp_Professors/58\n'
                           'https://t.me/Comp_Professors/64\n'
                           'https://t.me/Comp_Professors/31\n',
-    'msg_masters_tosi': '🔎اطلاعات مربوطه استاد طوسی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_tosi':  '👨🏻‍🏫استاد هاله امین طوسی\n'
+                            ' ۰۵۱-۳۸۸۰۵۴۳۶ ☎️\n'
+                            'amintoosi@um.ac.ir 📧\n'
+                            '🗄تحصیلات: \n'
+                            '\t🔰مرتبه علمی: استادیار\n'
+                            '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر\n'
+                            '\t🔰محل اخذ آخرین مدرک تحصیلی: محل اخذ آخرین مدرک تحصیلی: دانشگاه نيوساوت ولز، استرالیا\n',
     'msg_masters_harati': '🔎اطلاعات مربوطه استاد هراتی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_paydar': '🔎اطلاعات مربوطه استاد پایدار، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_ghiasi': '🔎اطلاعات مربوطه استاد غیاثی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_paydar':  '👨🏻‍🏫صمد پایدار\n'
+                            ' ۰۵۱-۳۸۸۰۵۱۸۴ ☎️\n'
+                            's-paydar@um.ac.ir 📧\n'
+                            'تلگرام : @y_sedaghat\n'
+                            '🗄تحصیلات: \n'
+                            '\t🔰مرتبه علمی: استادیار\n'
+                            '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - معماری کامپیوتر\n'
+                            '\t🔰محل اخذ آخرین مدرک تحصیلی: دانشگاه صنعتی شریف، تهران، ایران\n'
+                            '\n✅سطح تدریس : خوب\n'
+                            '✅نمره دهی : خوب\n'
+                            '🏷توضیحات : \n نحوه درس دادن و انتقال مفاهیم خوب 👌🏻 کارگاه ها خودشون هم میان'
+                            ' تمریناتی که سر کلاس میدن کاملا مرتبط با شی گرایی هست و شی گرایی رو'
+                            ' فدای الگوریتم های پیچیده و سوالات پیچیده که میشه بدون شی گرایی هم حلشون کرد نمیکنن. '
+                            '\nنظرات دانشجویان💡 : \n'
+                            'https://t.me/Comp_Professors/45\n'
+                            'https://t.me/Comp_Professors/46\n',
+    'msg_masters_mirzavaziri': '🔎اطلاعات مربوطه استاد پایدار، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_ghiasi': '👨🏻‍🏫سید کمال الدین غیاثی شیرازی\n'
+                            ' ۰۵۱-۳۸۸۰۵۱۵۸ ☎️\n'
+                            'k.ghiasi@um.ac.ir 📧\n'
+                            'تلگرام : @kghiasi\n'
+                            '🗄تحصیلات: \n'
+                            '\t🔰مرتبه علمی: استادیار\n'
+                            '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر\n'
+                            '\t🔰محل اخذ آخرین مدرک تحصیلی: دانشگاه صنعتی امیرکبیر، تهران، ایران\n'
+                            '\n✅سطح تدریس : عالی\n'
+                            '\n✅سطح تدریس : خوب\n'
+                            '🏷توضیحات: \n اخلاق و سطح ندریس و نظم عالی \n'
+                            'واقعا جزؤ اساتیدیه که الویتش یادگیری دانشجوعه تمام تمرینات، امتحان ها و شیوه تدریسش '
+                            'هم در این مسیره. تدریس مجازی به صورت ویدیو آفلاین بود که برای تهیه‌اش زحمات'
+                            ' زیادی کشیده بودند. کلا استاد غیاثی انعطاف خوبی داشتن تو نمره دادن\n' 
+                            '\nنظرات دانشجویان💡 : \n'
+                            'https://t.me/Comp_Professors/22'
+                            'https://t.me/Comp_Professors/21\n'
+                            'https://t.me/Comp_Professors/54\n'
+                            'https://t.me/Comp_Professors/55\n',
     'msg_masters_fazlErsi': '🔎اطلاعات مربوطه استاد فضل ارثی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_zomorodi': '🔎اطلاعات مربوطه استاد فضل زمردی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_arban': '🔎اطلاعات مربوطه استاد عربان، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_vahedian': '🔎اطلاعات مربوطه استاد فضل واحدیان، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_zomorodi': '👨🏻‍🏫مریم زمردی مقدم\n'
+                             '۰۵۱-۳۸۸۰۵۱۸۰ ☎️\n'
+                             'تلگرام : @Sabrishami\n'
+                             'm_zomorodi@um.ac.ir 📧\n'
+                             '🗄تحصیلات: \n'
+                             '\t🔰مرتبه علمی: استادیار\n'
+                             '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - نرم افزار\n'
+                             '\n✅سطح تدریس : متوسط رو به پایین\n'
+                             '\nنظرات دانشجویان💡 : \n'
+                             'https://t.me/Comp_Professors/97\n'
+                             'https://t.me/Comp_Professors/29\n'
+                             'https://t.me/Comp_Professors/82\n',
+    'msg_masters_vahedian': '👨🏻‍🏫عابدین واحدیان مظلوم\n'
+                             '۰۵۱-۳۸۸۰۵۰۵۳ ☎️\n'
+                             'vahedian@um.ac.ir 📧\n'
+                             'تلگرام : @dr_vahedian\n'
+                             '🗄تحصیلات: \n'
+                             '\t🔰مرتبه علمی: استادیار\n'
+                             '\t🔰 آخرین مدرک تحصیلی : دکتری مهندسی برق\n'
+                             '\t🔰 محل اخذ آخرین مدرک تحصیلی: دانشگاه نيوساوت ولز، استرالیا\n'
+                             '\nنظرات دانشجویان💡 : \n'
+                             'https://t.me/Comp_Professors/83 (زبان تخصصی)\n'
+                             'https://t.me/Comp_Professors/27 (مدار)\n'
+                             'https://t.me/Comp_Professors/20 (مدار)\n',
+    'msg_masters_arban': '👨🏻‍🏫سعید عربان\n'
+                             '۰۵۱-۳۸۸۰۵۱۲۰ ☎️\n'
+                             'araban@um.ac.ir 📧\n'
+                             'تلگرام : @Saeed_Araban\n'
+                             '🗄تحصیلات: \n'
+                             '\t🔰مرتبه علمی: استادیار\n'
+                             '\t🔰 آخرین مدرک تحصیلی : دکتری مهندسی کامپیوتر - نر م افزار\n'
+                             '\t🔰 محل اخذ آخرین مدرک تحصیلی: دانشگاه ملبورن، استرالیا\n'
+                             'توضیحات : نظرات دانشجو هارو بخونید متوجه میشید :) \n'
+                             '\nنظرات دانشجویان💡 : \n'
+                             'https://t.me/Comp_Professors/96\n'
+                             'https://t.me/Comp_Professors/96\n'
+                             'https://t.me/Comp_Professors/38\n',
     'msg_masters_abrishami': '👨🏻‍🏫استاد سعید ابریشمی\n'
                              '۰۵۱-۳۸۸۰۵۱۲۱ ☎️\n'
                              'تلگرام : @Sabrishami\n'
@@ -122,7 +213,13 @@ messages = {
                              '\nنظرات دانشجویان💡 : \n'
                              'https://t.me/ashnayi_ba_asatid/358\n'
                              'https://t.me/Comp_Professors/63\n',
-
+    'msg_masters_ershadi': '👨🏻‍🏫سارا ارشادی نسب\n' 
+                             'تلگرام : @Sabrishami\n'
+                             '\nنظرات دانشجویان💡 : \n'
+                             'https://t.me/ashnayi_ba_asatid/433\n'
+                             'https://t.me/Comp_Professors/94\n'
+                             'https://t.me/Comp_Professors/93\n'
+                             'https://t.me/Comp_Professors/95\n',
     'btn_college': 'گروه مهندسی کامپیوتر🏫',
     'btn_exams_exe': 'تمرین و امتحانات📑',
     'btn_sources': 'منابع و جزوات📚',
@@ -158,10 +255,14 @@ messages = {
     'btn_back_college': 'بازگشت🔙',
 }
 
-conversation = {}
 FIRST, SECOND = range(2)
 logging.basicConfig(filename='info.log', filemode='a', level=logging.INFO,
                     format='%(asctime)s-%(filename)s-%(message)s-%(funcName)s')
+
+
+def do_something_dangerous():
+    a = 1 / 0
+    return a
 
 
 def start(update, context):
@@ -169,17 +270,21 @@ def start(update, context):
     first_name = update.message.chat.first_name
     last_name = update.message.chat.last_name
     group_name = update.message.chat.title
+    group_id = update.message.chat.id
     # write user data in file
     with open('./users/users_data.txt', 'a') as f:
         f.write(str(update) + '\n\n')
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    if update.message.chat.type == "group" and (group_name == 'SV' or group_name=='CE@FUM<99> group'):
+        context.bot.send_message(chat_id=update.effective_chat.id, text='چند بار start میزنی داش :|')
+        return 'out!start'
     if update.message.chat.type == "private":
         context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start_private'].format(first_name))
-    if update.message.chat.type == "group":
+    elif update.message.chat.type == "group":
         context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start_group'].format(group_name))
-    if update.message.chat.type == "supergroup":
+    elif update.message.chat.type == "supergroup":
         context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start_supergroup'].format(group_name))
-    if update.message.chat.type == "channel":
+    elif update.message.chat.type == "channel":
         context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start_channel'])
 
     main_menu_handler(update, context)
@@ -389,13 +494,14 @@ def college_masters_handler(update: Update, context: CallbackContext) -> None:
     buttons = [
         [
             InlineKeyboardButton('برنامه سازی پیشرفته', callback_data='advance_programming'),
-            InlineKeyboardButton('مبانی کامپیوتر و برنامه سازی', callback_data='fundamental_programming')
+            InlineKeyboardButton('مدار منطقی', callback_data='logic_circuits'),
         ], [
+            InlineKeyboardButton('مبانی کامپیوتر و برنامه سازی', callback_data='fundamental_programming'),
             InlineKeyboardButton('ریاضیات گسسته', callback_data='discrete_math'),
-            InlineKeyboardButton('مدار منطقی', callback_data='logic_circuits')
         ], [
             InlineKeyboardButton('زبان تخصصی', callback_data='advance_english'),
-            InlineKeyboardButton('ساختمان داده', callback_data='data_structure')
+            InlineKeyboardButton('طراحی الگوریتم', callback_data='algorithm'),
+            InlineKeyboardButton('ساختمان داده', callback_data='data_structure'),
         ],
     ]
     update.message.reply_text(
@@ -415,6 +521,22 @@ def college_masters_ds_handler(update: Update, context: CallbackContext) -> None
         [
             InlineKeyboardButton('دکتر غیاثی شیرازی', callback_data='ghiasi'),
             InlineKeyboardButton('دکتر امین طوسی', callback_data='tosi'),
+        ],
+    ]
+    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
+                                chat_id=chat_id, message_id=message_id,
+                                reply_markup=InlineKeyboardMarkup(buttons))
+    return SECOND
+
+
+def college_masters_algorithm_handler(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
+    data = query.data
+    chat_id = query.message.chat_id
+    message_id = query.message.message_id
+    buttons = [
+        [
+            InlineKeyboardButton('دکتر نوری بایگی', callback_data='noriBaigi'),
         ],
     ]
     context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
@@ -449,7 +571,9 @@ def college_masters_discrete_handler(update: Update, context: CallbackContext) -
         [
             InlineKeyboardButton('دکتر بافقی', callback_data='bafghi'),
             InlineKeyboardButton('دکتر غیاثی شیرازی', callback_data='ghiasi'),
-        ],
+        ], [
+            InlineKeyboardButton('مجید میرزاوزیری', callback_data='mirzavaziri'),
+        ]
     ]
     context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
                                 chat_id=chat_id, message_id=message_id,
@@ -539,6 +663,9 @@ def end_college_masters_handle_(update: Update, context: CallbackContext) -> Non
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://y_sedaghat.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_sedaghat'], reply_markup=InlineKeyboardMarkup(button))
+    elif data == 'ershadi':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_ershadi'])
     elif data == 'bafghi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://ghaemib.profcms.um.ac.ir/')]]
@@ -557,16 +684,19 @@ def end_college_masters_handle_(update: Update, context: CallbackContext) -> Non
         query.message.reply_text(text=messages['msg_masters_tosi'], reply_markup=InlineKeyboardMarkup(button))
     elif data == 'arban':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://amintoosi.profcms.um.ac.ir/')]]
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://araban.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_arban'], reply_markup=InlineKeyboardMarkup(button))
     elif data == 'zomorodi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://amintoosi.profcms.um.ac.ir/')]]
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://m_zomorodi.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_zomorodi'], reply_markup=InlineKeyboardMarkup(button))
     elif data == 'vahedian':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://amintoosi.profcms.um.ac.ir/')]]
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://vahedian.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_vahedian'], reply_markup=InlineKeyboardMarkup(button))
+    elif data == 'mirzavaziri':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_mirzavaziri'])
     return ConversationHandler.END
 
 
@@ -907,14 +1037,18 @@ def main() -> None:
                 CallbackQueryHandler(college_masters_ap_handler, pattern="^advance_programming$"),
                 CallbackQueryHandler(college_masters_advEnglish_handler, pattern="^advance_english$"),
                 CallbackQueryHandler(college_masters_logic_handler, pattern="^logic_circuits$"),
-                CallbackQueryHandler(college_masters_ds_handler, pattern="^data_structure$")
+                CallbackQueryHandler(college_masters_ds_handler, pattern="^data_structure$"),
+                CallbackQueryHandler(college_masters_algorithm_handler, pattern="^algorithm$")
             ],
             SECOND: [
                 CallbackQueryHandler(end_college_masters_handle_)
             ]
         },
         fallbacks=[MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler)],
-        allow_reentry=True
+        allow_reentry=True,
+        per_chat=True,
+        per_user=True,
+        per_message=False,
     )
     updater.dispatcher.add_handler(masters_conversation)
     updater.dispatcher.add_handler(CallbackQueryHandler(end_college_masters_handle_))
