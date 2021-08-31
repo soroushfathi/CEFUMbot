@@ -6,7 +6,7 @@ from telegram.ext import (
     CallbackContext,
     MessageHandler,
     CallbackQueryHandler,
-    InlineQueryHandler,
+    InlineQueryHandler, ConversationHandler,
 )
 from telegram import (
     ReplyKeyboardMarkup,
@@ -27,12 +27,16 @@ from bs4 import BeautifulSoup
 from uuid import uuid4
 import requests
 from telegram.utils.helpers import escape_markdown
-
+# TODO dockerized
+# TODO file id
 BASE_URL = 'http://ce.um.ac.ir/index.php?lang=fa'
 ARTICLES_URL = 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&edugroups=3105&cur_stu_title=&Itemid=694&lang=fa'
 
 messages = {
-    'msg_start': 'سلام {}، \n خوش امدی به ربات🙂، امیدوارم بتونم کمکت کنم🤠',
+    'msg_start_private': '🤖سلام {}، \n خوش امدی به ربات🙂; امیدوارم بتونم کمکت کنم🤠',
+    'msg_start_group': '🤖سلام بر بچه های گروه {} ;\n خوشحالم که اومدم تو گروهتون🙂;\n امیدوارم بتونم کمکتون کنم🤠',
+    'msg_start_supergroup': '🤖سلام بر بچه های گروه {} ;\n خوشحالم که اومدم تو گروهتون🙂;\n امیدوارم بتونم کمکتون کنم🤠',
+    'msg_start_channel': 'سلام و وقت بخیر اعضای محترم کانال، \n 🙂، امیدوارم بتونم کمکتون کنم🤠',
     'msg_contact': 'سروش فتحی 👨🏻‍💻، دانشجوی مهندسی کامپیوتر فردوسی ورودی 99🧑🏻‍🎓\n',
     'msg_main_handler': 'منوی اصلی🗂️:',
     'msg_select_src_subject': 'درس مورد نظر را انتخاب کنید(تمرین و امتحانات):',
@@ -42,10 +46,10 @@ messages = {
     'msg_college_press': 'انتشارات مهندسی کامپیوتر فردوسی مشهد: ',
     'msg_network_error': 'به دلیل سرعت پایین شبکه، ارسال فایل با مشکل مواجه شد😣 \n '
                          'به زودی مشکل را حل خواهیم کرد🤠\n'
-                         'با تشکر از صبر شما🙏🏻',
+                         'با عرض پوزش🙏🏻',
     'msg_sending_time': 'به دلیل سرعت پایین شبکه، ارسال فایل ممکن '
-                        'است پنج دقیقه طول بکشد😣 \n '
-                        'به زودی مشکل را حل خواهیم کرد🤠\n'
+                        'است تا دو دقیقه طول بکشد😣 \n '
+                        'به زودی مشکلو حل خواهیم کرد🤠\n'
                         'با تشکر از صبر شما🙏🏻',
     'msg_college_about': 'در سال ۱۳۴۹ هجری خورشیدی همزمان با دانشگاه تهران و دانشگاه صنعتی شریف، '
                          'رشته آمار و ماشین های حسابگر در مقطع کارشناسی در دانشکده علوم دانشگاه فردوسی مشهد تأسیس شد.'
@@ -102,7 +106,10 @@ messages = {
     'msg_masters_harati': '🔎اطلاعات مربوطه استاد هراتی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
     'msg_masters_paydar': '🔎اطلاعات مربوطه استاد پایدار، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
     'msg_masters_ghiasi': '🔎اطلاعات مربوطه استاد غیاثی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
-    'msg_masters_fazlErsi': '🔎اطلاعات مربوطه استادفضل ارثی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_fazlErsi': '🔎اطلاعات مربوطه استاد فضل ارثی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_zomorodi': '🔎اطلاعات مربوطه استاد فضل زمردی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_arban': '🔎اطلاعات مربوطه استاد عربان، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
+    'msg_masters_vahedian': '🔎اطلاعات مربوطه استاد فضل واحدیان، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
     'msg_masters_abrishami': '👨🏻‍🏫استاد سعید ابریشمی\n'
                              '۰۵۱-۳۸۸۰۵۱۲۱ ☎️\n'
                              'تلگرام : @Sabrishami\n'
@@ -151,6 +158,8 @@ messages = {
     'btn_back_college': 'بازگشت🔙',
 }
 
+conversation = {}
+FIRST, SECOND = range(2)
 logging.basicConfig(filename='info.log', filemode='a', level=logging.INFO,
                     format='%(asctime)s-%(filename)s-%(message)s-%(funcName)s')
 
@@ -159,11 +168,20 @@ def start(update, context):
     chat_id = update.message.chat_id
     first_name = update.message.chat.first_name
     last_name = update.message.chat.last_name
+    group_name = update.message.chat.title
     # write user data in file
     with open('./users/users_data.txt', 'a') as f:
         f.write(str(update) + '\n\n')
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start'].format(first_name))
+    if update.message.chat.type == "private":
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start_private'].format(first_name))
+    if update.message.chat.type == "group":
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start_group'].format(group_name))
+    if update.message.chat.type == "supergroup":
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start_supergroup'].format(group_name))
+    if update.message.chat.type == "channel":
+        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start_channel'])
+
     main_menu_handler(update, context)
     logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
 
@@ -307,6 +325,8 @@ def college_press_handler(update: Update, context: CallbackContext) -> None:
 
 def college_news_handler(update, context):
     chat_id = update.message.chat_id
+    first_name = update.message.chat.first_name
+    last_name = update.message.chat.last_name
     url = BASE_URL
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -327,6 +347,7 @@ def college_news_handler(update, context):
         text=txt, parse_mode=ParseMode.HTML,
         reply_markup=InlineKeyboardMarkup(button)
     )
+    logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
 
 
 def college_notification_handler(update: Update, context: CallbackContext) -> None:
@@ -361,33 +382,137 @@ def college_teach_handler(update: Update, context: CallbackContext) -> None:
 
 def college_masters_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
+    first_name = update.message.chat.first_name
+    last_name = update.message.chat.last_name
     #  buttons for linking DS videos to programming telegram channel
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     buttons = [
-        [  # first row
-            InlineKeyboardButton('دکتر ابریشمی', callback_data='abrishami'),
-            InlineKeyboardButton('دکتر نوری بایگی', callback_data='noriBaigi'),
+        [
+            InlineKeyboardButton('برنامه سازی پیشرفته', callback_data='advance_programming'),
+            InlineKeyboardButton('مبانی کامپیوتر و برنامه سازی', callback_data='fundamental_programming')
         ], [
-            InlineKeyboardButton('سارا ارشادی نسب', callback_data='ershadi'),
-            InlineKeyboardButton('دکتر صداقت', callback_data='sedaghat'),
+            InlineKeyboardButton('ریاضیات گسسته', callback_data='discrete_math'),
+            InlineKeyboardButton('مدار منطقی', callback_data='logic_circuits')
         ], [
-            InlineKeyboardButton('دکتر غیاثی شیرازی', callback_data='ghiasi'),
-            InlineKeyboardButton('دکتر فضل ارثی', callback_data='fazlErsi'),
-        ], [
-            InlineKeyboardButton('دکتر بافقی', callback_data='bafghi'),
-            InlineKeyboardButton('دکتر امین طوسی', callback_data='tosi'),
-        ], [
-            InlineKeyboardButton('دکتر پایدار', callback_data='paydar'),
-            InlineKeyboardButton('دکتر هراتی', callback_data='harati'),
+            InlineKeyboardButton('زبان تخصصی', callback_data='advance_english'),
+            InlineKeyboardButton('ساختمان داده', callback_data='data_structure')
         ],
     ]
     update.message.reply_text(
-        text='برای دریافت اطلاعات، استاد مورد نظر را انتخاب کنید:',
+        text='درس مورد نظر را انتخاب کنید:',
         reply_markup=InlineKeyboardMarkup(buttons)
     )
+    # logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
+    return FIRST
 
 
-def college_masters_keyboard(update: Update, context: CallbackContext) -> None:
+def college_masters_ds_handler(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
+    data = query.data
+    chat_id = query.message.chat_id
+    message_id = query.message.message_id
+    buttons = [
+        [
+            InlineKeyboardButton('دکتر غیاثی شیرازی', callback_data='ghiasi'),
+            InlineKeyboardButton('دکتر امین طوسی', callback_data='tosi'),
+        ],
+    ]
+    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
+                                chat_id=chat_id, message_id=message_id,
+                                reply_markup=InlineKeyboardMarkup(buttons))
+    return SECOND
+
+
+def college_masters_ap_handler(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
+    data = query.data
+    chat_id = query.message.chat_id
+    message_id = query.message.message_id
+    buttons = [
+        [
+            InlineKeyboardButton('دکتر نوری بایگی', callback_data='noriBaigi'),
+            InlineKeyboardButton('دکتر پایدار', callback_data='paydar'),
+        ],
+    ]
+    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
+                                chat_id=chat_id, message_id=message_id,
+                                reply_markup=InlineKeyboardMarkup(buttons))
+    return SECOND
+
+
+def college_masters_discrete_handler(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
+    data = query.data
+    chat_id = query.message.chat_id
+    message_id = query.message.message_id
+    buttons = [
+        [
+            InlineKeyboardButton('دکتر بافقی', callback_data='bafghi'),
+            InlineKeyboardButton('دکتر غیاثی شیرازی', callback_data='ghiasi'),
+        ],
+    ]
+    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
+                                chat_id=chat_id, message_id=message_id,
+                                reply_markup=InlineKeyboardMarkup(buttons))
+    return SECOND
+
+
+def college_masters_logic_handler(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
+    data = query.data
+    chat_id = query.message.chat_id
+    message_id = query.message.message_id
+    buttons = [
+        [
+            InlineKeyboardButton('یاصر صداقت', callback_data='sedaghat'),
+            InlineKeyboardButton('سارا ارشادی نسب', callback_data='ershadi'),
+        ], [
+            InlineKeyboardButton('مریم زمردی مقدم', callback_data='zomorodi'),
+        ],
+    ]
+    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
+                                chat_id=chat_id, message_id=message_id,
+                                reply_markup=InlineKeyboardMarkup(buttons))
+    return SECOND
+
+
+def college_masters_fp_handler(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
+    data = query.data
+    chat_id = query.message.chat_id
+    message_id = query.message.message_id
+    buttons = [
+        [
+            InlineKeyboardButton('سعید ابریشمی', callback_data='abrishami'),
+            InlineKeyboardButton(' نوری بایگی', callback_data='noriBaigi'),
+        ], [
+            InlineKeyboardButton('احسان فضل ارثی', callback_data='fazlErsi'),
+        ],
+    ]
+    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
+                                chat_id=chat_id, message_id=message_id,
+                                reply_markup=InlineKeyboardMarkup(buttons))
+    return SECOND
+
+
+def college_masters_advEnglish_handler(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
+    data = query.data
+    chat_id = query.message.chat_id
+    message_id = query.message.message_id
+    buttons = [
+        [
+            InlineKeyboardButton('سعید عربان', callback_data='arban'),
+            InlineKeyboardButton('عابدین واحدیان مظلوم', callback_data='vahedian'),
+        ],
+    ]
+    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
+                                chat_id=chat_id, message_id=message_id,
+                                reply_markup=InlineKeyboardMarkup(buttons))
+    return SECOND
+
+
+def end_college_masters_handle_(update: Update, context: CallbackContext) -> None:
     query = update.callback_query
     data = query.data
     chat_id = query.message.chat_id
@@ -430,6 +555,19 @@ def college_masters_keyboard(update: Update, context: CallbackContext) -> None:
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://amintoosi.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_tosi'], reply_markup=InlineKeyboardMarkup(button))
+    elif data == 'arban':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://amintoosi.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_arban'], reply_markup=InlineKeyboardMarkup(button))
+    elif data == 'zomorodi':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://amintoosi.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_zomorodi'], reply_markup=InlineKeyboardMarkup(button))
+    elif data == 'vahedian':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        button = [[InlineKeyboardButton('صفحه شخصی', 'http://amintoosi.profcms.um.ac.ir/')]]
+        query.message.reply_text(text=messages['msg_masters_vahedian'], reply_markup=InlineKeyboardMarkup(button))
+    return ConversationHandler.END
 
 
 def college_contact_handler(update: Update, context: CallbackContext) -> None:
@@ -478,6 +616,7 @@ def contact_handler(update, context):
             InlineKeyboardButton('instagram', 'https://instagram.com/soroushfathi.pb')
         ], [
             InlineKeyboardButton('LinkedIn', 'www.linkedin.com/in/soroush-fathi-45aa07201'),
+            InlineKeyboardButton('github', 'https://github.com/soroushfathi'),
         ]
     ]
     update.message.reply_text(text=messages['msg_contact'], reply_markup=InlineKeyboardMarkup(buttons))
@@ -717,7 +856,7 @@ def inlinequery(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Run the Bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater(token='1914222564:AAFl7vn1ESo3oT9_65IicNKEWntq5RFuJOc', use_context=True)
+    updater = Updater(token='1914222564:AAE4nRZZZin810LKiGgw1woavSdVKvkDy9s', use_context=True)
     # request_kwargs={'proxy_url': 'https://t.me/proxy?server=162.55.171.113&port=443&secret=EE00000'
     #                                                    '000000000000000000000000000646c2e676f6f676c652e636f6d'}
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -726,7 +865,8 @@ def main() -> None:
 
     dispatcher.add_handler(CommandHandler('start', start))
     dispatcher.add_handler(CommandHandler('exams_ap', exam_ap_file_handler))
-
+    dispatcher.add_handler(CommandHandler('exams_dm', exam_discrete_structure_file_handler))
+    # print(src_ds_file_handler())
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_exams_exe']), exe_subject_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_exe_advance_programming']), exam_ap_file_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_exe_discrete_bafghi']),
@@ -757,9 +897,29 @@ def main() -> None:
                                           college_books_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_contact']), college_contact_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_about']), college_about_handler))
-    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler))
+    # dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler))
+    masters_conversation = ConversationHandler(
+        entry_points=[MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler)],
+        states={
+            FIRST: [
+                CallbackQueryHandler(college_masters_fp_handler, pattern="^fundamental_programming$"),
+                CallbackQueryHandler(college_masters_discrete_handler, pattern="^discrete_math$"),
+                CallbackQueryHandler(college_masters_ap_handler, pattern="^advance_programming$"),
+                CallbackQueryHandler(college_masters_advEnglish_handler, pattern="^advance_english$"),
+                CallbackQueryHandler(college_masters_logic_handler, pattern="^logic_circuits$"),
+                CallbackQueryHandler(college_masters_ds_handler, pattern="^data_structure$")
+            ],
+            SECOND: [
+                CallbackQueryHandler(end_college_masters_handle_)
+            ]
+        },
+        fallbacks=[MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler)],
+        allow_reentry=True
+    )
+    updater.dispatcher.add_handler(masters_conversation)
+    updater.dispatcher.add_handler(CallbackQueryHandler(end_college_masters_handle_))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_teach']), college_teach_handler))
-    dispatcher.add_handler(CallbackQueryHandler(college_masters_keyboard))
+    # dispatcher.add_handler(CallbackQueryHandler(college_masters_keyboard))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_back_college']), back_college_handler))
 
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_back_home']), back_home_handler))
