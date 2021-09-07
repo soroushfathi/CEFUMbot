@@ -1,8 +1,8 @@
 FROM python:latest
 COPY bot.py .
-RUN pip install python-telegram-bot --upgrade
-RUN pip install requests --upgrade
-RUN pip install bs4 --upgrade
-RUN pip install cryptography --upgrade
+RUN pip3 install python-telegram-bot --upgrade
+RUN pip3 install requests --upgrade
+RUN pip3 install bs4 --upgrade
+RUN pip3 install cryptography --upgrade
 ENTRYPOINT [ "python3" ]
 CMD ["bot.py"]

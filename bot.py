@@ -1,6 +1,4 @@
 import logging
-from datetime import time
-
 from telegram.ext import (
     Updater,
     CommandHandler,
@@ -38,14 +36,15 @@ messages = {
     'msg_start_group': '🤖سلام بر بچه های گروه {} ;\n خوشحالم که اومدم تو گروهتون🙂;\n امیدوارم بتونم کمکتون کنم🤠',
     'msg_start_supergroup': '🤖سلام بر بچه های گروه {} ;\n خوشحالم که اومدم تو گروهتون🙂;\n امیدوارم بتونم کمکتون کنم🤠',
     'msg_start_channel': 'سلام و وقت بخیر اعضای محترم کانال، \n 🙂، امیدوارم بتونم کمکتون کنم🤠',
-    'msg_contact': 'نظرات 👨🏻‍💻 انتقادات 99🧑🏻‍🎓 پیشنهادات',
+    'msg_contact': 'نظرات 👨🏻‍💻 انتقادات 🧑🏻‍🎓 پیشنهادات',
     'msg_main_handler': 'منوی اصلی🗂️:',
-    'msg_select_src_subject': 'درس مورد نظر را انتخاب کنید(تمرین و امتحانات):',
-    'msg_select_exe_subject': ' درس مورد نظر را انتخاب کنید(منابع و جزوات):',
-    'msg_help': 'کار با ربات سادس😌 نیازی به راهنمایی نیست😜😆',
+    'msg_select_src_subject': 'درس مورد نظر را انتخاب کنید:',
+    'msg_select_exe_subject': ' درس مورد نظر را انتخاب کنید:',
     'msg_college': 'گروه مهندسی کامپیوتر🖥 : ',
     'msg_college_press': 'انتشارات مهندسی کامپیوتر فردوسی مشهد: ',
-    'msg_input_file': 'فایل مورد نظر را ارسال کنید: ',
+    'msg_send_document': 'ممنون {} 😍 بابت همکاری برای تکمیل ربات🙌🏻 \n '
+                         'فایل مورد نظر را ارسال کنید:',
+    'msg_send_document2': 'فایل با موفقیت دریافت شد✅با تشکر🙏🏻',
     'msg_network_error': 'به دلیل سرعت پایین شبکه، ارسال فایل با مشکل مواجه شد😣 \n '
                          'به زودی مشکل را حل خواهیم کرد🤠\n'
                          'با عرض پوزش🙏🏻',
@@ -84,7 +83,7 @@ messages = {
                              'https://t.me/Comp_Professors/86\n'
                              'https://t.me/Comp_Professors/84\n'
                              'https://t.me/Comp_Professors/35\n',
-    'msg_masters_sedaghat': '👨🏻‍🏫استاد یاصر صداقت\n'
+    'msg_masters_sedaghat': '👨🏻‍🏫استاد یاسر صداقت\n'
                             ' ۰۵۱-۳۸۸۰۵۱۴۸ ☎️\n'
                             'y_sedaghat@um.ac.ir 📧\n'
                             'تلگرام : @y_sedaghat\n'
@@ -131,7 +130,7 @@ messages = {
     'msg_masters_paydar': '👨🏻‍🏫صمد پایدار\n'
                           ' ۰۵۱-۳۸۸۰۵۱۸۴ ☎️\n'
                           's-paydar@um.ac.ir 📧\n'
-                          'تلگرام : @y_sedaghat\n'
+                          'تلگرام : @samadpaydar\n'
                           '🗄تحصیلات: \n'
                           '\t🔰مرتبه علمی: استادیار\n'
                           '\t🔰آخرین مدرک تحصیلی: دکترای مهندسی کامپیوتر - معماری کامپیوتر\n'
@@ -167,7 +166,6 @@ messages = {
     'msg_masters_fazlErsi': '🔎اطلاعات مربوطه استاد فضل ارثی، به زودی در این بخش قرار خواهد گرفت\n با تشکر🙏🏻',
     'msg_masters_zomorodi': '👨🏻‍🏫مریم زمردی مقدم\n'
                             '۰۵۱-۳۸۸۰۵۱۸۰ ☎️\n'
-                            'تلگرام : @Sabrishami\n'
                             'm_zomorodi@um.ac.ir 📧\n'
                             '🗄تحصیلات: \n'
                             '\t🔰مرتبه علمی: استادیار\n'
@@ -215,7 +213,6 @@ messages = {
                              'https://t.me/ashnayi_ba_asatid/358\n'
                              'https://t.me/Comp_Professors/63\n',
     'msg_masters_ershadi': '👨🏻‍🏫سارا ارشادی نسب\n'
-                           'تلگرام : @Sabrishami\n'
                            '\nنظرات دانشجویان💡 : \n'
                            'https://t.me/ashnayi_ba_asatid/433\n'
                            'https://t.me/Comp_Professors/94\n'
@@ -225,6 +222,7 @@ messages = {
     'btn_exams_exe': 'تمرین و امتحانات📑',
     'btn_sources': 'منابع و جزوات📚',
     'btn_plans': 'طرح های پژوهشی جاری',
+    'btn_send_document': 'ارسال فایل📤',
     'btn_contact': '📞تماس با من👨🏻‍💻',
     'btn_help': 'راهنمایی✅',
 
@@ -250,6 +248,8 @@ messages = {
 
     'btn_src_fundamental_programming': 'مبانی کامپیوتر برنامه نویسی',
     'btn_src_advance_programming': 'برنامه سازی پیشرفته',
+    'btn_src_ai_abrishami': 'هوش مصنوعی(ابریشمی)',
+    'btn_src_os_allahbakhsh': 'سیسستم عامل(الله بخش)',
     'btn_src_discrete': 'ریاضیات گسسته',
     'btn_src_data_structure': 'ساختمان داده',
 
@@ -269,8 +269,6 @@ def start(update, context):
     group_name = update.message.chat.title
     group_id = update.message.chat.id
     # write user data in file
-    with open('./users/users_data.txt', 'a') as f:
-        f.write(str(update) + '\n\n')
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     if update.message.chat.type == "group" and (group_name == 'SV' or group_name == 'CE@FUM<99> group'):
         context.bot.send_message(chat_id=update.effective_chat.id, text='چند بار start میزنی داش :|')
@@ -290,15 +288,11 @@ def start(update, context):
     logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
 
 
-# def echo(update, context):
-#     context.bot.send_message(chat_id=update.effective_chat.id, text=update.message.text)
-
-
 def main_menu_handler(update, context):
     buttons = [
         [messages['btn_exams_exe'], messages['btn_sources']],
-        [messages['btn_college'], messages['btn_help']],
-        [messages['btn_contact'], messages['btn_file_input']],
+        [messages['btn_college'], messages['btn_send_document']],
+        [messages['btn_contact'], messages['btn_help']],
     ]
     update.message.reply_text(
         text=messages['msg_main_handler'],
@@ -321,8 +315,9 @@ def exe_subject_handler(update, context):
 
 def src_subject_handler(update, context):
     buttons = [
-        [messages['btn_src_fundamental_programming'], messages['btn_src_advance_programming']],
+        # [messages['btn_src_ai_abrishami'], messages['btn_src_os_allahbakhsh']],
         [messages['btn_src_discrete'], messages['btn_src_data_structure']],
+        [messages['btn_src_fundamental_programming'], messages['btn_src_advance_programming']],
         [messages['btn_back_home']]
     ]
     update.message.reply_text(
@@ -370,35 +365,34 @@ def college_latinArticles_handler(update: Update, context: CallbackContext) -> N
     for t, a, d, l in list(zip(titles[:10], authors[1:20:2], date[0:20:2], links[:10])):
         txt += '📝{0} - <a href="{3}">{1}</a> - {2} \n'.format(a, t, d, l)
     buttons = [
-        [InlineKeyboardButton('مقالات بیشتر+', callback_data='extraArticles'),
-         InlineKeyboardButton('مراجعه به سایت', 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&'
+        [InlineKeyboardButton('مراجعه به سایت', 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&'
                                                 'edugroups=3105&cur_stu_title=&Itemid=694&lang=fa')],
     ]
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     update.message.reply_text(text=txt, parse_mode=ParseMode.HTML, reply_markup=InlineKeyboardMarkup(buttons))
 
 
-def college_articles_keyboard(update: Update, context: CallbackContext) -> None:
-    query = update.callback_query
-    data = query.data
-    chat_id = query.message.chat_id
-    message_id = query.message.message_id
-    authors, titles, date, links = college_getLatinArticles()
-    txt = ''
-    for t, a, d, l in list(zip(titles[:15], authors[1:30:2], date[0:30:2], links[:15])):
-        txt += '📝{0} - <a href="{3}">{1}</a> - {2} \n'.format(a, t, d, l)
-    txt += '\n<a href="{}">مراجعه به سایت</a>\n'.format(ARTICLES_URL)
-    # button = [
-    #     [InlineKeyboardButton('مراجعه به سایت', 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&'
-    #                                             'edugroups=3105&cur_stu_title=&Itemid=694&lang=fa')],
-    # ]
-    if data == 'extraArticles':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.editMessageText(text=txt, chat_id=chat_id, message_id=message_id)
-        # context.bot.editMessageReplyMarkup(text=txt + '\n<a href="{}">مقالات بیشتر</a>\n'.format(ARTICLES_URL),
-        #                                    parse_mode=ParseMode.HTML,
-        #                                    reply_markup=InlineKeyboardMarkup(button),
-        #                                    chat_id=chat_id, message_id=message_id)
+# def college_articles_keyboard(update: Update, context: CallbackContext) -> None:
+#     query = update.callback_query
+#     data = query.data
+#     chat_id = query.message.chat_id
+#     message_id = query.message.message_id
+#     authors, titles, date, links = college_getLatinArticles()
+#     txt = ''
+#     for t, a, d, l in list(zip(titles[:15], authors[1:30:2], date[0:30:2], links[:15])):
+#         txt += '📝{0} - <a href="{3}">{1}</a> - {2} \n'.format(a, t, d, l)
+#     txt += '\n<a href="{}">مراجعه به سایت</a>\n'.format(ARTICLES_URL)
+# button = [
+#     [InlineKeyboardButton('مراجعه به سایت', 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&'
+#                                             'edugroups=3105&cur_stu_title=&Itemid=694&lang=fa')],
+# ]
+# if data == 'extraArticles':
+#     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+#     context.bot.editMessageText(text=txt, chat_id=chat_id, message_id=message_id)
+# context.bot.editMessageReplyMarkup(text=txt + '\n<a href="{}">مقالات بیشتر</a>\n'.format(ARTICLES_URL),
+#                                    parse_mode=ParseMode.HTML,
+#                                    reply_markup=InlineKeyboardMarkup(button),
+#                                    chat_id=chat_id, message_id=message_id)
 
 
 def college_persianArticles_handler(update: Update, context: CallbackContext) -> None:
@@ -462,18 +456,20 @@ def college_notification_handler(update: Update, context: CallbackContext) -> No
     soup = BeautifulSoup(response.content, 'html.parser')
     title_result = soup.find_all('div', attrs={'class': 'aidanews2_positions'})
     title = [item.h1.a.text for item in title_result]
+    links = [item.h1.a['href'] for item in title_result]
     date_time_result = soup.find_all('span', attrs={'class': 'aidanews2_date'})
     date_time = [item.text for item in date_time_result]
     txt = ''
     for i in range(5, len(date_time)):
-        txt += '{}📌'.format(i - 4) + title[i] + '\n\t' + date_time[i] + '\n'
+        txt += '{}📌'.format(i - 4) + '<a href="ce.um.ac.ir{}">{}</a>'.format(links[i], title[i]) + \
+               '\n\t' + date_time[i] + '\n'
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     button = [
         [InlineKeyboardButton('مشاهده همه ی اطلاعیه ها', 'http://ce.um.ac.ir/index.php?option=com_content&view=category'
                                                          '&id=113&Itemid=540&lang=fa')],
     ]
     update.message.reply_text(
-        text=txt,
+        text=txt, parse_mode=ParseMode.HTML,
         reply_markup=InlineKeyboardMarkup(button)
     )
 
@@ -485,11 +481,10 @@ def college_teach_handler(update: Update, context: CallbackContext) -> None:
                                                                     'گرفت،\n با تشکر🙏🏻 ')
 
 
-def college_masters_handler(update: Update, context: CallbackContext) -> None:
+def college_masters_handler(update: Update, context: CallbackContext) -> int:
     chat_id = update.message.chat_id
     first_name = update.message.chat.first_name
     last_name = update.message.chat.last_name
-    #  buttons for linking DS videos to programming telegram channel
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
     buttons = [
         [
@@ -508,13 +503,12 @@ def college_masters_handler(update: Update, context: CallbackContext) -> None:
         text='درس مورد نظر را انتخاب کنید:',
         reply_markup=InlineKeyboardMarkup(buttons)
     )
-    # logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     return FIRST
 
 
-def college_masters_ds_handler(update: Update, context: CallbackContext) -> None:
+def college_masters_ds_handler(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
-    data = query.data
+    # data = query.data
     chat_id = query.message.chat_id
     message_id = query.message.message_id
     buttons = [
@@ -529,9 +523,9 @@ def college_masters_ds_handler(update: Update, context: CallbackContext) -> None
     return SECOND
 
 
-def college_masters_algorithm_handler(update: Update, context: CallbackContext) -> None:
+def college_masters_algorithm_handler(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
-    data = query.data
+    # data = query.data
     chat_id = query.message.chat_id
     message_id = query.message.message_id
     buttons = [
@@ -545,9 +539,9 @@ def college_masters_algorithm_handler(update: Update, context: CallbackContext) 
     return SECOND
 
 
-def college_masters_ap_handler(update: Update, context: CallbackContext) -> None:
+def college_masters_ap_handler(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
-    data = query.data
+    # data = query.data
     chat_id = query.message.chat_id
     message_id = query.message.message_id
     buttons = [
@@ -562,9 +556,9 @@ def college_masters_ap_handler(update: Update, context: CallbackContext) -> None
     return SECOND
 
 
-def college_masters_discrete_handler(update: Update, context: CallbackContext) -> None:
+def college_masters_discrete_handler(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
-    data = query.data
+    # data = query.data
     chat_id = query.message.chat_id
     message_id = query.message.message_id
     buttons = [
@@ -581,9 +575,9 @@ def college_masters_discrete_handler(update: Update, context: CallbackContext) -
     return SECOND
 
 
-def college_masters_logic_handler(update: Update, context: CallbackContext) -> None:
+def college_masters_logic_handler(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
-    data = query.data
+    # data = query.data
     chat_id = query.message.chat_id
     message_id = query.message.message_id
     buttons = [
@@ -600,9 +594,9 @@ def college_masters_logic_handler(update: Update, context: CallbackContext) -> N
     return SECOND
 
 
-def college_masters_fp_handler(update: Update, context: CallbackContext) -> None:
+def college_masters_fp_handler(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
-    data = query.data
+    # data = query.data
     chat_id = query.message.chat_id
     message_id = query.message.message_id
     buttons = [
@@ -619,9 +613,9 @@ def college_masters_fp_handler(update: Update, context: CallbackContext) -> None
     return SECOND
 
 
-def college_masters_advEnglish_handler(update: Update, context: CallbackContext) -> None:
+def college_masters_advEnglish_handler(update: Update, context: CallbackContext) -> int:
     query = update.callback_query
-    data = query.data
+    # data = query.data
     chat_id = query.message.chat_id
     message_id = query.message.message_id
     buttons = [
@@ -636,84 +630,71 @@ def college_masters_advEnglish_handler(update: Update, context: CallbackContext)
     return SECOND
 
 
-def end_college_masters_handle_(update: Update, context: CallbackContext) -> None:
-    first_name = update.message.chat.first_name
-    last_name = update.message.chat.last_name
+def end_college_masters_handler(update: Update, context: CallbackContext) -> None:
     query = update.callback_query
     data = query.data
     chat_id = query.message.chat_id
-    message_id = query.message.message_id
+    first_name = query.message.chat.first_name
+    last_name = query.message.chat.last_name
+    # message_id = query.message.message_id
     if data == 'abrishami':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://s-abrishami.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_abrishami'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
         # context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_abrishami'])
         # context.bot.editMessageText(text=messages['msg_masters_abrishami'], chat_id=chat_id, message_id=message_id)
     elif data == 'noriBaigi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://nouribaygi.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_noriBaigi'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'paydar':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://s-paydar.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_paydar'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'fazlErsi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://fazlersi.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_fazlErsi'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'sedaghat':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://y_sedaghat.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_sedaghat'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'ershadi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_ershadi'])
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'bafghi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://ghaemib.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_bafghi'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'ghiasi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://profsite.um.ac.ir/~k.ghiasi/')]]
         query.message.reply_text(text=messages['msg_masters_ghiasi'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'harati':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://a.harati.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_harati'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'tosi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://amintoosi.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_tosi'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'arban':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://araban.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_arban'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'zomorodi':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://m_zomorodi.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_zomorodi'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'vahedian':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         button = [[InlineKeyboardButton('صفحه شخصی', 'http://vahedian.profcms.um.ac.ir/')]]
         query.message.reply_text(text=messages['msg_masters_vahedian'], reply_markup=InlineKeyboardMarkup(button))
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     elif data == 'mirzavaziri':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_mirzavaziri'])
-        logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
-    return ConversationHandler.END
+    logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
+    # return ConversationHandler.END
 
 
 def college_contact_handler(update: Update, context: CallbackContext) -> None:
@@ -773,7 +754,7 @@ def help_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_PHOTO)
     context.bot.send_photo(chat_id, photo='AgACAgQAAxkDAAIOQ2EvyYYCKQGnSxGjakjPZiQsWZc-AAI7uTEbvnOBUb1qkbhvbws'
-                                          'BAQADAgADbQADIAQ', caption='راهنمایی')
+                                          'BAQADAgADbQADIAQ')
 
 
 def back_home_handler(update: Update, context: CallbackContext) -> None:
@@ -889,14 +870,11 @@ def src_ds_file_handler(update: Update, context: CallbackContext) -> None:
         reply_markup=InlineKeyboardMarkup(buttons)
     )
     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    try:
-        context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-        context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIOIWEvqc_csllZ8y0oKN-rIQg'
-                                                                             'LW8qhAAKZCwACvnOBUctL9li_jBvzIAQ',
-                                  filename='DS & Algorithm by Weiss',
-                                  caption='منبع درس ساختمان داده', timeout=600)
-    except error.NetworkError as e:
-        update.message.reply_text(text=messages['msg_network_error'])
+    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIOIWEvqc_csllZ8y0oKN-rIQg'
+                                                                         'LW8qhAAKZCwACvnOBUctL9li_jBvzIAQ',
+                              filename='DS & Algorithm by Weiss',
+                              caption='منبع درس ساختمان داده', timeout=11)
+
     logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     # with open('./sources/DS/The Art of Computer Programming (vol. 3_ Sorting and Searching) (2nd ed.) [Knuth '
     #           '1998-05-04].pdf') as f:
@@ -904,6 +882,24 @@ def src_ds_file_handler(update: Update, context: CallbackContext) -> None:
     #     print(context.bot.send_document(chat_id=update.effective_chat.id, document=f,
     #                                     filename='The Art of Computer Programming',
     #                                     caption='منبع در ساختمان داده', timeout=300))
+
+
+def src_ai_abrishami_handler(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
+    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAAIUSWE1woC5Hbb05QH22qiZoYz-'
+                                                                         'lN0SAAKwCQACUYl4USxYqCkiFX8gIAQ',
+                              file_name='AI(abrishami)',
+                              caption='فایل های درس هوش مصنوعی استاد ابریشمی بهار 1400')
+
+
+def src_os_allah_handler(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
+    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAAMNYTUlPxO9KFaay6vLcNKSEU-xmUwAA'
+                                                                         'qYJAAJRiXhR3fEWYGFDKTYgBA',
+                              file_name='OS(allah bakhsh)',
+                              caption='فایل های درس سیستم عامل الله بخش بهار 1400')
 
 
 # Start exam file handlers
@@ -934,7 +930,6 @@ def exam_discrete_bafghi_file_handler(update: Update, context: CallbackContext) 
 def exam_discrete_structure_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_sending_time'])
     try:
         context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT, timeout=300)
         context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIOF2Evp3rOZ4ILOBWni6xh3Y97y'
@@ -955,9 +950,10 @@ def exam_fp_file_handler(update: Update, context: CallbackContext) -> None:
 def exam_ds_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text='این بخش در حال بروزرسانی است، به زودی فایل های'
-                                                                    ' مربوطه قرار خواهند گرفت')
-
+    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAAIUVWE1xLqU2lUhw1O_toh68mkaFXe'
+                                                                         '2AAKRCwAC5miwUTynOJTv3cEYIAQ',
+                              filename='DS Ghiasi',
+                              caption='فایل درس ساختمان داده غیاثی 99', timeout=60)
 
 # TODO InlineQueryResultGif
 
@@ -1004,6 +1000,19 @@ def inlinequery(update: Update, context: CallbackContext) -> None:
     update.inline_query.answer(results)
 
 
+def send_document_handler(update: Update, context: CallbackContext):
+    chat_id = update.message.chat_id
+    first_name = update.message.chat.first_name
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    context.bot.send_message(chat_id, text=messages['msg_send_document'].format(first_name))
+
+
+def docmsg(update: Update, context: CallbackContext):
+    context.bot.send_document(chat_id=131605711, document=update.message.document.file_id)
+    context.bot.send_message(chat_id=131605711, text=str(update.message.document))
+    context.bot.send_message(chat_id=update.message.chat_id, text=messages['msg_send_document2'])
+
+
 def main() -> None:
     """Run the Bot."""
     # Create the Updater and pass it your bot's token.
@@ -1028,9 +1037,12 @@ def main() -> None:
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_exe_fundamental_programming']),
                                           exam_fp_file_handler))
 
+    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_send_document']), send_document_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_sources']), src_subject_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_src_data_structure']), src_ds_file_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_src_discrete']), src_discrete_file_handler))
+    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_src_ai_abrishami']), src_ai_abrishami_handler))
+    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_src_os_allahbakhsh']), src_os_allah_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_src_advance_programming']), src_ap_file_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_src_fundamental_programming']),
                                           src_fp_file_handler))
@@ -1048,7 +1060,6 @@ def main() -> None:
                                           college_books_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_contact']), college_contact_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_about']), college_about_handler))
-    dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler))
     masters_conversation = ConversationHandler(
         entry_points=[MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler)],
         states={
@@ -1062,25 +1073,24 @@ def main() -> None:
                 CallbackQueryHandler(college_masters_algorithm_handler, pattern="^algorithm$")
             ],
             SECOND: [
-                CallbackQueryHandler(end_college_masters_handle_)
+                CallbackQueryHandler(end_college_masters_handler)
             ]
         },
         fallbacks=[MessageHandler(Filters.regex(messages['btn_college_masters']), college_masters_handler)],
         allow_reentry=True,
-        per_chat=True,
-        per_user=True,
-        per_message=True,
+        # per_chat=True,
+        # per_user=True,
+        per_message=False,
     )
-    updater.dispatcher.add_handler(masters_conversation)
-    updater.dispatcher.add_handler(CallbackQueryHandler(end_college_masters_handle_))
+    dispatcher.add_handler(masters_conversation)
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_college_teach']), college_teach_handler))
-    # dispatcher.add_handler(CallbackQueryHandler(college_masters_keyboard))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_back_college']), back_college_handler))
 
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_back_home']), back_home_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_contact']), contact_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_help']), help_handler))
 
+    dispatcher.add_handler(MessageHandler(Filters.document, docmsg))
     dispatcher.add_handler(InlineQueryHandler(inlinequery))
     # dispatcher.add_handler(MessageHandler(Filters.text & (~Filters.command), echo))
     # Start hte Bot

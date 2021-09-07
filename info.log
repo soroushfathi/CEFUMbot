@@ -6,13 +6,8 @@
 -src_ds_file_handler
 2021-08-28 14:55:26,790-bot.py-Alireza Mohammadi(492270575): {'message': {'entities': [], 'new_chat_members': [], 'message_id': 1356, 'date': 1630146325, 'chat': {'type': 'private', 'last_name': 'Mohammadi', 'first_name': 'Alireza', 'username': 'the6fallenangel', 'id': 492270575}, 'caption_entities': [], 'supergroup_chat_created': False, 'photo': [], 'group_chat_created': False, 'text': '\U0001f4de���� �� ��\U0001f468\U0001f3fb\u200d\U0001f4bb', 'channel_chat_created': False, 'new_chat_photo': [], 'delete_chat_photo': False, 'from': {'username': 'the6fallenangel', 'first_name': 'Alireza', 'id': 492270575, 'language_code': 'en', 'is_bot': False, 'last_name': 'Mohammadi'}}, 'update_id': 906986163}
 -contact_handler
-2021-08-28 23:02:59,442-base.py-Scheduler started-start
 2021-08-28 23:03:02,633-bot.py-Sahar Mohammadi(604920777): {'message': {'entities': [{'type': 'bot_command', 'length': 6, 'offset': 0}], 'supergroup_chat_created': False, 'channel_chat_created': False, 'group_chat_created': False, 'delete_chat_photo': False, 'date': 1630175575, 'photo': [], 'chat': {'type': 'private', 'last_name': 'Mohammadi', 'first_name': 'Sahar', 'username': 'shr_mhmdi', 'id': 604920777}, 'caption_entities': [], 'new_chat_photo': [], 'text': '/start', 'new_chat_members': [], 'message_id': 1358, 'from': {'language_code': 'fa', 'last_name': 'Mohammadi', 'first_name': 'Sahar', 'username': 'shr_mhmdi', 'is_bot': False, 'id': 604920777}}, 'update_id': 906986165}
 -start
-2021-08-28 23:25:14,741-bot.py-<Soroush> </Fathi>(131605711): {'message': {'entities': [], 'supergroup_chat_created': False, 'channel_chat_created': False, 'group_chat_created': False, 'delete_chat_photo': False, 'date': 1630176902, 'photo': [], 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711}, 'caption_entities': [], 'new_chat_photo': [], 'text': '������� ����', 'new_chat_members': [], 'message_id': 1391, 'from': {'language_code': 'en', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'is_bot': False, 'id': 131605711}}, 'update_id': 906986182}
--src_ds_file_handler
-2021-08-28 23:38:51,670-bot.py-Vania Fathi(1658989773): {'message': {'entities': [], 'supergroup_chat_created': False, 'channel_chat_created': False, 'group_chat_created': False, 'delete_chat_photo': False, 'date': 1630177731, 'photo': [], 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 1658989773}, 'caption_entities': [], 'new_chat_photo': [], 'text': '\U0001f4de���� �� ��\U0001f468\U0001f3fb\u200d\U0001f4bb', 'new_chat_members': [], 'message_id': 1423, 'from': {'language_code': 'en', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'is_bot': False, 'id': 1658989773}}, 'update_id': 906986196}
--contact_handler
 2021-08-28 23:44:00,381-base.py-Scheduler started-start
 2021-08-28 23:52:38,167-bot.py-Tahoora None(1312958959): {'message': {'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'channel_chat_created': False, 'supergroup_chat_created': False, 'photo': [], 'chat': {'username': 'ltahooral', 'first_name': 'Tahoora', 'type': 'private', 'id': 1312958959}, 'date': 1630178557, 'caption_entities': [], 'text': '/start', 'message_id': 1442, 'delete_chat_photo': False, 'group_chat_created': False, 'new_chat_photo': [], 'new_chat_members': [], 'from': {'language_code': 'en', 'username': 'ltahooral', 'first_name': 'Tahoora', 'id': 1312958959, 'is_bot': False}}, 'update_id': 906986204}
 -start
@@ -174,16 +169,6 @@
 -start
 2021-08-29 12:31:19,080-bot.py-Eren None(569391393): {'update_id': 906986605, 'message': {'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'delete_chat_photo': False, 'text': '/start', 'photo': [], 'channel_chat_created': False, 'group_chat_created': False, 'caption_entities': [], 'date': 1630224078, 'message_id': 2300, 'new_chat_members': [], 'supergroup_chat_created': False, 'new_chat_photo': [], 'chat': {'first_name': 'Eren', 'id': 569391393, 'username': 'eren20002', 'type': 'private'}, 'from': {'username': 'eren20002', 'language_code': 'en', 'is_bot': False, 'first_name': 'Eren', 'id': 569391393}}}
 -start
-2021-08-29 12:40:56,600-bot.py-Vania Fathi(1658989773): {'update_id': 906986629, 'message': {'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'delete_chat_photo': False, 'text': '/start', 'photo': [], 'channel_chat_created': False, 'group_chat_created': False, 'caption_entities': [], 'date': 1630224655, 'message_id': 2325, 'new_chat_members': [], 'supergroup_chat_created': False, 'new_chat_photo': [], 'chat': {'last_name': 'Fathi', 'first_name': 'Vania', 'id': 1658989773, 'username': 'Vania_Fathi_84', 'type': 'private'}, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
--start
-2021-08-29 12:41:08,896-bot.py-Vania Fathi(1658989773): {'update_id': 906986630, 'message': {'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'delete_chat_photo': False, 'text': '/start', 'photo': [], 'channel_chat_created': False, 'group_chat_created': False, 'caption_entities': [], 'date': 1630224668, 'message_id': 2330, 'new_chat_members': [], 'supergroup_chat_created': False, 'new_chat_photo': [], 'chat': {'last_name': 'Fathi', 'first_name': 'Vania', 'id': 1658989773, 'username': 'Vania_Fathi_84', 'type': 'private'}, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
--start
-2021-08-29 12:41:21,608-bot.py-Vania Fathi(1658989773): {'update_id': 906986631, 'message': {'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'delete_chat_photo': False, 'text': '/start', 'photo': [], 'channel_chat_created': False, 'group_chat_created': False, 'caption_entities': [], 'date': 1630224680, 'message_id': 2336, 'new_chat_members': [], 'supergroup_chat_created': False, 'new_chat_photo': [], 'chat': {'last_name': 'Fathi', 'first_name': 'Vania', 'id': 1658989773, 'username': 'Vania_Fathi_84', 'type': 'private'}, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
--start
-2021-08-29 12:41:34,408-bot.py-Vania Fathi(1658989773): {'update_id': 906986633, 'message': {'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'delete_chat_photo': False, 'text': '/start', 'photo': [], 'channel_chat_created': False, 'group_chat_created': False, 'caption_entities': [], 'date': 1630224693, 'message_id': 2347, 'new_chat_members': [], 'supergroup_chat_created': False, 'new_chat_photo': [], 'chat': {'last_name': 'Fathi', 'first_name': 'Vania', 'id': 1658989773, 'username': 'Vania_Fathi_84', 'type': 'private'}, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
--start
-2021-08-29 12:41:50,557-bot.py-Vania Fathi(1658989773): {'update_id': 906986635, 'message': {'entities': [], 'delete_chat_photo': False, 'text': '\U0001f4de���� �� ��\U0001f468\U0001f3fb\u200d\U0001f4bb', 'photo': [], 'channel_chat_created': False, 'group_chat_created': False, 'caption_entities': [], 'date': 1630224709, 'message_id': 2352, 'new_chat_members': [], 'supergroup_chat_created': False, 'new_chat_photo': [], 'chat': {'last_name': 'Fathi', 'first_name': 'Vania', 'id': 1658989773, 'username': 'Vania_Fathi_84', 'type': 'private'}, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
--contact_handler
 2021-08-29 12:42:14,335-bot.py-nashenas None(1497105174): {'update_id': 906986639, 'message': {'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'delete_chat_photo': False, 'text': '/start', 'photo': [], 'channel_chat_created': False, 'group_chat_created': False, 'caption_entities': [], 'date': 1630224733, 'message_id': 2355, 'new_chat_members': [], 'supergroup_chat_created': False, 'new_chat_photo': [], 'chat': {'first_name': 'nashenas', 'id': 1497105174, 'username': 'TestTest10100', 'type': 'private'}, 'from': {'username': 'TestTest10100', 'language_code': 'en', 'is_bot': False, 'first_name': 'nashenas', 'id': 1497105174}}}
 -start
 2021-08-29 12:42:38,351-bot.py-Vania Fathi(1658989773): {'update_id': 906986645, 'message': {'entities': [], 'delete_chat_photo': False, 'text': '������� ����', 'photo': [], 'channel_chat_created': False, 'group_chat_created': False, 'caption_entities': [], 'date': 1630224747, 'message_id': 2366, 'new_chat_members': [], 'supergroup_chat_created': False, 'new_chat_photo': [], 'chat': {'last_name': 'Fathi', 'first_name': 'Vania', 'id': 1658989773, 'username': 'Vania_Fathi_84', 'type': 'private'}, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
@@ -329,8 +314,6 @@
 -src_ds_file_handler
 2021-08-30 11:39:29,359-bot.py-SARA None(570184893): {'update_id': 906987042, 'message': {'photo': [], 'chat': {'username': 'AsadieSabzi', 'id': 570184893, 'type': 'private', 'first_name': 'SARA'}, 'caption_entities': [], 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'new_chat_photo': [], 'group_chat_created': False, 'date': 1630307365, 'text': '/start', 'new_chat_members': [], 'supergroup_chat_created': False, 'channel_chat_created': False, 'delete_chat_photo': False, 'message_id': 3191, 'from': {'first_name': 'SARA', 'username': 'AsadieSabzi', 'language_code': 'en', 'is_bot': False, 'id': 570184893}}}
 -start
-2021-08-30 18:08:20,779-bot.py-<Soroush> </Fathi>(131605711): {'message': {'date': 1630330697, 'message_id': 3228, 'supergroup_chat_created': False, 'new_chat_members': [], 'delete_chat_photo': False, 'group_chat_created': False, 'text': '/start', 'new_chat_photo': [], 'chat': {'type': 'private', 'first_name': '<Soroush>', 'id': 131605711, 'last_name': '</Fathi>', 'username': 'soroush_fathi'}, 'caption_entities': [], 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'channel_chat_created': False, 'photo': [], 'from': {'first_name': '<Soroush>', 'id': 131605711, 'last_name': '</Fathi>', 'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False}}, 'update_id': 906987063}
--start
 2021-08-30 18:09:16,730-bot.py-None None(-573597806): {'message': {'date': 1630330755, 'message_id': 3232, 'supergroup_chat_created': False, 'new_chat_members': [], 'delete_chat_photo': False, 'group_chat_created': False, 'text': '/start', 'new_chat_photo': [], 'chat': {'type': 'group', 'id': -573597806, 'all_members_are_administrators': True, 'title': 'SV'}, 'caption_entities': [], 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'channel_chat_created': False, 'photo': [], 'from': {'first_name': '<Soroush>', 'id': 131605711, 'last_name': '</Fathi>', 'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False}}, 'update_id': 906987066}
 -start
 2021-08-30 18:11:44,524-bot.py-None None(-573597806): {'message': {'date': 1630330902, 'message_id': 3239, 'supergroup_chat_created': False, 'new_chat_members': [], 'delete_chat_photo': False, 'group_chat_created': False, 'text': '/start', 'new_chat_photo': [], 'chat': {'type': 'group', 'id': -573597806, 'all_members_are_administrators': True, 'title': 'SV'}, 'caption_entities': [], 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'channel_chat_created': False, 'photo': [], 'from': {'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi', 'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False}}, 'update_id': 906987069}
@@ -341,117 +324,800 @@
 -start
 2021-08-30 19:54:45,731-bot.py-........ None(655254274): {'update_id': 906987087, 'message': {'channel_chat_created': False, 'entities': [], 'message_id': 3277, 'new_chat_members': [], 'caption_entities': [], 'text': '������� ����', 'delete_chat_photo': False, 'photo': [], 'date': 1630337070, 'chat': {'type': 'private', 'id': 655254274, 'first_name': '........'}, 'group_chat_created': False, 'new_chat_photo': [], 'supergroup_chat_created': False, 'from': {'first_name': '........', 'is_bot': False, 'id': 655254274, 'language_code': 'en'}}}
 -src_ds_file_handler
-2021-09-01 07:02:02,907-bot.py-<Soroush> </Fathi>(131605711): {'update_id': 906987191, 'message': {'new_chat_photo': [], 'channel_chat_created': False, 'caption_entities': [], 'photo': [], 'supergroup_chat_created': False, 'delete_chat_photo': False, 'text': '/start', 'group_chat_created': False, 'message_id': 3446, 'date': 1630463521, 'chat': {'id': 131605711, 'username': 'soroush_fathi', 'first_name': '<Soroush>', 'type': 'private', 'last_name': '</Fathi>'}, 'new_chat_members': [], 'entities': [{'length': 6, 'offset': 0, 'type': 'bot_command'}], 'from': {'id': 131605711, 'username': 'soroush_fathi', 'language_code': 'en', 'first_name': '<Soroush>', 'is_bot': False, 'last_name': '</Fathi>'}}}
--start
 2021-09-01 17:34:09,567-bot.py-Mahdi Habibi(791927771): {'update_id': 906987226, 'message': {'group_chat_created': False, 'new_chat_members': [], 'message_id': 3503, 'entities': [{'offset': 0, 'type': 'bot_command', 'length': 6}], 'delete_chat_photo': False, 'photo': [], 'caption_entities': [], 'channel_chat_created': False, 'new_chat_photo': [], 'date': 1630500604, 'text': '/start', 'supergroup_chat_created': False, 'chat': {'id': 791927771, 'type': 'private', 'last_name': 'Habibi', 'username': 'HabibiDev', 'first_name': 'Mahdi'}, 'from': {'language_code': 'en', 'id': 791927771, 'last_name': 'Habibi', 'username': 'HabibiDev', 'is_bot': False, 'first_name': 'Mahdi'}}}
 -start
-2021-09-01 22:23:59,867-updater.py-Received signal 2 (SIGINT), stopping...-_signal_handler
-2021-09-01 22:23:59,992-base.py-Scheduler has been shut down-shutdown
-2021-09-01 22:24:00,132-updater.py-Received signal 2 (SIGINT), stopping...-_signal_handler
-2021-09-01 22:24:16,475-base.py-Scheduler started-start
-2021-09-01 22:39:02,965-updater.py-Received signal 2 (SIGINT), stopping...-_signal_handler
-2021-09-01 22:39:02,965-base.py-Scheduler has been shut down-shutdown
-2021-09-01 22:39:11,656-updater.py-Exiting immediately!-_signal_handler
-2021-09-01 22:54:20,155-base.py-Scheduler started-start
-2021-09-01 22:54:27,499-dispatcher.py-No error handlers are registered, logging exception.-dispatch_error
-Traceback (most recent call last):
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
-    handler.handle_update(update, self, check, context)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
-    return self.callback(update, context)
-  File "F:\Programming\Python\projects\CEFUMbot\bot.py", line 776, in help_handler
-    print(context.bot.send_photo(chat_id, photo=f, caption='������\u06cc\u06cc'))
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\bot.py", line 130, in decorator
-    result = func(*args, **kwargs)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\bot.py", line 699, in send_photo
-    return self._message(  # type: ignore[return-value]
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\ext\extbot.py", line 199, in _message
-    result = super()._message(
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\bot.py", line 332, in _message
-    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\bot.py", line 295, in _post
-    return self.request.post(
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\utils\request.py", line 354, in post
-    result = self._request_wrapper('POST', url, fields=data, **urlopen_kwargs)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\utils\request.py", line 279, in _request_wrapper
-    raise BadRequest(message)
-telegram.error.BadRequest: Image_process_failed
-2021-09-01 22:55:45,382-updater.py-Received signal 2 (SIGINT), stopping...-_signal_handler
-2021-09-01 22:55:45,382-base.py-Scheduler has been shut down-shutdown
-2021-09-01 22:55:46,043-updater.py-Exiting immediately!-_signal_handler
-2021-09-01 22:55:49,904-base.py-Scheduler started-start
-2021-09-01 22:56:12,414-dispatcher.py-No error handlers are registered, logging exception.-dispatch_error
-Traceback (most recent call last):
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 402, in _make_request
-    six.raise_from(e, None)
-  File "<string>", line 2, in raise_from
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 398, in _make_request
-    httplib_response = conn.getresponse()
-  File "c:\users\sorosuh\appdata\local\programs\python\python39\lib\http\client.py", line 1349, in getresponse
-    response.begin()
-  File "c:\users\sorosuh\appdata\local\programs\python\python39\lib\http\client.py", line 316, in begin
-    version, status, reason = self._read_status()
-  File "c:\users\sorosuh\appdata\local\programs\python\python39\lib\http\client.py", line 277, in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-  File "c:\users\sorosuh\appdata\local\programs\python\python39\lib\socket.py", line 704, in readinto
-    return self._sock.recv_into(b)
-  File "c:\users\sorosuh\appdata\local\programs\python\python39\lib\ssl.py", line 1241, in recv_into
-    return self.read(nbytes, buffer)
-  File "c:\users\sorosuh\appdata\local\programs\python\python39\lib\ssl.py", line 1099, in read
-    return self._sslobj.read(len, buffer)
-socket.timeout: The read operation timed out
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\utils\request.py", line 259, in _request_wrapper
-    resp = self._con_pool.request(*args, **kwargs)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 68, in request
-    return self.request_encode_body(method, url, fields=fields,
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\request.py", line 148, in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\poolmanager.py", line 244, in urlopen
-    response = conn.urlopen(method, u.request_uri, **kw)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 665, in urlopen
-    retries = retries.increment(method, url, error=e, _pool=self,
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\util\retry.py", line 347, in increment
-    raise six.reraise(type(error), error, _stacktrace)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\packages\six.py", line 686, in reraise
-    raise value
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 614, in urlopen
-    httplib_response = self._make_request(conn, method, url,
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 404, in _make_request
-    self._raise_timeout(err=e, url=url, timeout_value=read_timeout,
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\vendor\ptb_urllib3\urllib3\connectionpool.py", line 321, in _raise_timeout
-    raise exc_cls(*args)
-telegram.vendor.ptb_urllib3.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=5.0)
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\ext\dispatcher.py", line 555, in process_update
-    handler.handle_update(update, self, check, context)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\ext\handler.py", line 198, in handle_update
-    return self.callback(update, context)
-  File "F:\Programming\Python\projects\CEFUMbot\bot.py", line 775, in help_handler
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_PHOTO)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\bot.py", line 130, in decorator
-    result = func(*args, **kwargs)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\bot.py", line 2023, in send_chat_action
-    result = self._post('sendChatAction', data, timeout=timeout, api_kwargs=api_kwargs)
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\bot.py", line 295, in _post
-    return self.request.post(
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\utils\request.py", line 356, in post
-    result = self._request_wrapper(
-  File "F:\Programming\Python\projects\CEFUMbot\venv\lib\site-packages\telegram\utils\request.py", line 261, in _request_wrapper
-    raise TimedOut() from error
-telegram.error.TimedOut: Timed out
-2021-09-01 23:06:15,195-updater.py-Received signal 2 (SIGINT), stopping...-_signal_handler
-2021-09-01 23:06:15,195-base.py-Scheduler has been shut down-shutdown
-2021-09-01 23:06:15,348-updater.py-Exiting immediately!-_signal_handler
-2021-09-01 23:06:21,875-base.py-Scheduler started-start
-2021-09-01 23:08:11,179-bot.py-<Soroush> </Fathi>(131605711): {'update_id': 906987301, 'message': {'entities': [], 'new_chat_photo': [], 'chat': {'username': 'soroush_fathi', 'type': 'private', 'first_name': '<Soroush>', 'last_name': '</Fathi>', 'id': 131605711}, 'photo': [], 'delete_chat_photo': False, 'new_chat_members': [], 'group_chat_created': False, 'date': 1630521490, 'message_id': 3646, 'text': '\U0001f4de���� �� ��\U0001f468\U0001f3fb\u200d\U0001f4bb', 'channel_chat_created': False, 'caption_entities': [], 'supergroup_chat_created': False, 'from': {'first_name': '<Soroush>', 'id': 131605711, 'username': 'soroush_fathi', 'is_bot': False, 'last_name': '</Fathi>', 'language_code': 'en'}}}
+2021-09-02 06:46:51,197-bot.py-Vania Fathi(1658989773): {'update_id': 906987625, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+ 'bot_command', 'length': 6}], 'message_id': 3982, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 16
+58989773}, 'date': 1630565211, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 165898977
+3, 'last_name': 'Fathi'}}}
+-start
+2021-09-02 06:47:11,853-bot.py-Vania Fathi(1658989773): {'update_id': 906987627, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '�تماس با من��\u200d�', 'group_chat_created': False, 'entities': [],
+'message_id': 3987, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 1658989773}, 'date': 1630565231,
+'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
 -contact_handler
-2021-09-01 23:11:04,105-updater.py-Received signal 2 (SIGINT), stopping...-_signal_handler
-2021-09-01 23:11:04,106-base.py-Scheduler has been shut down-shutdown
-2021-09-01 23:11:11,284-updater.py-Exiting immediately!-_signal_handler
+2021-09-02 06:47:20,142-bot.py-Vania Fathi(1658989773): {'update_id': 906987629, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'ساختمان داده', 'group_chat_created': False, 'entities': [], 'message_id'
+: 3991, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 1658989773}, 'date': 1630565239, 'delete_chat
+_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
+-src_ds_file_handler
+2021-09-02 06:47:29,513-bot.py-Vania Fathi(1658989773): {'update_id': 906987632, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'ساختمان داده', 'group_chat_created': False, 'entities': [], 'message_id'
+: 4000, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 1658989773}, 'date': 1630565249, 'delete_chat
+_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
+-src_ds_file_handler
+2021-09-02 06:47:53,416-bot.py-Vania Fathi(1658989773): {'update_id': 906987637, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'ساختمان داده', 'group_chat_created': False, 'entities': [], 'message_id'
+: 4013, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 1658989773}, 'date': 1630565273, 'delete_chat
+_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
+-src_ds_file_handler
+2021-09-02 06:48:02,309-bot.py-Vania Fathi(1658989773): {'update_id': 906987641, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'اخبار�', 'group_chat_created': False, 'entities': [], 'message_id': 402
+3, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 1658989773}, 'date': 1630565280, 'delete_chat_phot
+o': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
+-college_news_handler
+2021-09-02 06:48:18,434-bot.py-Vania Fathi(1658989773): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4028, 'new_chat_members': [], 'su
+pergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 1658989773}, 'date': 1630565293, 'delete_chat_photo': False, 'photo': [], 'chann
+el_chat_created': False, 'edit_date': 1630565296, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ghiasi', 'id': '7125306819617060810', 'chat_instance': '797051557
+0051627227', 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}, 'update_id': 906987645}
+-end_college_masters_handler
+2021-09-02 06:48:27,906-bot.py-Vania Fathi(1658989773): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4028, 'new_chat_members': [], 'su
+pergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 1658989773}, 'date': 1630565293, 'delete_chat_photo': False, 'photo': [], 'chann
+el_chat_created': False, 'edit_date': 1630565296, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'tosi', 'id': '7125306820532736925', 'chat_instance': '79705155700
+51627227', 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}, 'update_id': 906987646}
+-end_college_masters_handler
+2021-09-02 06:48:36,357-bot.py-Vania Fathi(1658989773): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4032, 'new_chat_members': [], 'su
+pergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 1658989773}, 'date': 1630565312, 'delete_chat_photo': False, 'photo': [], 'chann
+el_chat_created': False, 'edit_date': 1630565314, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'noriBaigi', 'id': '7125306820122777132', 'chat_instance': '797051
+5570051627227', 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}, 'update_id': 906987649}
+-end_college_masters_handler
+2021-09-02 06:49:00,232-bot.py-Vania Fathi(1658989773): {'update_id': 906987653, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '�تماس با من��\u200d�', 'group_chat_created': False, 'entities': [],
+'message_id': 4041, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Fathi', 'first_name': 'Vania', 'username': 'Vania_Fathi_84', 'id': 1658989773}, 'date': 1630565340,
+'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Vania_Fathi_84', 'language_code': 'en', 'is_bot': False, 'first_name': 'Vania', 'id': 1658989773, 'last_name': 'Fathi'}}}
+-contact_handler
+2021-09-02 07:01:03,102-bot.py-am dvi(1331894477): {'update_id': 906987656, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': 'bot
+_command', 'length': 6}], 'message_id': 4043, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'dvi', 'first_name': 'am', 'username': 'amdvi1', 'id': 1331894477}, 'date':
+ 1630566062, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'amdvi1', 'language_code': 'fa', 'is_bot': False, 'first_name': 'am', 'id': 1331894477, 'last_name': 'dvi'}}}
+-start
+2021-09-02 07:01:16,086-bot.py-Alireza Rais satari(1391394593): {'update_id': 906987659, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0,
+ 'type': 'bot_command', 'length': 6}], 'message_id': 4048, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Rais satari', 'first_name': 'Alireza', 'username': 'alireza0r
+s', 'id': 1391394593}, 'date': 1630566075, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'alireza0rs', 'language_code': 'en', 'is_bot': False, 'first_name': 'Alireza', 'id':
+ 1391394593, 'last_name': 'Rais satari'}}}
+-start
+2021-09-02 07:01:20,172-bot.py-am dvi(1331894477): {'update_id': 906987661, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '�تماس با من��\u200d�', 'group_chat_created': False, 'entities': [], 'mess
+age_id': 4053, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'dvi', 'first_name': 'am', 'username': 'amdvi1', 'id': 1331894477}, 'date': 1630566080, 'delete_chat_photo
+': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'amdvi1', 'language_code': 'fa', 'is_bot': False, 'first_name': 'am', 'id': 1331894477, 'last_name': 'dvi'}}}
+-contact_handler
+2021-09-02 07:01:24,026-bot.py-Alireza Rais satari(1391394593): {'update_id': 906987664, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '�تماس با من��\u200d�', 'group_chat_created': False, 'entitie
+s': [], 'message_id': 4057, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Rais satari', 'first_name': 'Alireza', 'username': 'alireza0rs', 'id': 1391394593}, 'date':
+1630566083, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'alireza0rs', 'language_code': 'en', 'is_bot': False, 'first_name': 'Alireza', 'id': 1391394593, 'last_name': 'Rais
+ satari'}}}
+-contact_handler
+2021-09-02 07:01:25,579-bot.py-Mobin None(397359285): {'update_id': 906987665, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': '
+bot_command', 'length': 6}], 'message_id': 4059, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Mobin', 'username': 'mobin_manteghi', 'id': 397359285}, 'date': 163056
+6085, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'mobin_manteghi', 'language_code': 'en', 'is_bot': False, 'first_name': 'Mobin', 'id': 397359285}}}
+-start
+2021-09-02 07:01:28,253-bot.py-Bahare None(147858633): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fal
+se, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zomo
+rodi'}]]}, 'message_id': 4056, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Bahare', 'username': 'bahare271', 'id': 147858633}, 'date': 1630566080, 'delete_chat_pho
+to': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630566083, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'sedaghat', 'id': '6350479939416170
+49', 'chat_instance': '-4489142971124102584', 'from': {'username': 'bahare271', 'language_code': 'en', 'is_bot': False, 'first_name': 'Bahare', 'id': 147858633}}, 'update_id': 906987666}
+-end_college_masters_handler
+2021-09-02 07:01:48,874-bot.py-Narges None(1499504199): {'update_id': 906987672, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+ 'bot_command', 'length': 6}], 'message_id': 4073, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Narges', 'username': 'nssK1881', 'id': 1499504199}, 'date': 16305661
+08, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'nssK1881', 'language_code': 'en', 'is_bot': False, 'first_name': 'Narges', 'id': 1499504199}}}
+-start
+2021-09-02 07:01:59,882-bot.py-mpch None(633964760): {'update_id': 906987678, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': 'b
+ot_command', 'length': 6}], 'message_id': 4085, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'mpch', 'username': 'mpch4444', 'id': 633964760}, 'date': 1630566119, 'd
+elete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'mpch4444', 'language_code': 'fa', 'is_bot': False, 'first_name': 'mpch', 'id': 633964760}}}
+-start
+2021-09-02 07:02:03,577-bot.py-Bahare None(147858633): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fal
+se, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید ابریشمی', 'callback_data': 'abrishami'}, {'text': ' نوری بایگی', 'callback_data': 'noriBaigi'}], [{'text': 'احسان فضل ارثی', 'callback_data': 'fazl
+Ersi'}]]}, 'message_id': 4082, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Bahare', 'username': 'bahare271', 'id': 147858633}, 'date': 1630566116, 'delete_chat_pho
+to': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630566121, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'abrishami', 'id': '635047993901418
+839', 'chat_instance': '-4489142971124102584', 'from': {'username': 'bahare271', 'language_code': 'en', 'is_bot': False, 'first_name': 'Bahare', 'id': 147858633}}, 'update_id': 906987680}
+-end_college_masters_handler
+2021-09-02 07:02:07,016-bot.py-Niloofar None(325014818): {'update_id': 906987681, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type'
+: 'bot_command', 'length': 6}], 'message_id': 4089, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Niloofar', 'username': 'niloofarzrb', 'id': 325014818}, 'date': 163
+0566126, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'niloofarzrb', 'language_code': 'en', 'is_bot': False, 'first_name': 'Niloofar', 'id': 325014818}}}
+-start
+2021-09-02 07:02:13,683-bot.py-Ali None(101079417): {'update_id': 906987684, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'ساختمان داده', 'group_chat_created': False, 'entities': [], 'message_id': 40
+96, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ali', 'username': 'Akhakh2002', 'id': 101079417}, 'date': 1630566133, 'delete_chat_photo': False, 'photo': [], 'cha
+nnel_chat_created': False, 'from': {'username': 'Akhakh2002', 'language_code': 'fa', 'is_bot': False, 'first_name': 'Ali', 'id': 101079417}}}
+-src_ds_file_handler
+2021-09-02 07:02:21,288-bot.py-Niloofar None(325014818): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': F
+alse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4100, 'new_chat_members': [], 's
+upergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Niloofar', 'username': 'niloofarzrb', 'id': 325014818}, 'date': 1630566135, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': Fals
+e, 'edit_date': 1630566139, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'paydar', 'id': '1395928015771493567', 'chat_instance': '-8424834371804874932', 'from':
+{'username': 'niloofarzrb', 'language_code': 'en', 'is_bot': False, 'first_name': 'Niloofar', 'id': 325014818}}, 'update_id': 906987690}
+-end_college_masters_handler
+2021-09-02 07:02:23,085-bot.py-mpch None(633964760): {'update_id': 906987691, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'ساختمان داده', 'group_chat_created': False, 'entities': [], 'message_id': 4
+109, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'mpch', 'username': 'mpch4444', 'id': 633964760}, 'date': 1630566142, 'delete_chat_photo': False, 'photo': [], 'cha
+nnel_chat_created': False, 'from': {'username': 'mpch4444', 'language_code': 'fa', 'is_bot': False, 'first_name': 'mpch', 'id': 633964760}}}
+-src_ds_file_handler
+2021-09-02 07:02:38,016-bot.py-Reza N(922088401): {'update_id': 906987698, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': 'bot_
+command', 'length': 6}], 'message_id': 4124, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'N', 'first_name': 'Reza', 'id': 922088401}, 'date': 1630566157, 'delete_cha
+t_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'language_code': 'fa', 'is_bot': False, 'first_name': 'Reza', 'id': 922088401, 'last_name': 'N'}}}
+-start
+2021-09-02 07:02:47,136-bot.py-mpch None(633964760): {'update_id': 906987702, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '�تماس با من��\u200d�', 'group_chat_created': False, 'entities': [], 'me
+ssage_id': 4134, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'mpch', 'username': 'mpch4444', 'id': 633964760}, 'date': 1630566166, 'delete_chat_photo': False, 'phot
+o': [], 'channel_chat_created': False, 'from': {'username': 'mpch4444', 'language_code': 'fa', 'is_bot': False, 'first_name': 'mpch', 'id': 633964760}}}
+-contact_handler
+2021-09-02 07:03:21,154-bot.py-Ali None(101079417): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+ 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4154, 'new_chat_members': [], 'supe
+rgroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ali', 'username': 'Akhakh2002', 'id': 101079417}, 'date': 1630566191, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_
+date': 1630566197, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'vahedian', 'id': '434132792876484953', 'chat_instance': '-149003664845231203', 'from': {'usernam
+e': 'Akhakh2002', 'language_code': 'fa', 'is_bot': False, 'first_name': 'Ali', 'id': 101079417}}, 'update_id': 906987713}
+-end_college_masters_handler
+2021-09-02 07:03:47,603-bot.py-Ali None(101079417): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+ 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4154, 'new_chat_members': [], 'supe
+rgroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ali', 'username': 'Akhakh2002', 'id': 101079417}, 'date': 1630566191, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_
+date': 1630566197, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'arban', 'id': '434132793529728211', 'chat_instance': '-149003664845231203', 'from': {'username':
+ 'Akhakh2002', 'language_code': 'fa', 'is_bot': False, 'first_name': 'Ali', 'id': 101079417}}, 'update_id': 906987714}
+-end_college_masters_handler
+2021-09-02 07:04:29,904-bot.py-Rozhan None(99810570): {'update_id': 906987715, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': '
+bot_command', 'length': 6}], 'message_id': 4157, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Rozhan', 'username': 'Rozhanbr', 'id': 99810570}, 'date': 1630566269,
+'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Rozhanbr', 'language_code': 'en', 'is_bot': False, 'first_name': 'Rozhan', 'id': 99810570}}}
+-start
+2021-09-02 07:04:53,169-bot.py-Rozhan None(99810570): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fals
+e, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4163, 'new_chat_members': [], 'supe
+rgroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Rozhan', 'username': 'Rozhanbr', 'id': 99810570}, 'date': 1630566282, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_
+date': 1630566289, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'tosi', 'id': '428683136581360357', 'chat_instance': '8025839752813274508', 'from': {'username':
+'Rozhanbr', 'language_code': 'en', 'is_bot': False, 'first_name': 'Rozhan', 'id': 99810570}}, 'update_id': 906987719}
+-end_college_masters_handler
+2021-09-02 07:06:28,102-bot.py-⁪⁬⁮⁮⁮⁮ ⁪⁬⁮⁮⁮Hamid Reza None(84616973): {'update_id': 906987722, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offse
+t': 0, 'type': 'bot_command', 'length': 6}], 'message_id': 4169, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': '\u206a\u206c\u206e\u206e\u206e\u206e \u206a\u206c\u206
+e\u206e\u206eHamid Reza', 'username': 'Daresofii', 'id': 84616973}, 'date': 1630566387, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Daresofii', 'language_code': 'en', 'is
+_bot': False, 'first_name': '\u206a\u206c\u206e\u206e\u206e\u206e \u206a\u206c\u206e\u206e\u206eHamid Reza', 'id': 84616973}}}
+-start
+2021-09-02 07:07:35,480-bot.py-Niloofar None(325014818): {'update_id': 906987727, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type'
+: 'bot_command', 'length': 6}], 'message_id': 4181, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Niloofar', 'username': 'niloofarzrb', 'id': 325014818}, 'date': 163
+0566455, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'niloofarzrb', 'language_code': 'en', 'is_bot': False, 'first_name': 'Niloofar', 'id': 325014818}}}
+-start
+2021-09-02 07:08:05,952-bot.py-محمد None(1389289676): {'update_id': 906987732, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': '
+bot_command', 'length': 6}], 'message_id': 4190, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'محمد', 'username': 'Mohammad_oshkooh', 'id': 1389289676}, 'date': 1630
+566485, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Mohammad_oshkooh', 'language_code': 'en', 'is_bot': False, 'first_name': 'محمد', 'id': 1389289676}}}
+-start
+2021-09-02 07:11:01,312-bot.py-QwErT None(115572111): {'update_id': 906987736, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': '
+bot_command', 'length': 6}], 'message_id': 4197, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'QwErT', 'username': 'sunknowns', 'id': 115572111}, 'date': 1630566661,
+ 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'sunknowns', 'language_code': 'en', 'is_bot': False, 'first_name': 'QwErT', 'id': 115572111}}}
+-start
+2021-09-02 07:11:05,868-bot.py-QwErT None(115572111): {'update_id': 906987737, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '�تماس با من��\u200d�', 'group_chat_created': False, 'entities': [], 'm
+essage_id': 4200, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'QwErT', 'username': 'sunknowns', 'id': 115572111}, 'date': 1630566665, 'delete_chat_photo': False, 'p
+hoto': [], 'channel_chat_created': False, 'from': {'username': 'sunknowns', 'language_code': 'en', 'is_bot': False, 'first_name': 'QwErT', 'id': 115572111}}}
+-contact_handler
+2021-09-02 07:11:36,802-bot.py-Mohammadreza None(173898679): {'update_id': 906987738, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 't
+ype': 'bot_command', 'length': 6}], 'message_id': 4202, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Mohammadreza', 'username': 'MzHz_02', 'id': 173898679}, 'date':
+ 1630566696, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'MzHz_02', 'language_code': 'en', 'is_bot': False, 'first_name': 'Mohammadreza', 'id': 173898679}}}
+-start
+2021-09-02 07:11:55,343-bot.py-Mohammadreza None(173898679): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created
+': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4208, 'new_chat_members': []
+, 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Mohammadreza', 'username': 'MzHz_02', 'id': 173898679}, 'date': 1630566707, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created':
+False, 'edit_date': 1630566712, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'paydar', 'id': '746889141900033944', 'chat_instance': '1945478048465935172', 'from'
+: {'username': 'MzHz_02', 'language_code': 'en', 'is_bot': False, 'first_name': 'Mohammadreza', 'id': 173898679}}, 'update_id': 906987742}
+-end_college_masters_handler
+2021-09-02 07:12:41,828-bot.py-Mohammadreza None(173898679): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created
+': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4208, 'new_chat_members': []
+, 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Mohammadreza', 'username': 'MzHz_02', 'id': 173898679}, 'date': 1630566707, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created':
+False, 'edit_date': 1630566712, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'noriBaigi', 'id': '746889140203587283', 'chat_instance': '1945478048465935172', 'fr
+om': {'username': 'MzHz_02', 'language_code': 'en', 'is_bot': False, 'first_name': 'Mohammadreza', 'id': 173898679}}, 'update_id': 906987743}
+-end_college_masters_handler
+2021-09-02 07:13:18,692-bot.py-SOROUSH PASANDIDEH(1333915375): {'update_id': 906987744, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0,
+'type': 'bot_command', 'length': 6}], 'message_id': 4211, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'PASANDIDEH', 'first_name': 'SOROUSH', 'username': 'PASANDIDEH8
+0', 'id': 1333915375}, 'date': 1630566798, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'PASANDIDEH80', 'language_code': 'fa', 'is_bot': False, 'first_name': 'SOROUSH', 'id
+': 1333915375, 'last_name': 'PASANDIDEH'}}}
+-start
+2021-09-02 07:42:55,770-bot.py-fateme z.bahary(412471179): {'update_id': 906987750, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'typ
+e': 'bot_command', 'length': 6}], 'message_id': 4224, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'z.bahary', 'first_name': 'fateme', 'username': 'F_galaxy', 'id': 4
+12471179}, 'date': 1630568575, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'F_galaxy', 'language_code': 'en', 'is_bot': False, 'first_name': 'fateme', 'id': 412471179, 'la
+st_name': 'z.bahary'}}}
+-start
+2021-09-02 07:43:12,423-bot.py-fateme z.bahary(412471179): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created':
+ False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4230, 'new_chat_members': [],
+'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'z.bahary', 'first_name': 'fateme', 'username': 'F_galaxy', 'id': 412471179}, 'date': 1630568583, 'delete_chat_photo': False, 'photo': [], 'chann
+el_chat_created': False, 'edit_date': 1630568590, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ghiasi', 'id': '1771550226317300792', 'chat_instance': '846498020
+6720313271', 'from': {'username': 'F_galaxy', 'language_code': 'en', 'is_bot': False, 'first_name': 'fateme', 'id': 412471179, 'last_name': 'z.bahary'}}, 'update_id': 906987754}
+-end_college_masters_handler
+2021-09-02 07:51:02,468-bot.py-Amirr●_● None(344481750): {'update_id': 906987755, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type'
+: 'bot_command', 'length': 6}], 'message_id': 4232, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Amirr●_●', 'username': 'amirrsm_02', 'id': 344481750}, 'date': 1630
+569062, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'amirrsm_02', 'language_code': 'en', 'is_bot': False, 'first_name': 'Amirr●_●', 'id': 344481750}}}
+-start
+2021-09-02 07:51:12,263-bot.py-Amirr●_● None(344481750): {'update_id': 906987756, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '�تماس با من��\u200d�', 'group_chat_created': False, 'entities': [],
+ 'message_id': 4235, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Amirr●_●', 'username': 'amirrsm_02', 'id': 344481750}, 'date': 1630569072, 'delete_chat_photo': Fa
+lse, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'amirrsm_02', 'language_code': 'en', 'is_bot': False, 'first_name': 'Amirr●_●', 'id': 344481750}}}
+-contact_handler
+2021-09-02 07:51:27,864-bot.py-Amirr●_● None(344481750): {'update_id': 906987760, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'اخبار�', 'group_chat_created': False, 'entities': [], 'message_id': 42
+43, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Amirr●_●', 'username': 'amirrsm_02', 'id': 344481750}, 'date': 1630569086, 'delete_chat_photo': False, 'photo': [],
+ 'channel_chat_created': False, 'from': {'username': 'amirrsm_02', 'language_code': 'en', 'is_bot': False, 'first_name': 'Amirr●_●', 'id': 344481750}}}
+-college_news_handler
+2021-09-02 07:57:54,703-bot.py-Ali Vazirinejad None(259084223): {'update_id': 906987761, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0,
+ 'type': 'bot_command', 'length': 6}], 'message_id': 4245, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ali Vazirinejad', 'username': 'Ali_Vazirinejad', 'id': 25908
+4223}, 'date': 1630569474, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Ali_Vazirinejad', 'language_code': 'en', 'is_bot': False, 'first_name': 'Ali Vazirinejad', 'id': 25
+9084223}}}
+-start
+2021-09-02 07:58:28,918-bot.py-Ali Vazirinejad None(259084223): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_crea
+ted': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4253, 'new_chat_members
+': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ali Vazirinejad', 'username': 'Ali_Vazirinejad', 'id': 259084223}, 'date': 1630569499, 'delete_chat_photo': False, 'photo': [], 'channel
+_chat_created': False, 'edit_date': 1630569505, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'arban', 'id': '1112758266718863730', 'chat_instance': '-89052664638
+17620715', 'from': {'username': 'Ali_Vazirinejad', 'language_code': 'en', 'is_bot': False, 'first_name': 'Ali Vazirinejad', 'id': 259084223}}, 'update_id': 906987766}
+-end_college_masters_handler
+2021-09-02 08:01:09,018-bot.py-AmirAli None(113094665): {'update_id': 906987767, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+ 'bot_command', 'length': 6}], 'message_id': 4255, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'AmirAli', 'username': 'AliSSme', 'id': 113094665}, 'date': 163056966
+8, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'AliSSme', 'language_code': 'en', 'is_bot': False, 'first_name': 'AmirAli', 'id': 113094665}}}
+-start
+2021-09-02 08:33:36,691-bot.py-Ailin Hassan Pour None(69593513): {'update_id': 906987770, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0
+, 'type': 'bot_command', 'length': 6}], 'message_id': 4262, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ailin Hassan Pour', 'username': 'ailinhassanpour', 'id': 69
+593513}, 'date': 1630571616, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'ailinhassanpour', 'language_code': 'en', 'is_bot': False, 'first_name': 'Ailin Hassan Pour', 'id'
+: 69593513}}}
+-start
+2021-09-02 08:36:17,296-bot.py-Sajjad.a None(112771569): {'update_id': 906987774, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type'
+: 'bot_command', 'length': 6}], 'message_id': 4269, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Sajjad.a', 'username': 'sajjad_arg', 'id': 112771569}, 'date': 1630
+571777, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'sajjad_arg', 'language_code': 'en', 'is_bot': False, 'first_name': 'Sajjad.a', 'id': 112771569}}}
+-start
+2021-09-02 08:37:17,358-bot.py-Sajjad.a None(112771569): {'update_id': 906987785, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'اخبار�', 'group_chat_created': False, 'entities': [], 'message_id': 42
+90, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Sajjad.a', 'username': 'sajjad_arg', 'id': 112771569}, 'date': 1630571835, 'delete_chat_photo': False, 'photo': [],
+ 'channel_chat_created': False, 'from': {'username': 'sajjad_arg', 'language_code': 'en', 'is_bot': False, 'first_name': 'Sajjad.a', 'id': 112771569}}}
+-college_news_handler
+2021-09-02 09:15:56,673-bot.py-Parsa None(774570244): {'update_id': 906987791, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': '
+bot_command', 'length': 6}], 'message_id': 4300, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Parsa', 'username': 'pz81427', 'id': 774570244}, 'date': 1630574156, '
+delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'pz81427', 'language_code': 'fa', 'is_bot': False, 'first_name': 'Parsa', 'id': 774570244}}}
+-start
+2021-09-02 09:24:12,501-bot.py-MQ None(1927106297): {'update_id': 906987794, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': 'bo
+t_command', 'length': 6}], 'message_id': 4307, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'MQ', 'username': 'Babybold3', 'id': 1927106297}, 'date': 1630574652, 'de
+lete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Babybold3', 'language_code': 'en', 'is_bot': False, 'first_name': 'MQ', 'id': 1927106297}}}
+-start
+2021-09-02 09:42:23,571-bot.py-mohammad hashemy(410506123): {'update_id': 906987810, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'ty
+pe': 'bot_command', 'length': 6}], 'message_id': 4340, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'hashemy', 'first_name': 'mohammad', 'username': 'sm_hashemy', 'id
+': 410506123}, 'date': 1630575742, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'sm_hashemy', 'language_code': 'en', 'is_bot': False, 'first_name': 'mohammad', 'id': 410506
+123, 'last_name': 'hashemy'}}}
+-start
+2021-09-02 10:05:31,706-bot.py-Pedram None(1307377929): {'update_id': 906987816, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+ 'bot_command', 'length': 6}], 'message_id': 4350, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Pedram', 'username': 'ipedram_vr', 'id': 1307377929}, 'date': 163057
+7131, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'ipedram_vr', 'language_code': 'en', 'is_bot': False, 'first_name': 'Pedram', 'id': 1307377929}}}
+-start
+2021-09-02 10:05:51,939-bot.py-Pedram None(1307377929): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4356, 'new_chat_members': [], 'su
+pergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Pedram', 'username': 'ipedram_vr', 'id': 1307377929}, 'date': 1630577143, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False,
+'edit_date': 1630577148, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'paydar', 'id': '5615145452353351178', 'chat_instance': '-7535726391029985481', 'from': {'u
+sername': 'ipedram_vr', 'language_code': 'en', 'is_bot': False, 'first_name': 'Pedram', 'id': 1307377929}}, 'update_id': 906987820}
+-end_college_masters_handler
+2021-09-02 10:11:20,119-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data'
+: 'zomorodi'}]]}, 'message_id': 4359, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711
+}, 'date': 1630577467, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630577471, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'dat
+a': 'sedaghat', 'id': '565242228685824652', 'chat_instance': '-8145903418485722246', 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name':
+'</Fathi>'}}, 'update_id': 906987823}
+-end_college_masters_handler
+2021-09-02 10:12:16,049-bot.py-fateme z.bahary(412471179): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created':
+ False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4230, 'new_chat_members': [],
+'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'z.bahary', 'first_name': 'fateme', 'username': 'F_galaxy', 'id': 412471179}, 'date': 1630568583, 'delete_chat_photo': False, 'photo': [], 'chann
+el_chat_created': False, 'edit_date': 1630568590, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'tosi', 'id': '1771550228409677658', 'chat_instance': '84649802067
+20313271', 'from': {'username': 'F_galaxy', 'language_code': 'en', 'is_bot': False, 'first_name': 'fateme', 'id': 412471179, 'last_name': 'z.bahary'}}, 'update_id': 906987824}
+-end_college_masters_handler
+2021-09-02 10:14:10,283-bot.py-ℳeԋrαb� None(234494846): {'update_id': 906987825, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type'
+: 'bot_command', 'length': 6}], 'message_id': 4362, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'ℳeԋrαb�', 'username': 'mehrab_1380', 'id': 234494846}, 'date': 163
+0577650, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'mehrab_1380', 'language_code': 'en', 'is_bot': False, 'first_name': 'ℳeԋrαb�', 'id': 234494846}}}
+-start
+2021-09-02 10:29:53,746-bot.py-am dvi(1331894477): {'update_id': 906987832, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '�تماس با من��\u200d�', 'group_chat_created': False, 'entities': [], 'mess
+age_id': 4378, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'dvi', 'first_name': 'am', 'username': 'amdvi1', 'id': 1331894477}, 'date': 1630578593, 'delete_chat_photo
+': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'amdvi1', 'language_code': 'fa', 'is_bot': False, 'first_name': 'am', 'id': 1331894477, 'last_name': 'dvi'}}}
+-contact_handler
+2021-09-02 10:30:52,373-bot.py-am dvi(1331894477): {'update_id': 906987834, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'اخبار�', 'group_chat_created': False, 'entities': [], 'message_id': 4382, 'n
+ew_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'dvi', 'first_name': 'am', 'username': 'amdvi1', 'id': 1331894477}, 'date': 1630578650, 'delete_chat_photo': False, 'photo'
+: [], 'channel_chat_created': False, 'from': {'username': 'amdvi1', 'language_code': 'fa', 'is_bot': False, 'first_name': 'am', 'id': 1331894477, 'last_name': 'dvi'}}}
+-college_news_handler
+2021-09-02 10:35:30,777-bot.py-am dvi(1331894477): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4389, 'new_chat_members': [], 'supergr
+oup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'dvi', 'first_name': 'am', 'username': 'amdvi1', 'id': 1331894477}, 'date': 1630578924, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created':
+False, 'edit_date': 1630578928, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'paydar', 'id': '5720443221176921673', 'chat_instance': '-1792382322150554256', 'fro
+m': {'username': 'amdvi1', 'language_code': 'fa', 'is_bot': False, 'first_name': 'am', 'id': 1331894477, 'last_name': 'dvi'}}, 'update_id': 906987839}
+-end_college_masters_handler
+2021-09-02 10:38:37,236-bot.py-am dvi(1331894477): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4392, 'new_chat_members': [], 'super
+group_chat_created': False, 'chat': {'type': 'private', 'last_name': 'dvi', 'first_name': 'am', 'username': 'amdvi1', 'id': 1331894477}, 'date': 1630579110, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created'
+: False, 'edit_date': 1630579114, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'arban', 'id': '5720443224380317139', 'chat_instance': '-1792382322150554256', 'fr
+om': {'username': 'amdvi1', 'language_code': 'fa', 'is_bot': False, 'first_name': 'am', 'id': 1331894477, 'last_name': 'dvi'}}, 'update_id': 906987842}
+-end_college_masters_handler
+2021-09-02 10:39:04,617-bot.py-am dvi(1331894477): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4395, 'new_chat_members': [], 'super
+group_chat_created': False, 'chat': {'type': 'private', 'last_name': 'dvi', 'first_name': 'am', 'username': 'amdvi1', 'id': 1331894477}, 'date': 1630579141, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created'
+: False, 'edit_date': 1630579143, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'vahedian', 'id': '5720443221314921189', 'chat_instance': '-1792382322150554256',
+'from': {'username': 'amdvi1', 'language_code': 'fa', 'is_bot': False, 'first_name': 'am', 'id': 1331894477, 'last_name': 'dvi'}}, 'update_id': 906987845}
+-end_college_masters_handler
+2021-09-02 10:40:23,873-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data'
+: 'zomorodi'}]]}, 'message_id': 4359, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711
+}, 'date': 1630577467, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630577471, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'dat
+a': 'ershadi', 'id': '565242227017050866', 'chat_instance': '-8145903418485722246', 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name': '
+</Fathi>'}}, 'update_id': 906987846}
+-end_college_masters_handler
+2021-09-02 10:42:33,420-bot.py-Elham None(373715713): {'update_id': 906987848, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': '
+bot_command', 'length': 6}], 'message_id': 4398, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Elham', 'id': 373715713}, 'date': 1630579353, 'delete_chat_photo': Fal
+se, 'photo': [], 'channel_chat_created': False, 'from': {'language_code': 'en', 'is_bot': False, 'first_name': 'Elham', 'id': 373715713}}}
+-start
+2021-09-02 10:47:35,502-bot.py-Negin None(85444746): {'update_id': 906987855, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': 'b
+ot_command', 'length': 6}], 'message_id': 4414, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Negin', 'username': 'mrdnegin', 'id': 85444746}, 'date': 1630579655, 'd
+elete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'mrdnegin', 'language_code': 'en', 'is_bot': False, 'first_name': 'Negin', 'id': 85444746}}}
+-start
+2021-09-02 10:48:26,683-bot.py-Negin None(85444746): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False
+, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر بافقی', 'callback_data': 'bafghi'}, {'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}], [{'text': 'مجید میرزاوزیری', 'callback_data': 'mirzava
+ziri'}]]}, 'message_id': 4432, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Negin', 'username': 'mrdnegin', 'id': 85444746}, 'date': 1630579699, 'delete_chat_photo'
+: False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630579704, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'bafghi', 'id': '366982393062987501',
+'chat_instance': '448125620760665437', 'from': {'username': 'mrdnegin', 'language_code': 'en', 'is_bot': False, 'first_name': 'Negin', 'id': 85444746}}, 'update_id': 906987865}
+-end_college_masters_handler
+2021-09-02 11:24:37,513-bot.py-MOHAMMADREZA None(665985244): {'update_id': 906987871, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 't
+ype': 'bot_command', 'length': 6}], 'message_id': 4441, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'MOHAMMADREZA', 'username': 'Mohammadreza1899', 'id': 665985244}
+, 'date': 1630581877, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Mohammadreza1899', 'language_code': 'fa', 'is_bot': False, 'first_name': 'MOHAMMADREZA', 'id': 665985244
+}}}
+-start
+2021-09-02 12:01:40,890-bot.py-⁪⁬⁮⁮⁮⁮ ⁪⁬⁮⁮⁮Hamid Reza None(84616973): {'update_id': 906987875, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'ساختمان داده', 'group_chat_created': False, 'entities': []
+, 'message_id': 4450, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': '\u206a\u206c\u206e\u206e\u206e\u206e \u206a\u206c\u206e\u206e\u206eHamid Reza', 'username': 'Dare
+sofii', 'id': 84616973}, 'date': 1630584100, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Daresofii', 'language_code': 'en', 'is_bot': False, 'first_name': '\u206a\u206c\u
+206e\u206e\u206e\u206e \u206a\u206c\u206e\u206e\u206eHamid Reza', 'id': 84616973}}}
+-src_ds_file_handler
+2021-09-02 12:35:31,126-bot.py-RezA None(540630793): {'update_id': 906987877, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': 'b
+ot_command', 'length': 6}], 'message_id': 4456, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'RezA', 'username': 'rnavaei', 'id': 540630793}, 'date': 1630586130, 'de
+lete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'rnavaei', 'language_code': 'en', 'is_bot': False, 'first_name': 'RezA', 'id': 540630793}}}
+-start
+2021-09-02 12:36:01,076-bot.py-RezA None(540630793): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False
+, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zomoro
+di'}]]}, 'message_id': 4462, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'RezA', 'username': 'rnavaei', 'id': 540630793}, 'date': 1630586147, 'delete_chat_photo': F
+alse, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630586154, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'sedaghat', 'id': '2321991578498339585',
+'chat_instance': '2240250582312685084', 'from': {'username': 'rnavaei', 'language_code': 'en', 'is_bot': False, 'first_name': 'RezA', 'id': 540630793}}, 'update_id': 906987881}
+-end_college_masters_handler
+2021-09-02 12:36:03,862-bot.py-RezA None(540630793): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False
+, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zomoro
+di'}]]}, 'message_id': 4462, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'RezA', 'username': 'rnavaei', 'id': 540630793}, 'date': 1630586147, 'delete_chat_photo': F
+alse, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630586154, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ershadi', 'id': '2321991577757144609', '
+chat_instance': '2240250582312685084', 'from': {'username': 'rnavaei', 'language_code': 'en', 'is_bot': False, 'first_name': 'RezA', 'id': 540630793}}, 'update_id': 906987882}
+-end_college_masters_handler
+2021-09-02 12:37:41,708-bot.py-RezA None(540630793): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False
+, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4466, 'new_chat_members': [], 'super
+group_chat_created': False, 'chat': {'type': 'private', 'first_name': 'RezA', 'username': 'rnavaei', 'id': 540630793}, 'date': 1630586256, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_dat
+e': 1630586259, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'tosi', 'id': '2321991575628737019', 'chat_instance': '2240250582312685084', 'from': {'username': 'r
+navaei', 'language_code': 'en', 'is_bot': False, 'first_name': 'RezA', 'id': 540630793}}, 'update_id': 906987885}
+-end_college_masters_handler
+2021-09-02 12:38:09,248-bot.py-RezA None(540630793): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False
+, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4466, 'new_chat_members': [], 'super
+group_chat_created': False, 'chat': {'type': 'private', 'first_name': 'RezA', 'username': 'rnavaei', 'id': 540630793}, 'date': 1630586256, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_dat
+e': 1630586259, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ghiasi', 'id': '2321991576911778233', 'chat_instance': '2240250582312685084', 'from': {'username':
+'rnavaei', 'language_code': 'en', 'is_bot': False, 'first_name': 'RezA', 'id': 540630793}}, 'update_id': 906987886}
+-end_college_masters_handler
+2021-09-02 12:39:25,807-bot.py-RezA None(540630793): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False
+, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4470, 'new_chat_members': [], 'sup
+ergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'RezA', 'username': 'rnavaei', 'id': 540630793}, 'date': 1630586359, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_d
+ate': 1630586362, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'arban', 'id': '2321991577034465173', 'chat_instance': '2240250582312685084', 'from': {'username':
+ 'rnavaei', 'language_code': 'en', 'is_bot': False, 'first_name': 'RezA', 'id': 540630793}}, 'update_id': 906987889}
+-end_college_masters_handler
+2021-09-02 12:39:58,138-bot.py-RezA None(540630793): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False
+, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4470, 'new_chat_members': [], 'sup
+ergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'RezA', 'username': 'rnavaei', 'id': 540630793}, 'date': 1630586359, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_d
+ate': 1630586362, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'vahedian', 'id': '2321991576777897675', 'chat_instance': '2240250582312685084', 'from': {'usernam
+e': 'rnavaei', 'language_code': 'en', 'is_bot': False, 'first_name': 'RezA', 'id': 540630793}}, 'update_id': 906987890}
+-end_college_masters_handler
+2021-09-02 13:29:12,833-bot.py-Asal �(59007207): {'update_id': 906987903, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': 'bot_
+command', 'length': 6}], 'message_id': 4499, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '�', 'first_name': 'Asal', 'id': 59007207}, 'date': 1630589352, 'delete_cha
+t_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'language_code': 'en', 'is_bot': False, 'first_name': 'Asal', 'id': 59007207, 'last_name': '�'}}}
+-start
+2021-09-02 13:29:39,272-bot.py-Asal �(59007207): {'update_id': 906987908, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'ساختمان داده', 'group_chat_created': False, 'entities': [], 'message_id': 4511
+, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '�', 'first_name': 'Asal', 'id': 59007207}, 'date': 1630589379, 'delete_chat_photo': False, 'photo': [], 'channel_chat
+_created': False, 'from': {'language_code': 'en', 'is_bot': False, 'first_name': 'Asal', 'id': 59007207, 'last_name': '�'}}}
+-src_ds_file_handler
+2021-09-02 13:30:34,463-bot.py-Asal �(59007207): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False, '
+entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zomorodi'
+}]]}, 'message_id': 4531, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '�', 'first_name': 'Asal', 'id': 59007207}, 'date': 1630589427, 'delete_chat_photo': False, 'p
+hoto': [], 'channel_chat_created': False, 'edit_date': 1630589430, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'sedaghat', 'id': '253434026793921030', 'chat_ins
+tance': '5762914985293901958', 'from': {'language_code': 'en', 'is_bot': False, 'first_name': 'Asal', 'id': 59007207, 'last_name': '�'}}, 'update_id': 906987919}
+-end_college_masters_handler
+2021-09-02 13:30:50,568-bot.py-Asal �(59007207): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False, '
+entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zomorodi'
+}]]}, 'message_id': 4531, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '�', 'first_name': 'Asal', 'id': 59007207}, 'date': 1630589427, 'delete_chat_photo': False, 'p
+hoto': [], 'channel_chat_created': False, 'edit_date': 1630589430, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'zomorodi', 'id': '253434025486416840', 'chat_ins
+tance': '5762914985293901958', 'from': {'language_code': 'en', 'is_bot': False, 'first_name': 'Asal', 'id': 59007207, 'last_name': '�'}}, 'update_id': 906987920}
+-end_college_masters_handler
+2021-09-02 13:30:57,636-bot.py-Asal �(59007207): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False, '
+entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zomorodi'
+}]]}, 'message_id': 4531, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '�', 'first_name': 'Asal', 'id': 59007207}, 'date': 1630589427, 'delete_chat_photo': False, 'p
+hoto': [], 'channel_chat_created': False, 'edit_date': 1630589430, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ershadi', 'id': '253434026699764920', 'chat_inst
+ance': '5762914985293901958', 'from': {'language_code': 'en', 'is_bot': False, 'first_name': 'Asal', 'id': 59007207, 'last_name': '�'}}, 'update_id': 906987922}
+-end_college_masters_handler
+2021-09-02 13:31:09,656-bot.py-Asal �(59007207): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False, '
+entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4540, 'new_chat_members': [], 'superg
+roup_chat_created': False, 'chat': {'type': 'private', 'last_name': '�', 'first_name': 'Asal', 'id': 59007207}, 'date': 1630589464, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 16
+30589467, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'vahedian', 'id': '253434027069663319', 'chat_instance': '5762914985293901958', 'from': {'language_code':
+'en', 'is_bot': False, 'first_name': 'Asal', 'id': 59007207, 'last_name': '�'}}, 'update_id': 906987927}
+-end_college_masters_handler
+2021-09-02 13:31:12,267-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}]]}, 'message_id': 4538, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type'
+: 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711}, 'date': 1630589462, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 163
+0589467, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'noriBaigi', 'id': '565242228208334754', 'chat_instance': '-8145903418485722246', 'from': {'username': 'sor
+oush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name': '</Fathi>'}}, 'update_id': 906987928}
+-end_college_masters_handler
+2021-09-02 13:31:20,242-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4544, 'new_chat_members': [
+], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711}, 'date': 1630589474, 'delete_chat_photo': False, 'photo':
+ [], 'channel_chat_created': False, 'edit_date': 1630589475, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ghiasi', 'id': '565242227812018155', 'chat_instance':
+'-8145903418485722246', 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name': '</Fathi>'}}, 'update_id': 906987931}
+-end_college_masters_handler
+2021-09-02 13:31:23,349-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4544, 'new_chat_members': [
+], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711}, 'date': 1630589474, 'delete_chat_photo': False, 'photo':
+ [], 'channel_chat_created': False, 'edit_date': 1630589475, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'tosi', 'id': '565242227793998697', 'chat_instance': '-
+8145903418485722246', 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name': '</Fathi>'}}, 'update_id': 906987932}
+-end_college_masters_handler
+2021-09-02 13:31:24,363-bot.py-Asal �(59007207): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False, '
+entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4540, 'new_chat_members': [], 'superg
+roup_chat_created': False, 'chat': {'type': 'private', 'last_name': '�', 'first_name': 'Asal', 'id': 59007207}, 'date': 1630589464, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 16
+30589467, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'arban', 'id': '253434024469448235', 'chat_instance': '5762914985293901958', 'from': {'language_code': 'en
+', 'is_bot': False, 'first_name': 'Asal', 'id': 59007207, 'last_name': '�'}}, 'update_id': 906987933}
+-end_college_masters_handler
+2021-09-02 13:31:51,055-bot.py-Asal �(59007207): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False, '
+entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4549, 'new_chat_members': [], 'supergro
+up_chat_created': False, 'chat': {'type': 'private', 'last_name': '�', 'first_name': 'Asal', 'id': 59007207}, 'date': 1630589506, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630
+589508, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'tosi', 'id': '253434027690459593', 'chat_instance': '5762914985293901958', 'from': {'language_code': 'en',
+'is_bot': False, 'first_name': 'Asal', 'id': 59007207, 'last_name': '�'}}, 'update_id': 906987937}
+-end_college_masters_handler
+2021-09-02 13:32:01,047-bot.py-Asal �(59007207): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False, '
+entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4549, 'new_chat_members': [], 'supergro
+up_chat_created': False, 'chat': {'type': 'private', 'last_name': '�', 'first_name': 'Asal', 'id': 59007207}, 'date': 1630589506, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630
+589508, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ghiasi', 'id': '253434026317806786', 'chat_instance': '5762914985293901958', 'from': {'language_code': 'en'
+, 'is_bot': False, 'first_name': 'Asal', 'id': 59007207, 'last_name': '�'}}, 'update_id': 906987938}
+-end_college_masters_handler
+2021-09-02 14:36:19,432-bot.py-EB None(546064544): {'update_id': 906987939, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': 'bot
+_command', 'length': 6}], 'message_id': 4554, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'EB', 'username': 'Erfaneb7', 'id': 546064544}, 'date': 1630593378, 'delet
+e_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Erfaneb7', 'language_code': 'fa', 'is_bot': False, 'first_name': 'EB', 'id': 546064544}}}
+-start
+2021-09-02 14:37:09,801-bot.py-EB None(546064544): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4562, 'new_chat_members': [], 'supergr
+oup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'EB', 'username': 'Erfaneb7', 'id': 546064544}, 'date': 1630593416, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date':
+ 1630593425, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'paydar', 'id': '2345329360789821242', 'chat_instance': '-6243869857463585358', 'from': {'username': 'E
+rfaneb7', 'language_code': 'fa', 'is_bot': False, 'first_name': 'EB', 'id': 546064544}}, 'update_id': 906987944}
+-end_college_masters_handler
+2021-09-02 14:37:58,515-bot.py-EB None(546064544): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4565, 'new_chat_members': [], 'supergr
+oup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'EB', 'username': 'Erfaneb7', 'id': 546064544}, 'date': 1630593464, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date':
+ 1630593474, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'noriBaigi', 'id': '2345329358405265432', 'chat_instance': '-6243869857463585358', 'from': {'username':
+ 'Erfaneb7', 'language_code': 'fa', 'is_bot': False, 'first_name': 'EB', 'id': 546064544}}, 'update_id': 906987947}
+-end_college_masters_handler
+2021-09-02 14:38:55,965-bot.py-EB None(546064544): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4568, 'new_chat_members': [], 'super
+group_chat_created': False, 'chat': {'type': 'private', 'first_name': 'EB', 'username': 'Erfaneb7', 'id': 546064544}, 'date': 1630593514, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date
+': 1630593524, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'arban', 'id': '2345329359888428817', 'chat_instance': '-6243869857463585358', 'from': {'username': '
+Erfaneb7', 'language_code': 'fa', 'is_bot': False, 'first_name': 'EB', 'id': 546064544}}, 'update_id': 906987950}
+-end_college_masters_handler
+2021-09-02 14:41:15,804-bot.py-EB None(546064544): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4571, 'new_chat_members': [], 'super
+group_chat_created': False, 'chat': {'type': 'private', 'first_name': 'EB', 'username': 'Erfaneb7', 'id': 546064544}, 'date': 1630593672, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date
+': 1630593674, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'vahedian', 'id': '2345329358742514795', 'chat_instance': '-6243869857463585358', 'from': {'username'
+: 'Erfaneb7', 'language_code': 'fa', 'is_bot': False, 'first_name': 'EB', 'id': 546064544}}, 'update_id': 906987953}
+-end_college_masters_handler
+2021-09-02 14:41:50,245-bot.py-EB None(546064544): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4574, 'new_chat_members': [], 'supergr
+oup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'EB', 'username': 'Erfaneb7', 'id': 546064544}, 'date': 1630593703, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date':
+ 1630593706, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ghiasi', 'id': '2345329358530858140', 'chat_instance': '-6243869857463585358', 'from': {'username': 'E
+rfaneb7', 'language_code': 'fa', 'is_bot': False, 'first_name': 'EB', 'id': 546064544}}, 'update_id': 906987956}
+-end_college_masters_handler
+2021-09-02 14:59:40,009-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید ابریشمی', 'callback_data': 'abrishami'}, {'text': ' نوری بایگی', 'callback_data': 'noriBaigi'}], [{'text': 'احسان فضل ارثی', 'callback_data'
+: 'fazlErsi'}]]}, 'message_id': 4579, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711
+}, 'date': 1630594771, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630594777, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'dat
+a': 'abrishami', 'id': '565242225272136343', 'chat_instance': '-8145903418485722246', 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name':
+ '</Fathi>'}}, 'update_id': 906987960}
+-end_college_masters_handler
+2021-09-02 14:59:56,274-bot.py-<Soroush> </Fathi>(131605711): {'update_id': 906987961, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'اخبار�', 'group_chat_created': False, 'entities': [], 'message_id
+': 4581, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711}, 'date': 1630594793, 'delet
+e_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name': '</Fathi>'}}}
+-college_news_handler
+2021-09-02 15:50:33,781-bot.py-Ho.Farahmand None(482712440): {'update_id': 906987963, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 't
+ype': 'bot_command', 'length': 6}], 'message_id': 4585, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ho.Farahmand', 'username': 'Ho_Farah', 'id': 482712440}, 'date'
+: 1630597833, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Ho_Farah', 'language_code': 'en', 'is_bot': False, 'first_name': 'Ho.Farahmand', 'id': 482712440}}}
+-start
+2021-09-02 15:50:54,379-bot.py-Ho.Farahmand None(482712440): {'update_id': 906987965, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'اخبار�', 'group_chat_created': False, 'entities': [], 'message_id'
+: 4590, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ho.Farahmand', 'username': 'Ho_Farah', 'id': 482712440}, 'date': 1630597852, 'delete_chat_photo': False, 'photo
+': [], 'channel_chat_created': False, 'from': {'username': 'Ho_Farah', 'language_code': 'en', 'is_bot': False, 'first_name': 'Ho.Farahmand', 'id': 482712440}}}
+-college_news_handler
+2021-09-02 15:54:28,172-bot.py-Ho.Farahmand None(482712440): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created
+': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data':
+ 'zomorodi'}]]}, 'message_id': 4597, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ho.Farahmand', 'username': 'Ho_Farah', 'id': 482712440}, 'date': 1630598053, 'dele
+te_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630598058, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'sedaghat', 'id': '20732
+34143690579921', 'chat_instance': '7344610801138042837', 'from': {'username': 'Ho_Farah', 'language_code': 'en', 'is_bot': False, 'first_name': 'Ho.Farahmand', 'id': 482712440}}, 'update_id': 906987970}
+-end_college_masters_handler
+2021-09-02 17:28:53,374-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data'
+: 'zomorodi'}]]}, 'message_id': 4606, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711
+}, 'date': 1630603724, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630603730, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'dat
+a': 'sedaghat', 'id': '565242227055816462', 'chat_instance': '-8145903418485722246', 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name':
+'</Fathi>'}}, 'update_id': 906987976}
+-end_college_masters_handler
+2021-09-02 17:28:55,745-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data'
+: 'zomorodi'}]]}, 'message_id': 4606, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711
+}, 'date': 1630603724, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630603730, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'dat
+a': 'zomorodi', 'id': '565242227561174234', 'chat_instance': '-8145903418485722246', 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name':
+'</Fathi>'}}, 'update_id': 906987977}
+-end_college_masters_handler
+2021-09-02 17:29:13,258-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data'
+: 'zomorodi'}]]}, 'message_id': 4606, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711
+}, 'date': 1630603724, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630603730, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'dat
+a': 'ershadi', 'id': '565242228300141769', 'chat_instance': '-8145903418485722246', 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name': '
+</Fathi>'}}, 'update_id': 906987978}
+-end_college_masters_handler
+2021-09-02 18:24:19,570-bot.py-Homa None(1653104621): {'update_id': 906987979, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': '
+bot_command', 'length': 6}], 'message_id': 4610, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Homa', 'username': 'homabadiee', 'id': 1653104621}, 'date': 1630607059
+, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'homabadiee', 'language_code': 'en', 'is_bot': False, 'first_name': 'Homa', 'id': 1653104621}}}
+-start
+2021-09-02 18:24:40,066-bot.py-Homa None(1653104621): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fals
+e, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4616, 'new_chat_members': [], 'su
+pergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Homa', 'username': 'homabadiee', 'id': 1653104621}, 'date': 1630607070, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'e
+dit_date': 1630607075, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'vahedian', 'id': '7100030288206729480', 'chat_instance': '3186886838160448577', 'from': {'us
+ername': 'homabadiee', 'language_code': 'en', 'is_bot': False, 'first_name': 'Homa', 'id': 1653104621}}, 'update_id': 906987983}
+-end_college_masters_handler
+2021-09-02 18:25:20,893-bot.py-Homa None(1653104621): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fals
+e, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4616, 'new_chat_members': [], 'su
+pergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Homa', 'username': 'homabadiee', 'id': 1653104621}, 'date': 1630607070, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'e
+dit_date': 1630607075, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'arban', 'id': '7100030285659987341', 'chat_instance': '3186886838160448577', 'from': {'usern
+ame': 'homabadiee', 'language_code': 'en', 'is_bot': False, 'first_name': 'Homa', 'id': 1653104621}}, 'update_id': 906987984}
+-end_college_masters_handler
+2021-09-02 18:40:15,622-bot.py-Aminreza Seydabadi(953263464): {'update_id': 906987986, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, '
+type': 'bot_command', 'length': 6}], 'message_id': 4621, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Seydabadi', 'first_name': 'Aminreza', 'username': 'Amin_Idea',
+'id': 953263464}, 'date': 1630608015, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Amin_Idea', 'language_code': 'en', 'is_bot': False, 'first_name': 'Aminreza', 'id': 9532
+63464, 'last_name': 'Seydabadi'}}}
+-start
+2021-09-02 18:40:55,076-bot.py-Aminreza Seydabadi(953263464): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4627, 'new_chat_members': [
+], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Seydabadi', 'first_name': 'Aminreza', 'username': 'Amin_Idea', 'id': 953263464}, 'date': 1630608023, 'delete_chat_photo': False, 'photo': [],
+ 'channel_chat_created': False, 'edit_date': 1630608051, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'paydar', 'id': '4094235405162360587', 'chat_instance': '85
+02386226022115475', 'from': {'username': 'Amin_Idea', 'language_code': 'en', 'is_bot': False, 'first_name': 'Aminreza', 'id': 953263464, 'last_name': 'Seydabadi'}}, 'update_id': 906987990}
+-end_college_masters_handler
+2021-09-02 18:41:53,480-bot.py-Aminreza Seydabadi(953263464): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4627, 'new_chat_members': [
+], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Seydabadi', 'first_name': 'Aminreza', 'username': 'Amin_Idea', 'id': 953263464}, 'date': 1630608023, 'delete_chat_photo': False, 'photo': [],
+ 'channel_chat_created': False, 'edit_date': 1630608051, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'noriBaigi', 'id': '4094235403105889043', 'chat_instance':
+'8502386226022115475', 'from': {'username': 'Amin_Idea', 'language_code': 'en', 'is_bot': False, 'first_name': 'Aminreza', 'id': 953263464, 'last_name': 'Seydabadi'}}, 'update_id': 906987991}
+-end_college_masters_handler
+2021-09-02 18:45:35,948-bot.py-am dvi(1331894477): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید ابریشمی', 'callback_data': 'abrishami'}, {'text': ' نوری بایگی', 'callback_data': 'noriBaigi'}], [{'text': 'احسان فضل ارثی', 'callback_data': 'fazlErsi
+'}]]}, 'message_id': 4633, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'dvi', 'first_name': 'am', 'username': 'amdvi1', 'id': 1331894477}, 'date': 1630608327, 'delet
+e_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630608333, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'abrishami', 'id': '57204
+43221650305029', 'chat_instance': '-1792382322150554256', 'from': {'username': 'amdvi1', 'language_code': 'fa', 'is_bot': False, 'first_name': 'am', 'id': 1331894477, 'last_name': 'dvi'}}, 'update_id': 906987996}
+-end_college_masters_handler
+2021-09-02 18:45:40,895-bot.py-am dvi(1331894477): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید ابریشمی', 'callback_data': 'abrishami'}, {'text': ' نوری بایگی', 'callback_data': 'noriBaigi'}], [{'text': 'احسان فضل ارثی', 'callback_data': 'fazlErsi
+'}]]}, 'message_id': 4633, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'dvi', 'first_name': 'am', 'username': 'amdvi1', 'id': 1331894477}, 'date': 1630608327, 'delet
+e_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630608333, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'noriBaigi', 'id': '57204
+43223403271721', 'chat_instance': '-1792382322150554256', 'from': {'username': 'amdvi1', 'language_code': 'fa', 'is_bot': False, 'first_name': 'am', 'id': 1331894477, 'last_name': 'dvi'}}, 'update_id': 906987997}
+-end_college_masters_handler
+2021-09-02 18:45:49,448-bot.py-am dvi(1331894477): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': False,
+'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید ابریشمی', 'callback_data': 'abrishami'}, {'text': ' نوری بایگی', 'callback_data': 'noriBaigi'}], [{'text': 'احسان فضل ارثی', 'callback_data': 'fazlErsi
+'}]]}, 'message_id': 4633, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'dvi', 'first_name': 'am', 'username': 'amdvi1', 'id': 1331894477}, 'date': 1630608327, 'delet
+e_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630608333, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'fazlErsi', 'id': '572044
+3223992181129', 'chat_instance': '-1792382322150554256', 'from': {'username': 'amdvi1', 'language_code': 'fa', 'is_bot': False, 'first_name': 'am', 'id': 1331894477, 'last_name': 'dvi'}}, 'update_id': 906987998}
+-end_college_masters_handler
+2021-09-02 19:47:40,875-bot.py-Hamid Zehtab(502814159): {'update_id': 906987999, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+ 'bot_command', 'length': 6}], 'message_id': 4637, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Zehtab', 'first_name': 'Hamid', 'username': 'hamidzehtab', 'id': 5028
+14159}, 'date': 1630612060, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'hamidzehtab', 'language_code': 'en', 'is_bot': False, 'first_name': 'Hamid', 'id': 502814159, 'las
+t_name': 'Zehtab'}}}
+-start
+2021-09-02 19:47:54,674-bot.py-Hamid Zehtab(502814159): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zom
+orodi'}]]}, 'message_id': 4643, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Zehtab', 'first_name': 'Hamid', 'username': 'hamidzehtab', 'id': 502814159}, 'date': 163
+0612067, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630612071, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ershadi',
+ 'id': '2159570369621507380', 'chat_instance': '-8542859181600113979', 'from': {'username': 'hamidzehtab', 'language_code': 'en', 'is_bot': False, 'first_name': 'Hamid', 'id': 502814159, 'last_name': 'Zehtab'}}, 'update_
+id': 906988003}
+-end_college_masters_handler
+2021-09-03 00:32:01,278-bot.py-Hamid Zehtab(502814159): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zom
+orodi'}]]}, 'message_id': 4646, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Zehtab', 'first_name': 'Hamid', 'username': 'hamidzehtab', 'id': 502814159}, 'date': 163
+0629097, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630629113, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'sedaghat'
+, 'id': '2159570372630600315', 'chat_instance': '-8542859181600113979', 'from': {'username': 'hamidzehtab', 'language_code': 'en', 'is_bot': False, 'first_name': 'Hamid', 'id': 502814159, 'last_name': 'Zehtab'}}, 'update
+_id': 906988006}
+-end_college_masters_handler
+2021-09-03 00:38:15,867-bot.py-Hamid Zehtab(502814159): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zom
+orodi'}]]}, 'message_id': 4646, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Zehtab', 'first_name': 'Hamid', 'username': 'hamidzehtab', 'id': 502814159}, 'date': 163
+0629097, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630629113, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'zomorodi'
+, 'id': '2159570373145994298', 'chat_instance': '-8542859181600113979', 'from': {'username': 'hamidzehtab', 'language_code': 'en', 'is_bot': False, 'first_name': 'Hamid', 'id': 502814159, 'last_name': 'Zehtab'}}, 'update
+_id': 906988007}
+-end_college_masters_handler
+2021-09-03 00:44:13,022-bot.py-Hamid Zehtab(502814159): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4650, 'new_chat_members': [], '
+supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Zehtab', 'first_name': 'Hamid', 'username': 'hamidzehtab', 'id': 502814159}, 'date': 1630629845, 'delete_chat_photo': False, 'photo': [], 'channe
+l_chat_created': False, 'edit_date': 1630629850, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'vahedian', 'id': '2159570371922471102', 'chat_instance': '-8542859
+181600113979', 'from': {'username': 'hamidzehtab', 'language_code': 'en', 'is_bot': False, 'first_name': 'Hamid', 'id': 502814159, 'last_name': 'Zehtab'}}, 'update_id': 906988010}
+-end_college_masters_handler
+2021-09-03 00:45:15,477-bot.py-Hamid Zehtab(502814159): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4653, 'new_chat_members': [], 'su
+pergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Zehtab', 'first_name': 'Hamid', 'username': 'hamidzehtab', 'id': 502814159}, 'date': 1630629910, 'delete_chat_photo': False, 'photo': [], 'channel_
+chat_created': False, 'edit_date': 1630629912, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ghiasi', 'id': '2159570369327806481', 'chat_instance': '-85428591816
+00113979', 'from': {'username': 'hamidzehtab', 'language_code': 'en', 'is_bot': False, 'first_name': 'Hamid', 'id': 502814159, 'last_name': 'Zehtab'}}, 'update_id': 906988013}
+-end_college_masters_handler
+2021-09-03 03:01:26,810-bot.py-<Soroush> </Fathi>(131605711): {'update_id': 906988032, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '�تماس با من��\u200d�', 'group_chat_created': False, 'entities'
+: [], 'message_id': 4689, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711}, 'date': 1
+630638086, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name': '<
+/Fathi>'}}}
+-contact_handler
+2021-09-03 05:02:55,209-bot.py-Salma Erfani(966864528): {'update_id': 906988035, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+ 'bot_command', 'length': 6}], 'message_id': 4694, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Erfani', 'first_name': 'Salma', 'username': 'Salma_0111', 'id': 96686
+4528}, 'date': 1630645374, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Salma_0111', 'language_code': 'en', 'is_bot': False, 'first_name': 'Salma', 'id': 966864528, 'last_
+name': 'Erfani'}}}
+-start
+2021-09-03 05:03:31,521-bot.py-Salma Erfani(966864528): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zom
+orodi'}]]}, 'message_id': 4708, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Erfani', 'first_name': 'Salma', 'username': 'Salma_0111', 'id': 966864528}, 'date': 1630
+645403, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630645407, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'zomorodi',
+ 'id': '4152651528625376965', 'chat_instance': '-5016381279281252600', 'from': {'username': 'Salma_0111', 'language_code': 'en', 'is_bot': False, 'first_name': 'Salma', 'id': 966864528, 'last_name': 'Erfani'}}, 'update_i
+d': 906988043}
+-end_college_masters_handler
+2021-09-03 05:37:44,254-bot.py-Yasi None(207136381): {'update_id': 906988044, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': 'b
+ot_command', 'length': 6}], 'message_id': 4710, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Yasi', 'username': 'Yasiqrz', 'id': 207136381}, 'date': 1630647463, 'de
+lete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Yasiqrz', 'language_code': 'en', 'is_bot': False, 'first_name': 'Yasi', 'id': 207136381}}}
+-start
+2021-09-03 05:38:20,318-bot.py-Yasi None(207136381): {'update_id': 906988050, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'ساختمان داده', 'group_chat_created': False, 'entities': [], 'message_id': 4
+722, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Yasi', 'username': 'Yasiqrz', 'id': 207136381}, 'date': 1630647500, 'delete_chat_photo': False, 'photo': [], 'chan
+nel_chat_created': False, 'from': {'username': 'Yasiqrz', 'language_code': 'en', 'is_bot': False, 'first_name': 'Yasi', 'id': 207136381}}}
+-src_ds_file_handler
+2021-09-03 05:51:40,805-bot.py-Ali.M.Tabatabaei None(269194030): {'update_id': 906988051, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0
+, 'type': 'bot_command', 'length': 6}], 'message_id': 4725, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ali.M.Tabatabaei', 'username': 'AMTT80', 'id': 269194030},
+'date': 1630648300, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'AMTT80', 'language_code': 'en', 'is_bot': False, 'first_name': 'Ali.M.Tabatabaei', 'id': 269194030}}}
+-start
+2021-09-03 05:53:08,638-bot.py-Ali.M.Tabatabaei None(269194030): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_cre
+ated': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4743, 'new_chat_member
+s': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ali.M.Tabatabaei', 'username': 'AMTT80', 'id': 269194030}, 'date': 1630648357, 'delete_chat_photo': False, 'photo': [], 'channel_chat_c
+reated': False, 'edit_date': 1630648384, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'arban', 'id': '1156179559155628249', 'chat_instance': '518134143635347758'
+, 'from': {'username': 'AMTT80', 'language_code': 'en', 'is_bot': False, 'first_name': 'Ali.M.Tabatabaei', 'id': 269194030}}, 'update_id': 906988061}
+-end_college_masters_handler
+2021-09-03 05:53:45,715-bot.py-Ali.M.Tabatabaei None(269194030): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_cre
+ated': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر بافقی', 'callback_data': 'bafghi'}, {'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}], [{'text': 'مجید میرزاوزیری', 'callback_dat
+a': 'mirzavaziri'}]]}, 'message_id': 4746, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Ali.M.Tabatabaei', 'username': 'AMTT80', 'id': 269194030}, 'date': 163064841
+6, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630648422, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'mirzavaziri', '
+id': '1156179559081673061', 'chat_instance': '518134143635347758', 'from': {'username': 'AMTT80', 'language_code': 'en', 'is_bot': False, 'first_name': 'Ali.M.Tabatabaei', 'id': 269194030}}, 'update_id': 906988064}
+-end_college_masters_handler
+2021-09-03 06:38:07,572-bot.py-Z.rostami None(1167838272): {'update_id': 906988065, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'typ
+e': 'bot_command', 'length': 6}], 'message_id': 4748, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Z.rostami', 'username': 'Rostamii2001', 'id': 1167838272}, 'date'
+: 1630651086, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Rostamii2001', 'language_code': 'en', 'is_bot': False, 'first_name': 'Z.rostami', 'id': 1167838272}}}
+-start
+2021-09-03 06:38:59,371-bot.py-Z.rostami None(1167838272): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created':
+ False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4756, 'new_chat_members': []
+, 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Z.rostami', 'username': 'Rostamii2001', 'id': 1167838272}, 'date': 1630651116, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created
+': False, 'edit_date': 1630651134, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'vahedian', 'id': '5015827187374067701', 'chat_instance': '-2268867884142830120',
+ 'from': {'username': 'Rostamii2001', 'language_code': 'en', 'is_bot': False, 'first_name': 'Z.rostami', 'id': 1167838272}}, 'update_id': 906988070}
+-end_college_masters_handler
+2021-09-03 06:41:18,965-bot.py-Z.rostami None(1167838272): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created':
+ False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4756, 'new_chat_members': []
+, 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Z.rostami', 'username': 'Rostamii2001', 'id': 1167838272}, 'date': 1630651116, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created
+': False, 'edit_date': 1630651134, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'arban', 'id': '5015827189040003609', 'chat_instance': '-2268867884142830120', 'f
+rom': {'username': 'Rostamii2001', 'language_code': 'en', 'is_bot': False, 'first_name': 'Z.rostami', 'id': 1167838272}}, 'update_id': 906988071}
+-end_college_masters_handler
+2021-09-03 06:42:50,155-bot.py-Z.rostami None(1167838272): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created':
+ False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر بافقی', 'callback_data': 'bafghi'}, {'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}], [{'text': 'مجید میرزاوزیری', 'callback_data': 'm
+irzavaziri'}]]}, 'message_id': 4760, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Z.rostami', 'username': 'Rostamii2001', 'id': 1167838272}, 'date': 1630651352, 'de
+lete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630651366, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'bafghi', 'id': '50158
+27185270820826', 'chat_instance': '-2268867884142830120', 'from': {'username': 'Rostamii2001', 'language_code': 'en', 'is_bot': False, 'first_name': 'Z.rostami', 'id': 1167838272}}, 'update_id': 906988074}
+-end_college_masters_handler
+2021-09-03 06:45:43,764-bot.py-Z.rostami None(1167838272): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created':
+ False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر بافقی', 'callback_data': 'bafghi'}, {'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}], [{'text': 'مجید میرزاوزیری', 'callback_data': 'm
+irzavaziri'}]]}, 'message_id': 4760, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Z.rostami', 'username': 'Rostamii2001', 'id': 1167838272}, 'date': 1630651352, 'de
+lete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630651366, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ghiasi', 'id': '50158
+27187169139547', 'chat_instance': '-2268867884142830120', 'from': {'username': 'Rostamii2001', 'language_code': 'en', 'is_bot': False, 'first_name': 'Z.rostami', 'id': 1167838272}}, 'update_id': 906988075}
+-end_college_masters_handler
+2021-09-03 06:45:56,117-bot.py-Z.rostami None(1167838272): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created':
+ False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4764, 'new_chat_members': [],
+'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Z.rostami', 'username': 'Rostamii2001', 'id': 1167838272}, 'date': 1630651551, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created':
+ False, 'edit_date': 1630651552, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'paydar', 'id': '5015827188441012604', 'chat_instance': '-2268867884142830120', 'fr
+om': {'username': 'Rostamii2001', 'language_code': 'en', 'is_bot': False, 'first_name': 'Z.rostami', 'id': 1167838272}}, 'update_id': 906988078}
+-end_college_masters_handler
+2021-09-03 06:47:18,076-bot.py-Z.rostami None(1167838272): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created':
+ False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4764, 'new_chat_members': [],
+'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Z.rostami', 'username': 'Rostamii2001', 'id': 1167838272}, 'date': 1630651551, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created':
+ False, 'edit_date': 1630651552, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'noriBaigi', 'id': '5015827187573821226', 'chat_instance': '-2268867884142830120',
+'from': {'username': 'Rostamii2001', 'language_code': 'en', 'is_bot': False, 'first_name': 'Z.rostami', 'id': 1167838272}}, 'update_id': 906988079}
+-end_college_masters_handler
+2021-09-03 08:28:41,879-bot.py-Shakiba None(94162200): {'update_id': 906988080, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+'bot_command', 'length': 6}], 'message_id': 4767, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Shakiba', 'username': 'Shakiba_Alipour', 'id': 94162200}, 'date': 163
+0657721, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Shakiba_Alipour', 'language_code': 'en', 'is_bot': False, 'first_name': 'Shakiba', 'id': 94162200}}}
+-start
+2021-09-03 08:43:19,974-bot.py-Reza Farokh(1273478495): {'update_id': 906988086, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+ 'bot_command', 'length': 6}], 'message_id': 4780, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Farokh', 'first_name': 'Reza', 'username': 'Farokh_Rza', 'id': 127347
+8495}, 'date': 1630658599, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Farokh_Rza', 'language_code': 'en', 'is_bot': False, 'first_name': 'Reza', 'id': 1273478495, 'last_
+name': 'Farokh'}}}
+-start
+2021-09-03 12:33:12,772-bot.py-Fatemeh None(201180715): {'update_id': 906988087, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+ 'bot_command', 'length': 6}], 'message_id': 4783, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Fatemeh', 'username': 'Fa_Kh81', 'id': 201180715}, 'date': 163067239
+2, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'Fa_Kh81', 'language_code': 'fa', 'is_bot': False, 'first_name': 'Fatemeh', 'id': 201180715}}}
+-start
+2021-09-03 12:33:40,870-bot.py-Fatemeh None(201180715): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4791, 'new_chat_members': [], 'su
+pergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Fatemeh', 'username': 'Fa_Kh81', 'id': 201180715}, 'date': 1630672408, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'ed
+it_date': 1630672416, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'tosi', 'id': '864064594982612475', 'chat_instance': '8420407423214617961', 'from': {'username
+': 'Fa_Kh81', 'language_code': 'fa', 'is_bot': False, 'first_name': 'Fatemeh', 'id': 201180715}}, 'update_id': 906988092}
+-end_college_masters_handler
+2021-09-03 16:08:36,229-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4798, 'new_chat_members':
+ [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711}, 'date': 1630685310, 'delete_chat_photo': False, 'photo
+': [], 'channel_chat_created': False, 'edit_date': 1630685314, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'vahedian', 'id': '565242228363001282', 'chat_instanc
+e': '-8145903418485722246', 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name': '</Fathi>'}}, 'update_id': 906988097}
+-end_college_masters_handler
+2021-09-03 16:08:38,427-bot.py-<Soroush> </Fathi>(131605711): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_create
+d': False, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'سعید عربان', 'callback_data': 'arban'}, {'text': 'عابدین واحدیان مظلوم', 'callback_data': 'vahedian'}]]}, 'message_id': 4798, 'new_chat_members':
+ [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': '</Fathi>', 'first_name': '<Soroush>', 'username': 'soroush_fathi', 'id': 131605711}, 'date': 1630685310, 'delete_chat_photo': False, 'photo
+': [], 'channel_chat_created': False, 'edit_date': 1630685314, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'arban', 'id': '565242227761117695', 'chat_instance':
+ '-8145903418485722246', 'from': {'username': 'soroush_fathi', 'language_code': 'en', 'is_bot': False, 'first_name': '<Soroush>', 'id': 131605711, 'last_name': '</Fathi>'}}, 'update_id': 906988098}
+-end_college_masters_handler
+2021-09-03 17:18:34,371-bot.py-Alami None(301559090): {'update_id': 906988099, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type': '
+bot_command', 'length': 6}], 'message_id': 4801, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Alami', 'username': 'aalami', 'id': 301559090}, 'date': 1630689514, 'd
+elete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'aalami', 'language_code': 'fa', 'is_bot': False, 'first_name': 'Alami', 'id': 301559090}}}
+-start
+2021-09-03 17:21:39,525-bot.py-Alami None(301559090): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fals
+e, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4809, 'new_chat_members': [], 'supe
+rgroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Alami', 'username': 'aalami', 'id': 301559090}, 'date': 1630689654, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_da
+te': 1630689674, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'tosi', 'id': '1295186432470895433', 'chat_instance': '8093007490718085762', 'from': {'username': '
+aalami', 'language_code': 'fa', 'is_bot': False, 'first_name': 'Alami', 'id': 301559090}}, 'update_id': 906988104}
+-end_college_masters_handler
+2021-09-03 17:21:48,456-bot.py-Alami None(301559090): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fals
+e, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}, {'text': 'دکتر امین طوسی', 'callback_data': 'tosi'}]]}, 'message_id': 4809, 'new_chat_members': [], 'supe
+rgroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Alami', 'username': 'aalami', 'id': 301559090}, 'date': 1630689654, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_da
+te': 1630689674, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ghiasi', 'id': '1295186429567937667', 'chat_instance': '8093007490718085762', 'from': {'username':
+ 'aalami', 'language_code': 'fa', 'is_bot': False, 'first_name': 'Alami', 'id': 301559090}}, 'update_id': 906988105}
+-end_college_masters_handler
+2021-09-03 17:22:55,369-bot.py-Alami None(301559090): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fals
+e, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'یاصر صداقت', 'callback_data': 'sedaghat'}, {'text': 'سارا ارشادی نسب', 'callback_data': 'ershadi'}], [{'text': 'مریم زمردی مقدم', 'callback_data': 'zomor
+odi'}]]}, 'message_id': 4813, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'first_name': 'Alami', 'username': 'aalami', 'id': 301559090}, 'date': 1630689759, 'delete_chat_photo':
+False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630689770, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'sedaghat', 'id': '1295186430988369659',
+ 'chat_instance': '8093007490718085762', 'from': {'username': 'aalami', 'language_code': 'fa', 'is_bot': False, 'first_name': 'Alami', 'id': 301559090}}, 'update_id': 906988108}
+-end_college_masters_handler
+2021-09-03 19:06:11,882-bot.py-aref fathi(1304315485): {'update_id': 906988109, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+'bot_command', 'length': 6}], 'message_id': 4815, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'fathi', 'first_name': 'aref', 'username': 'aareffathii', 'id': 1304315
+485}, 'date': 1630695971, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'aareffathii', 'language_code': 'en', 'is_bot': False, 'first_name': 'aref', 'id': 1304315485, 'last_
+name': 'fathi'}}}
+-start
+2021-09-03 19:06:24,814-bot.py-aref fathi(1304315485): {'update_id': 906988113, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '�تماس با من��\u200d�', 'group_chat_created': False, 'entities': [], '
+message_id': 4825, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'fathi', 'first_name': 'aref', 'username': 'aareffathii', 'id': 1304315485}, 'date': 1630695984, 'dele
+te_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'aareffathii', 'language_code': 'en', 'is_bot': False, 'first_name': 'aref', 'id': 1304315485, 'last_name': 'fathi'}}}
+-contact_handler
+2021-09-03 19:10:59,524-bot.py-Sina Farsangi(90783562): {'update_id': 906988115, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': '/start', 'group_chat_created': False, 'entities': [{'offset': 0, 'type':
+ 'bot_command', 'length': 6}], 'message_id': 4829, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Farsangi', 'first_name': 'Sina', 'username': 'sinafarsangi80', 'id':
+90783562}, 'date': 1630696259, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'sinafarsangi80', 'language_code': 'en', 'is_bot': False, 'first_name': 'Sina', 'id': 90783562,
+'last_name': 'Farsangi'}}}
+-start
+2021-09-03 19:11:14,876-bot.py-Sina Farsangi(90783562): {'update_id': 906988117, 'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'اخبار�', 'group_chat_created': False, 'entities': [], 'message_id': 483
+4, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Farsangi', 'first_name': 'Sina', 'username': 'sinafarsangi80', 'id': 90783562}, 'date': 1630696272, 'delete_chat_phot
+o': False, 'photo': [], 'channel_chat_created': False, 'from': {'username': 'sinafarsangi80', 'language_code': 'en', 'is_bot': False, 'first_name': 'Sina', 'id': 90783562, 'last_name': 'Farsangi'}}}
+-college_news_handler
+2021-09-03 19:11:40,245-bot.py-Sina Farsangi(90783562): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4837, 'new_chat_members': [], 'su
+pergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Farsangi', 'first_name': 'Sina', 'username': 'sinafarsangi80', 'id': 90783562}, 'date': 1630696286, 'delete_chat_photo': False, 'photo': [], 'chann
+el_chat_created': False, 'edit_date': 1630696295, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'paydar', 'id': '389912433046731310', 'chat_instance': '-607125630
+6394133292', 'from': {'username': 'sinafarsangi80', 'language_code': 'en', 'is_bot': False, 'first_name': 'Sina', 'id': 90783562, 'last_name': 'Farsangi'}}, 'update_id': 906988120}
+-end_college_masters_handler
+2021-09-03 19:12:04,633-bot.py-Sina Farsangi(90783562): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر نوری بایگی', 'callback_data': 'noriBaigi'}, {'text': 'دکتر پایدار', 'callback_data': 'paydar'}]]}, 'message_id': 4837, 'new_chat_members': [], 'su
+pergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Farsangi', 'first_name': 'Sina', 'username': 'sinafarsangi80', 'id': 90783562}, 'date': 1630696286, 'delete_chat_photo': False, 'photo': [], 'chann
+el_chat_created': False, 'edit_date': 1630696295, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'noriBaigi', 'id': '389912430611330633', 'chat_instance': '-607125
+6306394133292', 'from': {'username': 'sinafarsangi80', 'language_code': 'en', 'is_bot': False, 'first_name': 'Sina', 'id': 90783562, 'last_name': 'Farsangi'}}, 'update_id': 906988121}
+-end_college_masters_handler
+2021-09-03 19:12:42,157-bot.py-Sina Farsangi(90783562): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر بافقی', 'callback_data': 'bafghi'}, {'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}], [{'text': 'مجید میرزاوزیری', 'callback_data': 'mirz
+avaziri'}]]}, 'message_id': 4841, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Farsangi', 'first_name': 'Sina', 'username': 'sinafarsangi80', 'id': 90783562}, 'date'
+: 1630696357, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630696359, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'ghia
+si', 'id': '389912433187576342', 'chat_instance': '-6071256306394133292', 'from': {'username': 'sinafarsangi80', 'language_code': 'en', 'is_bot': False, 'first_name': 'Sina', 'id': 90783562, 'last_name': 'Farsangi'}}, 'u
+pdate_id': 906988124}
+-end_college_masters_handler
+2021-09-03 19:13:04,880-bot.py-Sina Farsangi(90783562): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر بافقی', 'callback_data': 'bafghi'}, {'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}], [{'text': 'مجید میرزاوزیری', 'callback_data': 'mirz
+avaziri'}]]}, 'message_id': 4841, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Farsangi', 'first_name': 'Sina', 'username': 'sinafarsangi80', 'id': 90783562}, 'date'
+: 1630696357, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630696359, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'bafg
+hi', 'id': '389912433873038466', 'chat_instance': '-6071256306394133292', 'from': {'username': 'sinafarsangi80', 'language_code': 'en', 'is_bot': False, 'first_name': 'Sina', 'id': 90783562, 'last_name': 'Farsangi'}}, 'u
+pdate_id': 906988125}
+-end_college_masters_handler
+2021-09-03 19:13:26,415-bot.py-Sina Farsangi(90783562): {'callback_query': {'message': {'new_chat_photo': [], 'caption_entities': [], 'text': 'برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:', 'group_chat_created': Fa
+lse, 'entities': [], 'reply_markup': {'inline_keyboard': [[{'text': 'دکتر بافقی', 'callback_data': 'bafghi'}, {'text': 'دکتر غیاثی شیرازی', 'callback_data': 'ghiasi'}], [{'text': 'مجید میرزاوزیری', 'callback_data': 'mirz
+avaziri'}]]}, 'message_id': 4841, 'new_chat_members': [], 'supergroup_chat_created': False, 'chat': {'type': 'private', 'last_name': 'Farsangi', 'first_name': 'Sina', 'username': 'sinafarsangi80', 'id': 90783562}, 'date'
+: 1630696357, 'delete_chat_photo': False, 'photo': [], 'channel_chat_created': False, 'edit_date': 1630696359, 'from': {'username': 'CEFUMbot', 'is_bot': True, 'first_name': '</CE FUM>', 'id': 1914222564}}, 'data': 'mirz
+avaziri', 'id': '389912432852453185', 'chat_instance': '-6071256306394133292', 'from': {'username': 'sinafarsangi80', 'language_code': 'en', 'is_bot': False, 'first_name': 'Sina', 'id': 90783562, 'last_name': 'Farsangi'}
+}, 'update_id': 906988126}
+-end_college_masters_handler
+2021-09-06 14:54:11,967-base.py-Scheduler started-start
+2021-09-06 14:54:20,692-bot.py-<Soroush> </Fathi>(131605711): {'update_id': 906988354, 'message': {'channel_chat_created': False, 'entities': [{'type': 'bot_command', 'offset': 0, 'length': 6}], 'new_chat_members': [], 'new_chat_photo': [], 'message_id': 5261, 'caption_entities': [], 'supergroup_chat_created': False, 'date': 1630923859, 'text': '/start', 'group_chat_created': False, 'photo': [], 'chat': {'first_name': '<Soroush>', 'id': 131605711, 'last_name': '</Fathi>', 'username': 'soroush_fathi', 'type': 'private'}, 'delete_chat_photo': False, 'from': {'is_bot': False, 'language_code': 'en', 'id': 131605711, 'first_name': '<Soroush>', 'last_name': '</Fathi>', 'username': 'soroush_fathi'}}}
+-start
+2021-09-06 14:55:04,930-updater.py-Received signal 2 (SIGINT), stopping...-_signal_handler
+2021-09-06 14:55:04,930-base.py-Scheduler has been shut down-shutdown
+2021-09-06 14:55:05,003-updater.py-Exiting immediately!-_signal_handler
