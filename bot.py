@@ -27,7 +27,7 @@ from uuid import uuid4
 import requests
 from telegram.utils.helpers import escape_markdown
 
-# TODO file get file
+# TODO memari computer
 BASE_URL = 'http://ce.um.ac.ir/index.php?lang=fa'
 ARTICLES_URL = 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&edugroups=3105&cur_stu_title=&Itemid=694&lang=fa'
 
@@ -218,6 +218,197 @@ messages = {
                            'https://t.me/Comp_Professors/94\n'
                            'https://t.me/Comp_Professors/93\n'
                            'https://t.me/Comp_Professors/95\n',
+    'msg_help': '''
+        1️⃣. منابع و جزوات 
+2️⃣. تمرین و امتحانات
+3️⃣. گروه مهندسی کامپیوتر:
+     🔘 اساتید
+     🔘 انتشارات
+     🔘 اخبار و اطلاعیه ها
+4️⃣. ارسال فایل: میتوانید فایل درسی مورد نظر خود را برای ربات ارسال کنید تا در بخش درس مربوطه قرار گیرد
+    ''',
+    'btn_maaref_masters': '''
+        #دیمه_کار
+#تفسیر_نهج‌البلاغه 
+خوش برخورد،حساس ب حضور غیاب 
+ارائت خوب باشه تضمین پاسی 
+میانترم تستی تشریحی 
+پایانترم تستی
+_________
+
+#گندم_آبادی
+#دانش_خانواده_وجمعیت
+خوش اخلاق، جو کلاس عالی 
+2 نمره مازاد کلاسی 
+امتحان تستی معقول 
+________
+
+#علی_مشهدی
+#حسین_پویا
+خلاصه و مفید 👌♥️
+هر چی ارائه داد بردارین 
+همه جوره هوا دانشجو رو داره 
+________
+
+#محمد_باقر_رضاییان
+#اندیشه_ها
+درس دادن عالی، اهل غیبتی برندار 
+حساس ب حضور غیاب +نمره مازاد 
+درس دادن عالی 
+Max:20
+Min:10
+Ave:16:5
+ امتحان تستی معقول 
+________
+
+#ناهید_مشایی
+#دانش_خانواده_وجمعیت
+اخلاق عالی حساس به حضور غیاب
+امتحان تشریحی تستی معقول 
+بیان شیرین اصلا هم کلاس کسل کننده نیست 
+________
+
+#راضیه_آرام
+#دانش_خانواده_وجمعیت 
+نمره دادن خوبه 
+کلاساش فانه، حساس ب حضور غیاب 
+________
+
+#نجف_زاده_تربتی
+#اندیشه_ها 
+حضور غیاب ب شدت حساس 
+منبع کتاب معرفی شده +120 صفحه جزوه تایپی 
+امتحان ب نسبت سخت 
+________
+
+#سبد_محمد_مرتضوی
+#تفسیر
+کلاس خسته کننده نیست 
+حساس ب حضور غیاب دیر کردی راه نمیده 
+امتحان نسبتا سخت از کتاب معرفی شده 
+نمره دادن خوبه 
+________
+
+#مجتهدی
+#تاریخ_امامت
+حساس ب حضور غیاب
+امتحان تستی نسبتا سخت 
+نمودار داره 
+فعال باشی بیست رو داری 
+Max:20
+Min:10
+Ave:16
+________
+
+#حمید_رضا_ثنایی
+#تاریخ_تحلیلی
+کلاس کسل کننده 
+نمره دادن افتضاح 
+ب شدت حساس رو حضور غیاب
+امتحان فضایی سوالات نکته دار 
+________
+
+#محمد_حسن_حایری
+#اخلاق_اسلامی
+در مجموع استاد خوبیه
+حساس ب حضور غیاب 
+خوش نمره خوش اخلاق 
+امتحان تشریحی
+Max:20
+Min:13.5
+Ave:18.46
+____________
+
+#مصطفی_گوهری_فخرآبادی
+#تاریخ_امامت 
+میانترم کوییز 25 صدمی سر کلاس که خیلی اسونه
+حساس ب حضور غیاب 
+نمره دادن خوبه
+Max:20
+Min:9.75
+Ave:16.94
+________
+
+#رویا_یداللهی
+#فارسی_عمومی
+استاد عالی 
+کلاس فان 
+خوش نمره 
+________
+
+#مهدی_راشدی
+#تفسیر 
+حساس ب حضور غیاب 
++نمره مازاد
+ارائه خوب باشه نمره بالا پاسی
+نمره دهی خوبه 
+________
+
+#جباریان
+#دانش_خانواده_وجمعیت 
+حضور غیاب نداره 
+کلاس فان امتحان 40 تا تست 
+از مباحث کتاب و مطرح شده در کلاس
+ارائه تا 4 نمره 
+________
+
+#عبدالقاسم_کریمی
+کلا برندارین 💩😃
+امتحان تستی تشریحی سخت
+از اونا که با پنبه (خنده هاش) سر میبره 
+________
+
+#سید_حسین_موسوی
+#اخلاق_اسلامی 
+حضور غیاب ب شدت حساس
+نمره دهی عالی 
+امتحان تستی در حد معقول و متوسط 
+________
+
+#علیرضا_آزاد
+#تفسیر 
+نمره مازاد تا دلت بخواد
+حساس ب حضور غیاب
+امتحان در حد کتاب معرفی شده و مباحث کلاسی
+نمودار داره 
+Max:20
+Min:0
+Ave:18
+________
+
+#صدیقه_صراف_نژاد
+#دانش_خانواده_وجمعیت 
+حساس ب حضور غیاب 
++نمره مازاد 
+ارائه داره 
+امتحان تستی 40 تا
+خوش نمره 
+________
+
+#احمد_پور_فرخنده
+#تاریخ_تحلیلی 
+حساس ب حضور غیاب 
+گویا رندوم هم حضور غیاب میکنن
+کلاس کسل کننده 
+امتحان سخت 
+نمره دهی تعریفی نداره 
+فقط اینکه کسی رو نمیندازه 
+________
+
+#علیرضا_محمدی
+#انقلاب
+#اندیشه_ها
+خوش اخلاق کلاس کسل کننده نیست
+خوش نمره 
+فعال باشی بالا 18
+Max:20
+Min:12
+Ave:18.87
+________
+#نوعی_باغبان
+#انقلاب
+از هر نظر عالی 🌹سواد و تدریس و اخلاق و نمره دهی
+    ''',
     'btn_college': 'گروه مهندسی کامپیوتر🏫',
     'btn_exams_exe': 'تمرین و امتحانات📑',
     'btn_sources': 'منابع و جزوات📚',
@@ -240,10 +431,14 @@ messages = {
     'btn_college_press_persianArticle': 'مقالات فارسی',
     'btn_college_press_books': 'کتاب ها📚',
 
+    'btn_add_master': '+اضافه کردن استاد',
+    'btn_add_subject': 'اضافه کردن درس+',
+
     'btn_exe_fundamental_programming': 'مبانی برنامه نویسی ابریشمی',
     'btn_exe_advance_programming': 'برنامه سازی پیشرفته پایدار',
     'btn_exe_discrete_bafghi': 'ریاضیات گسسته بافقی',
     'btn_exe_discrete_structure': 'ساختمان گسسته',
+    'btn_exe_differential_equation': 'معادلات دیفرانسیل',
     'btn_exe_data_structure': '-ساختمان داده-',
 
     'btn_src_fundamental_programming': 'مبانی کامپیوتر برنامه نویسی',
@@ -251,6 +446,7 @@ messages = {
     'btn_src_ai_abrishami': 'هوش مصنوعی(ابریشمی)',
     'btn_src_os_allahbakhsh': 'سیسستم عامل(الله بخش)',
     'btn_src_discrete': 'ریاضیات گسسته',
+    'btn_src_differential_equation': '-معادلات دیفرانسیل',
     'btn_src_data_structure': 'ساختمان داده',
 
     'btn_back_home': 'خانه🏠',
@@ -304,7 +500,7 @@ def exe_subject_handler(update, context):
     buttons = [
         [messages['btn_exe_fundamental_programming'], messages['btn_exe_advance_programming']],
         [messages['btn_exe_discrete_bafghi'], messages['btn_exe_discrete_structure']],
-        [messages['btn_exe_data_structure']],
+        [messages['btn_exe_data_structure'], messages['btn_exe_differential_equation']],
         [messages['btn_back_home']],
     ]
     update.message.reply_text(
@@ -318,7 +514,8 @@ def src_subject_handler(update, context):
         # [messages['btn_src_ai_abrishami'], messages['btn_src_os_allahbakhsh']],
         [messages['btn_src_discrete'], messages['btn_src_data_structure']],
         [messages['btn_src_fundamental_programming'], messages['btn_src_advance_programming']],
-        [messages['btn_back_home']]
+        # [messages['btn_src_differential_equation']],
+        [messages['btn_back_home']],
     ]
     update.message.reply_text(
         text=messages['msg_select_src_subject'],
@@ -497,7 +694,10 @@ def college_masters_handler(update: Update, context: CallbackContext) -> int:
             InlineKeyboardButton('زبان تخصصی', callback_data='advance_english'),
             InlineKeyboardButton('طراحی الگوریتم', callback_data='algorithm'),
             InlineKeyboardButton('ساختمان داده', callback_data='data_structure'),
-        ],
+        ], [
+            InlineKeyboardButton('معارف', callback_data='maaref'),
+            InlineKeyboardButton('اضافه کردن درس +', callback_data='add_subject')
+        ]
     ]
     update.message.reply_text(
         text='درس مورد نظر را انتخاب کنید:',
@@ -515,7 +715,9 @@ def college_masters_ds_handler(update: Update, context: CallbackContext) -> int:
         [
             InlineKeyboardButton('دکتر غیاثی شیرازی', callback_data='ghiasi'),
             InlineKeyboardButton('دکتر امین طوسی', callback_data='tosi'),
-        ],
+        ], [
+            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
+        ]
     ]
     context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
                                 chat_id=chat_id, message_id=message_id,
@@ -531,7 +733,9 @@ def college_masters_algorithm_handler(update: Update, context: CallbackContext) 
     buttons = [
         [
             InlineKeyboardButton('دکتر نوری بایگی', callback_data='noriBaigi'),
-        ],
+        ], [
+            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
+        ]
     ]
     context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
                                 chat_id=chat_id, message_id=message_id,
@@ -548,7 +752,9 @@ def college_masters_ap_handler(update: Update, context: CallbackContext) -> int:
         [
             InlineKeyboardButton('دکتر نوری بایگی', callback_data='noriBaigi'),
             InlineKeyboardButton('دکتر پایدار', callback_data='paydar'),
-        ],
+        ], [
+            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
+        ]
     ]
     context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
                                 chat_id=chat_id, message_id=message_id,
@@ -567,6 +773,8 @@ def college_masters_discrete_handler(update: Update, context: CallbackContext) -
             InlineKeyboardButton('دکتر غیاثی شیرازی', callback_data='ghiasi'),
         ], [
             InlineKeyboardButton('مجید میرزاوزیری', callback_data='mirzavaziri'),
+        ], [
+            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
         ]
     ]
     context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
@@ -586,7 +794,9 @@ def college_masters_logic_handler(update: Update, context: CallbackContext) -> i
             InlineKeyboardButton('سارا ارشادی نسب', callback_data='ershadi'),
         ], [
             InlineKeyboardButton('مریم زمردی مقدم', callback_data='zomorodi'),
-        ],
+        ], [
+            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
+        ]
     ]
     context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
                                 chat_id=chat_id, message_id=message_id,
@@ -605,7 +815,9 @@ def college_masters_fp_handler(update: Update, context: CallbackContext) -> int:
             InlineKeyboardButton(' نوری بایگی', callback_data='noriBaigi'),
         ], [
             InlineKeyboardButton('احسان فضل ارثی', callback_data='fazlErsi'),
-        ],
+        ], [
+            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
+        ]
     ]
     context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
                                 chat_id=chat_id, message_id=message_id,
@@ -622,11 +834,22 @@ def college_masters_advEnglish_handler(update: Update, context: CallbackContext)
         [
             InlineKeyboardButton('سعید عربان', callback_data='arban'),
             InlineKeyboardButton('عابدین واحدیان مظلوم', callback_data='vahedian'),
-        ],
+        ], [
+            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
+        ]
     ]
     context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
                                 chat_id=chat_id, message_id=message_id,
                                 reply_markup=InlineKeyboardMarkup(buttons))
+    return SECOND
+
+
+def college_masters_maaref_handler(update: Update, context: CallbackContext) -> int:
+    query = update.callback_query
+    data = query.data
+    chat_id = query.message.chat_id
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    context.bot.send_message(chat_id=chat_id, text=messages['msg_maaref_masters'])
     return SECOND
 
 
@@ -693,8 +916,39 @@ def end_college_masters_handler(update: Update, context: CallbackContext) -> Non
     elif data == 'mirzavaziri':
         context.bot.send_chat_action(chat_id, ChatAction.TYPING)
         context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_mirzavaziri'])
+    elif data == 'add_master':
+        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+        context.bot.send_message(chat_id=update.effective_chat.id, text='اگر استاد مد نظر در لیست وجود ندارد، میتوانید'
+                                                                        'اسم استاد را فقط با فرمت زیر(بین دو خط تیره)'
+                                                                        ' ارسال کنید 🙏🏻: '
+                                                                        '\n -نام استاد-')
+        get_master(update, context)
     logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     # return ConversationHandler.END
+
+
+def get_master(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    context.bot.send_message(chat_id, text='نام استاد دریافت شد✅پس از تایید در بات قرار داده میشود')
+    context.bot.send_message(chat_id=131605711, text=update.message.text)
+
+
+def college_masters_add_subject(update: Update, context: CallbackContext) -> None:
+    query = update.callback_query
+    chat_id = query.message.chat_id
+    message_id = query.message.message_id
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    context.bot.editMessageText(chat_id=update.effective_chat.id, message_id=message_id,
+                                text='اگر درس مد نظر در لیست وجود ندارد، میتوانید'
+                                     'نام درس را فقط با فرمت زیر(بین دو آندرلاین)'
+                                     ' ارسال کنید 🙏🏻: '
+                                     '\n _نام درس_')
+
+
+def get_subject(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    context.bot.send_message(chat_id, text='نام درس دریافت شد✅پس از تایید در بات قرار داده میشود')
+    context.bot.send_message(chat_id=131605711, text=update.message.text)
 
 
 def college_contact_handler(update: Update, context: CallbackContext) -> None:
@@ -753,8 +1007,7 @@ def contact_handler(update, context):
 def help_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_PHOTO)
-    context.bot.send_photo(chat_id, photo='AgACAgQAAxkDAAIOQ2EvyYYCKQGnSxGjakjPZiQsWZc-AAI7uTEbvnOBUb1qkbhvbws'
-                                          'BAQADAgADbQADIAQ')
+    context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_help'])
 
 
 def back_home_handler(update: Update, context: CallbackContext) -> None:
@@ -902,6 +1155,17 @@ def src_os_allah_handler(update: Update, context: CallbackContext) -> None:
                               caption='فایل های درس سیستم عامل الله بخش بهار 1400')
 
 
+def src_differential_equation(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
+    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAANAYTuhePSMSrMZU89512Jr-hnyK'
+                                                                         'gADSQkAAiwg4VGEWVkaYkOiHyAE',
+                              file_name='معادلات دیفرانسیل ادوارز و پتی')
+    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAANCYTuiCtYpXKvCyNvLaEIYtD4X84Y'
+                                                                         'AAkoJAAIsIOFRWMo8c14kmQsgBA',
+                              file_name='پاسخ نامه معادلات دیفرانسیل ادوارز و پتی')
+
+
 # Start exam file handlers
 def exam_ap_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
@@ -949,13 +1213,34 @@ def exam_fp_file_handler(update: Update, context: CallbackContext) -> None:
 
 def exam_ds_file_handler(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
     context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAAIUVWE1xLqU2lUhw1O_toh68mkaFXe'
                                                                          '2AAKRCwAC5miwUTynOJTv3cEYIAQ',
                               filename='DS Ghiasi',
                               caption='فایل درس ساختمان داده غیاثی 99', timeout=60)
 
+
+def exam_differential_equation(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    context.bot.send_message(hat_id=update.effective_chat.id, text='کانال حل تمرین نمونه سوالات(محمدیان):\n'
+                                                                   'https://t.me/tamrin_moadelat_fum')
+
+
 # TODO InlineQueryResultGif
+
+
+def send_document_handler(update: Update, context: CallbackContext):
+    chat_id = update.message.chat_id
+    first_name = update.message.chat.first_name
+    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
+    context.bot.send_message(chat_id, text=messages['msg_send_document'].format(first_name))
+
+
+def docmsg(update: Update, context: CallbackContext):
+    context.bot.send_document(chat_id=131605711, document=update.message.document.file_id)
+    context.bot.send_message(chat_id=131605711, text=str(update.message.document))
+    context.bot.send_message(chat_id=update.message.chat_id, text=messages['msg_send_document2'])
 
 
 def inlinequery(update: Update, context: CallbackContext) -> None:
@@ -1000,19 +1285,6 @@ def inlinequery(update: Update, context: CallbackContext) -> None:
     update.inline_query.answer(results)
 
 
-def send_document_handler(update: Update, context: CallbackContext):
-    chat_id = update.message.chat_id
-    first_name = update.message.chat.first_name
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id, text=messages['msg_send_document'].format(first_name))
-
-
-def docmsg(update: Update, context: CallbackContext):
-    context.bot.send_document(chat_id=131605711, document=update.message.document.file_id)
-    context.bot.send_message(chat_id=131605711, text=str(update.message.document))
-    context.bot.send_message(chat_id=update.message.chat_id, text=messages['msg_send_document2'])
-
-
 def main() -> None:
     """Run the Bot."""
     # Create the Updater and pass it your bot's token.
@@ -1034,12 +1306,16 @@ def main() -> None:
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_exe_discrete_structure']),
                                           exam_discrete_structure_file_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_exe_data_structure']), exam_ds_file_handler))
+    dispatcher.add_handler(
+        MessageHandler(Filters.regex(messages['btn_exe_differential_equation']), exam_differential_equation))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_exe_fundamental_programming']),
                                           exam_fp_file_handler))
 
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_send_document']), send_document_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_sources']), src_subject_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_src_data_structure']), src_ds_file_handler))
+    dispatcher.add_handler(
+        MessageHandler(Filters.regex(messages['btn_src_differential_equation']), src_differential_equation))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_src_discrete']), src_discrete_file_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_src_ai_abrishami']), src_ai_abrishami_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_src_os_allahbakhsh']), src_os_allah_handler))
@@ -1070,7 +1346,9 @@ def main() -> None:
                 CallbackQueryHandler(college_masters_advEnglish_handler, pattern="^advance_english$"),
                 CallbackQueryHandler(college_masters_logic_handler, pattern="^logic_circuits$"),
                 CallbackQueryHandler(college_masters_ds_handler, pattern="^data_structure$"),
-                CallbackQueryHandler(college_masters_algorithm_handler, pattern="^algorithm$")
+                CallbackQueryHandler(college_masters_algorithm_handler, pattern="^algorithm$"),
+                CallbackQueryHandler(college_masters_maaref_handler, pattern="^maaref$"),
+                CallbackQueryHandler(college_masters_add_subject, pattern="^add_subject$"),
             ],
             SECOND: [
                 CallbackQueryHandler(end_college_masters_handler)
@@ -1090,6 +1368,10 @@ def main() -> None:
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_contact']), contact_handler))
     dispatcher.add_handler(MessageHandler(Filters.regex(messages['btn_help']), help_handler))
 
+    dispatcher.add_handler(
+        MessageHandler(Filters.regex(r'^-([ آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیئ\s\w]+)-$'), get_master))
+    dispatcher.add_handler(
+        MessageHandler(Filters.regex(r'^_([ آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیئ\s\w]+)_$'), get_subject))
     dispatcher.add_handler(MessageHandler(Filters.document, docmsg))
     dispatcher.add_handler(InlineQueryHandler(inlinequery))
     # dispatcher.add_handler(MessageHandler(Filters.text & (~Filters.command), echo))
