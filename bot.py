@@ -235,21 +235,18 @@ messages = {
 میانترم تستی تشریحی 
 پایانترم تستی
 _________
-
 #گندم_آبادی
 #دانش_خانواده_وجمعیت
 خوش اخلاق، جو کلاس عالی 
 2 نمره مازاد کلاسی 
 امتحان تستی معقول 
 ________
-
 #علی_مشهدی
 #حسین_پویا
 خلاصه و مفید 👌♥️
 هر چی ارائه داد بردارین 
 همه جوره هوا دانشجو رو داره 
 ________
-
 #محمد_باقر_رضاییان
 #اندیشه_ها
 درس دادن عالی، اهل غیبتی برندار 
@@ -260,27 +257,23 @@ Min:10
 Ave:16:5
  امتحان تستی معقول 
 ________
-
 #ناهید_مشایی
 #دانش_خانواده_وجمعیت
 اخلاق عالی حساس به حضور غیاب
 امتحان تشریحی تستی معقول 
 بیان شیرین اصلا هم کلاس کسل کننده نیست 
 ________
-
 #راضیه_آرام
 #دانش_خانواده_وجمعیت 
 نمره دادن خوبه 
 کلاساش فانه، حساس ب حضور غیاب 
 ________
-
 #نجف_زاده_تربتی
 #اندیشه_ها 
 حضور غیاب ب شدت حساس 
 منبع کتاب معرفی شده +120 صفحه جزوه تایپی 
 امتحان ب نسبت سخت 
 ________
-
 #سبد_محمد_مرتضوی
 #تفسیر
 کلاس خسته کننده نیست 
@@ -288,7 +281,6 @@ ________
 امتحان نسبتا سخت از کتاب معرفی شده 
 نمره دادن خوبه 
 ________
-
 #مجتهدی
 #تاریخ_امامت
 حساس ب حضور غیاب
@@ -299,7 +291,6 @@ Max:20
 Min:10
 Ave:16
 ________
-
 #حمید_رضا_ثنایی
 #تاریخ_تحلیلی
 کلاس کسل کننده 
@@ -307,7 +298,6 @@ ________
 ب شدت حساس رو حضور غیاب
 امتحان فضایی سوالات نکته دار 
 ________
-
 #محمد_حسن_حایری
 #اخلاق_اسلامی
 در مجموع استاد خوبیه
@@ -318,7 +308,6 @@ Max:20
 Min:13.5
 Ave:18.46
 ____________
-
 #مصطفی_گوهری_فخرآبادی
 #تاریخ_امامت 
 میانترم کوییز 25 صدمی سر کلاس که خیلی اسونه
@@ -327,15 +316,13 @@ ____________
 Max:20
 Min:9.75
 Ave:16.94
-________
-
+__________
 #رویا_یداللهی
 #فارسی_عمومی
 استاد عالی 
 کلاس فان 
 خوش نمره 
-________
-
+__________
 #مهدی_راشدی
 #تفسیر 
 حساس ب حضور غیاب 
@@ -343,7 +330,6 @@ ________
 ارائه خوب باشه نمره بالا پاسی
 نمره دهی خوبه 
 ________
-
 #جباریان
 #دانش_خانواده_وجمعیت 
 حضور غیاب نداره 
@@ -351,20 +337,17 @@ ________
 از مباحث کتاب و مطرح شده در کلاس
 ارائه تا 4 نمره 
 ________
-
 #عبدالقاسم_کریمی
 کلا برندارین 💩😃
 امتحان تستی تشریحی سخت
 از اونا که با پنبه (خنده هاش) سر میبره 
-________
-
+_________
 #سید_حسین_موسوی
 #اخلاق_اسلامی 
 حضور غیاب ب شدت حساس
 نمره دهی عالی 
 امتحان تستی در حد معقول و متوسط 
 ________
-
 #علیرضا_آزاد
 #تفسیر 
 نمره مازاد تا دلت بخواد
@@ -849,7 +832,7 @@ def college_masters_maaref_handler(update: Update, context: CallbackContext) -> 
     data = query.data
     chat_id = query.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=chat_id, text=messages['msg_maaref_masters'])
+    context.bot.send_message(chat_id, text=messages['msg_maaref_masters'])
     return SECOND
 
 
@@ -1223,8 +1206,8 @@ def exam_ds_file_handler(update: Update, context: CallbackContext) -> None:
 def exam_differential_equation(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat_id
     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(hat_id=update.effective_chat.id, text='کانال حل تمرین نمونه سوالات(محمدیان):\n'
-                                                                   'https://t.me/tamrin_moadelat_fum')
+    context.bot.send_message(chat_id=update.effective_chat.id, text='کانال حل تمرین نمونه سوالات(محمدیان):\n'
+                                                                    'https://t.me/tamrin_moadelat_fum')
 
 
 # TODO InlineQueryResultGif
@@ -1283,6 +1266,27 @@ def inlinequery(update: Update, context: CallbackContext) -> None:
         ),
     ]
     update.inline_query.answer(results)
+
+
+def sendPost(update: Update, context: CallbackContext) -> None:
+    context.bot.send_message(chat_id=-1001342044227, text=update.channel_post.text)
+
+
+def doc_sender(update: Update, context: CallbackContext) -> None:
+    if update.channel_post.document:
+        context.bot.send_document(chat_id=-1001342044227, document=update.channel_post.document.file_id, caption=update.channel_post.caption)
+    elif update.channel_post.photo:
+        context.bot.send_photo(chat_id=-1001342044227, photo=update.channel_post.photo[0].file_id, caption=update.channel_post.caption)
+    elif update.channel_post.video:
+        context.bot.send_video(chat_id=-1001342044227, video=update.channel_post.video.file_id, caption=update.channel_post.caption)
+    elif update.channel_post.voice:
+        context.bot.send_voice(chat_id=-1001342044227, voice=update.channel_post.voice.file_id, caption=update.channel_post.caption)
+    elif update.channel_post.poll:
+        context.bot.send_poll(chat_id=-1001342044227, question=update.channel_post.poll.question,
+                              options=[item['text'] for item in update.channel_post.poll.options],
+                              is_anonymous=update.channel_post.poll.question)
+    elif update.channel_post.audio:
+        context.bot.send_audio(chat_id=-1001342044227, audio=update.channel_post.audio, caption=update.channel_post.caption)
 
 
 def main() -> None:
@@ -1374,6 +1378,12 @@ def main() -> None:
         MessageHandler(Filters.regex(r'^_([ آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیئ\s\w]+)_$'), get_subject))
     dispatcher.add_handler(MessageHandler(Filters.document, docmsg))
     dispatcher.add_handler(InlineQueryHandler(inlinequery))
+
+    dispatcher.add_handler(
+        MessageHandler(Filters.regex(r'^(.[ آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیئ\s\w\S\W@#$%^&*()_=+!]+.)$'), sendPost))
+    dispatcher.add_handler(
+        MessageHandler(Filters.document | Filters.photo | Filters.poll | Filters.voice | Filters.video
+                       , doc_sender))
     # dispatcher.add_handler(MessageHandler(Filters.text & (~Filters.command), echo))
     # Start hte Bot
     updater.start_polling()
