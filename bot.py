@@ -1025,7 +1025,7 @@ def src_discrete_file_handler(update: Update, context: CallbackContext) -> None:
     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
     context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIONmEvv79XY_bXBpIhlnDNMqbMNm9'
                                                                          'EAAJ7DAACvnOBUeySzm0kBgeOIAQ',
-                              filename='Rosen Discrete Mathematics',
+                              filename='Rosen Discrete Mathematics.',
                               caption='منبع اصلی - روزن', timeout=3000)
     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
     context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAION2EvwEM1JXSHvis_Pl9MHo'
@@ -1220,6 +1220,7 @@ def send_document_handler(update: Update, context: CallbackContext):
     context.bot.send_message(chat_id, text=messages['msg_send_document'].format(first_name))
 
 
+# send files which given from user for me(chat id=131605711)
 def docmsg(update: Update, context: CallbackContext):
     context.bot.send_document(chat_id=131605711, document=update.message.document.file_id)
     context.bot.send_message(chat_id=131605711, text=str(update.message.document))
@@ -1379,6 +1380,7 @@ def main() -> None:
     dispatcher.add_handler(MessageHandler(Filters.document, docmsg))
     dispatcher.add_handler(InlineQueryHandler(inlinequery))
 
+    #  send channel posts to group
     dispatcher.add_handler(
         MessageHandler(Filters.regex(r'^(.[ آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیئ\s\w\S\W@#$%^&*()_=+!]+.)$'), sendPost))
     dispatcher.add_handler(
