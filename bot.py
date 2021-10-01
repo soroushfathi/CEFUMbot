@@ -12,9 +12,6 @@ from telegram import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
     InlineQueryResultArticle,
-    InlineQueryResultDocument,
-    InlineQueryResultCachedGif,
-    InlineQueryResultGif,
     InputTextMessageContent,
     Update,
     ParseMode,
@@ -492,12 +489,14 @@ def exe_subject_handler(update, context):
     )
 
 
+#  [messages['btn_src_ai_abrishami'], messages['btn_src_os_allahbakhsh']],
+#  [messages['btn_src_differential_equation']],
+
+
 def src_subject_handler(update, context):
     buttons = [
-        # [messages['btn_src_ai_abrishami'], messages['btn_src_os_allahbakhsh']],
         [messages['btn_src_discrete'], messages['btn_src_data_structure']],
         [messages['btn_src_fundamental_programming'], messages['btn_src_advance_programming']],
-        # [messages['btn_src_differential_equation']],
         [messages['btn_back_home']],
     ]
     update.message.reply_text(
@@ -506,7 +505,6 @@ def src_subject_handler(update, context):
     )
 
 
-# TODO add conference & plans button (web scraping) & Packs
 def college_handler(update, context):
     buttons = [
         [messages['btn_college_news'], messages['btn_college_press']],
@@ -1006,12 +1004,12 @@ def src_fp_file_handler(update: Update, context: CallbackContext) -> None:
     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
     context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIOJ2EvuoLom5UGUamAJyt1Vh-jKhrw'
                                                                          'AAJ4DAACvnOBUVgDsjQ4o52yIAQ',
-                              filename='Fundamental Programming Sources',
+                              filename='Fundamental Programming Sources.zip',
                               caption='کناب دایتل و جزوات', timeout=300)
     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
     context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIONGEvvpe8Ed50EiOROx9N9kq6'
                                                                          '1sNdAAJ6DAACvnOBUc5tmQ3nPxXFIAQ',
-                              filename='Sample Codes',
+                              filename='Sample Codes.zip',
                               caption='نمونه کد های مسائل کارگاه', timeout=300)
     # with open('./slides-abrishami.zip') as f:
     #     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
@@ -1025,12 +1023,12 @@ def src_discrete_file_handler(update: Update, context: CallbackContext) -> None:
     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
     context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIONmEvv79XY_bXBpIhlnDNMqbMNm9'
                                                                          'EAAJ7DAACvnOBUeySzm0kBgeOIAQ',
-                              filename='Rosen Discrete Mathematics.',
+                              filename='Rosen Discrete Mathematics.pdf',
                               caption='منبع اصلی - روزن', timeout=3000)
     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
     context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAION2EvwEM1JXSHvis_Pl9MHo'
                                                                          'DbwkNDAAJ9DAACvnOBUcV2FFEF0FoPIAQ',
-                              filename='Solution Manual for Discrete Mathematics Rosen',
+                              filename='Solution Manual for Discrete Mathematics Rosen.pdf',
                               caption='پاسخنامه روزن', timeout=3000)
 
 
