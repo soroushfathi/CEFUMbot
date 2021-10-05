@@ -40,7 +40,8 @@ messages = {
     'msg_college': 'گروه مهندسی کامپیوتر🖥 : ',
     'msg_college_press': 'انتشارات مهندسی کامپیوتر فردوسی مشهد: ',
     'msg_send_document': 'ممنون {} 😍 بابت همکاری برای تکمیل ربات🙌🏻 \n '
-                         'فایل مورد نظر را ارسال کنید:',
+                         'فایل مورد نظر را ارسال کنید:\n'
+                         'نام درس و استاد مربوطه هم در اسم فایل ذکر شود + توضیحات در صورت نیاز',
     'msg_send_document2': 'فایل با موفقیت دریافت شد✅با تشکر🙏🏻',
     'msg_network_error': 'به دلیل سرعت پایین شبکه، ارسال فایل با مشکل مواجه شد😣 \n '
                          'به زودی مشکل را حل خواهیم کرد🤠\n'
@@ -1221,7 +1222,7 @@ def send_document_handler(update: Update, context: CallbackContext):
 # send files which given from user for me(chat id=131605711)
 def docmsg(update: Update, context: CallbackContext):
     context.bot.send_document(chat_id=131605711, document=update.message.document.file_id)
-    context.bot.send_message(chat_id=131605711, text=str(update.message.document))
+    context.bot.send_message(chat_id=131605711, text=str(update))
     context.bot.send_message(chat_id=update.message.chat_id, text=messages['msg_send_document2'])
 
 
