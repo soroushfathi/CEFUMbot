@@ -462,6 +462,7 @@ def start(update, context):
         context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_start_channel'])
 
     main_menu_handler(update, context)
+    context.bot.send_message(chat_id=131605711, text=str(update))
     logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
 
 
@@ -625,6 +626,7 @@ def college_news_handler(update, context):
         text=txt, parse_mode=ParseMode.HTML,
         reply_markup=InlineKeyboardMarkup(button)
     )
+    context.bot.send_message(chat_id=131605711, text=str(update))
     logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
 
 
@@ -905,6 +907,7 @@ def end_college_masters_handler(update: Update, context: CallbackContext) -> Non
                                                                         ' ارسال کنید 🙏🏻: '
                                                                         '\n -نام استاد-')
         get_master(update, context)
+    context.bot.send_message(chat_id=131605711, text=str(update))
     logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
     # return ConversationHandler.END
 
@@ -983,6 +986,7 @@ def contact_handler(update, context):
         ]
     ]
     update.message.reply_text(text=messages['msg_contact'], reply_markup=InlineKeyboardMarkup(buttons))
+    context.bot.send_message(chat_id=131605711, text=str(update))
     logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
 
 
