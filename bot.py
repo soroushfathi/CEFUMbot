@@ -1272,7 +1272,7 @@ def inlinequery(update: Update, context: CallbackContext) -> None:
     update.inline_query.answer(results)
 
 
-def sendPost(update: Update, context: CallbackContext) -> None:
+def sendpost(update: Update, context: CallbackContext) -> None:
     context.bot.send_message(chat_id=-1001342044227, text=update.channel_post.text)
 
 
@@ -1385,7 +1385,7 @@ def main() -> None:
 
     #  send channel posts to group
     dispatcher.add_handler(
-        MessageHandler(Filters.regex(r'^(.[ آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیئ\s\w\S\W@#$%^&*()_=+!]+.)$'), sendPost))
+        MessageHandler(Filters.regex(r'^(.[ آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهیئ\s\w\S\W@#$%^&*()_=+!]+.)$'), sendpost))
     dispatcher.add_handler(
         MessageHandler(Filters.document | Filters.photo | Filters.poll | Filters.voice | Filters.video
                        , doc_sender))
