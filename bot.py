@@ -17,6 +17,36 @@ from telegram import (
     ParseMode,
     error,
 )
+from exam_handler import (
+    exam_discrete_bafghi_file_handler,
+    exam_ds_file_handler,
+    exam_fp_file_handler,
+    exam_ap_file_handler,
+    exam_differential_equation,
+    exam_discrete_structure_file_handler
+)
+from college_handler import (
+    college_masters_handler,
+    college_news_handler,
+    college_about_handler,
+    college_books_handler,
+    college_press_handler,
+    college_teach_handler,
+    college_contact_handler,
+    college_latinArticles_handler,
+    college_persianArticles_handler,
+    college_notification_handler,
+    college_masters_algorithm_handler,
+    college_masters_discrete_handler,
+    college_masters_ap_handler,
+    college_masters_ds_handler,
+    college_masters_fp_handler,
+    college_masters_logic_handler,
+    college_masters_maaref_handler,
+    college_masters_add_subject,
+    college_masters_advEnglish_handler,
+    college_getLatinArticles,
+)
 from telegram.ext.filters import Filters
 from telegram.chataction import ChatAction
 from bs4 import BeautifulSoup
@@ -26,7 +56,8 @@ from telegram.utils.helpers import escape_markdown
 
 # TODO memari computer
 BASE_URL = 'http://ce.um.ac.ir/index.php?lang=fa'
-ARTICLES_URL = 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&edugroups=3105&cur_stu_title=&Itemid=694&lang=fa'
+ARTICLES_URL = 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&edugroups=3105&cur_stu_title=&Itemid' \
+               '=694&lang=fa '
 
 messages = {
     'msg_start_private': '🤖سلام {}، \n خوش امدی به ربات🙂; امیدوارم بتونم کمکت کنم🤠',
@@ -91,8 +122,8 @@ messages = {
                             '\t🔰محل اخذ آخرین مدرک تحصیلی: دانشگاه صنعتی شریف، تهران، ایران\n'
                             '\n✅سطح تدریس : پیشرفته\n'
                             '✅نمره دهی : خوب\n'
-                            '🏷توضیحات: \n بجز حساسیت های الکیی ک داره دقیقا رو نظم و با برنامه و خیلی هم خوب تدریس میکنه n\
-                            در این حد ک ارشادی جزوه صداقت رو درس میداد(۳ فصل آخرشو) \n '
+                            '🏷توضیحات: \n بجز حساسیت های الکیی ک داره دقیقا رو نظم و با برنامه و خیلی هم خوب تدریس '
+                            'میکنه n\ در این حد ک ارشادی جزوه صداقت رو درس میداد(۳ فصل آخرشو) \n '
                             'کلی هم نمره اضافه داره صداقت، کلاسای حل تمرینش همش امتیازیه 4و5 تا کوییز امتیازی داره \n '
                             'از اول ترم مشخص میکنه برنامشو طبق همون میره جلو\n '
                             '\nنظرات دانشجویان💡 : \n'
@@ -521,454 +552,6 @@ def college_handler(update, context):
 
 
 # ToDo get persian articles and books
-def college_getLatinArticles():
-    url = ARTICLES_URL
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, 'html.parser')
-    number_result = soup.find_all('td', attrs={
-        'style': 'padding:5px; border:1px solid #E6E6E6; text-align:center !important;'})
-    title_result = soup.find_all('td', attrs={
-        'style': 'padding:5px; border:1px solid #E6E6E6; text-align: justify !important; direction: ltr; '})
-    date_result = soup.find_all('td', attrs={'style': 'padding:5px; border:1px solid #E6E6E6;'})
-    author_result = soup.find_all('td', attrs={'style': 'padding:5px; border:1px solid #E6E6E6;'})
-    authors = [item.text for item in author_result]  # odds
-    date = [item.text for item in date_result]  # even
-    titles = [item.text for item in title_result]
-    links = [item.a['href'] for item in title_result]
-    return authors, titles, date, links
-
-
-def college_latinArticles_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    authors, titles, date, links = college_getLatinArticles()
-    txt = ''
-    for t, a, d, l in list(zip(titles[:10], authors[1:20:2], date[0:20:2], links[:10])):
-        txt += '📝{0} - <a href="{3}">{1}</a> - {2} \n'.format(a, t, d, l)
-    buttons = [
-        [InlineKeyboardButton('مراجعه به سایت', 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&'
-                                                'edugroups=3105&cur_stu_title=&Itemid=694&lang=fa')],
-    ]
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    update.message.reply_text(text=txt, parse_mode=ParseMode.HTML, reply_markup=InlineKeyboardMarkup(buttons))
-
-
-# def college_articles_keyboard(update: Update, context: CallbackContext) -> None:
-#     query = update.callback_query
-#     data = query.data
-#     chat_id = query.message.chat_id
-#     message_id = query.message.message_id
-#     authors, titles, date, links = college_getLatinArticles()
-#     txt = ''
-#     for t, a, d, l in list(zip(titles[:15], authors[1:30:2], date[0:30:2], links[:15])):
-#         txt += '📝{0} - <a href="{3}">{1}</a> - {2} \n'.format(a, t, d, l)
-#     txt += '\n<a href="{}">مراجعه به سایت</a>\n'.format(ARTICLES_URL)
-# button = [
-#     [InlineKeyboardButton('مراجعه به سایت', 'http://ce.um.ac.ir/index.php?option=com_groups&view=enarticles&'
-#                                             'edugroups=3105&cur_stu_title=&Itemid=694&lang=fa')],
-# ]
-# if data == 'extraArticles':
-#     context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-#     context.bot.editMessageText(text=txt, chat_id=chat_id, message_id=message_id)
-# context.bot.editMessageReplyMarkup(text=txt + '\n<a href="{}">مقالات بیشتر</a>\n'.format(ARTICLES_URL),
-#                                    parse_mode=ParseMode.HTML,
-#                                    reply_markup=InlineKeyboardMarkup(button),
-#                                    chat_id=chat_id, message_id=message_id)
-
-
-def college_persianArticles_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text='به زودی فایل های مربوطه در این بخش قرار خواهند '
-                                                                    'گرفت،\n با تشکر🙏🏻 ')
-
-
-def college_books_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text='به زودی فایل های مربوطه در این بخش قرار خواهند '
-                                                                    'گرفت،\n با تشکر🙏🏻 ')
-
-
-def college_press_handler(update: Update, context: CallbackContext) -> None:
-    buttons = [
-        [messages['btn_college_press_latinArticle'], messages['btn_college_press_books']],
-        [messages['btn_college_press_persianArticle']],
-        [messages['btn_back_home'], messages['btn_back_college']],
-    ]
-    update.message.reply_text(
-        text=messages['msg_college_press'],
-        reply_markup=ReplyKeyboardMarkup(buttons, resize_keyboard=True)
-    )
-
-
-def college_news_handler(update, context):
-    chat_id = update.message.chat_id
-    first_name = update.message.chat.first_name
-    last_name = update.message.chat.last_name
-    url = BASE_URL
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, 'html.parser')
-    title_result = soup.find_all('div', attrs={'class': 'aidanews2_positions'})
-    title = [item.h1.a.text for item in title_result]
-    date_time_result = soup.find_all('div', attrs={'class': 'aidanews2_botL'})
-    date_time = [item.span.text for item in date_time_result]
-    links = [item.h1.a['href'] for item in title_result]
-    txt = ''
-    for i in range(len(date_time) - 1):
-        txt += '{}📌'.format(i + 1) + '<a href="ce.um.ac.ir{}">{}</a>'.format(links[i], title[i]) + '\n\t' + date_time[
-            i] + '\n'
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    button = [
-        [InlineKeyboardButton('مشاهده همه ی اخبار', 'http://ce.um.ac.ir/index.php?option=com_content&view=category'
-                                                    '&id=102&Itemid=634&lang=fa')],
-    ]
-    update.message.reply_text(
-        text=txt, parse_mode=ParseMode.HTML,
-        reply_markup=InlineKeyboardMarkup(button)
-    )
-    context.bot.send_message(chat_id=131605711, text=str(update))
-    logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
-
-
-def college_notification_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    url = BASE_URL
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, 'html.parser')
-    title_result = soup.find_all('div', attrs={'class': 'aidanews2_positions'})
-    title = [item.h1.a.text for item in title_result]
-    links = [item.h1.a['href'] for item in title_result]
-    date_time_result = soup.find_all('span', attrs={'class': 'aidanews2_date'})
-    date_time = [item.text for item in date_time_result]
-    txt = ''
-    for i in range(5, len(date_time)):
-        txt += '{}📌'.format(i - 4) + '<a href="ce.um.ac.ir{}">{}</a>'.format(links[i], title[i]) + \
-               '\n\t' + date_time[i] + '\n'
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    button = [
-        [InlineKeyboardButton('مشاهده همه ی اطلاعیه ها', 'http://ce.um.ac.ir/index.php?option=com_content&view=category'
-                                                         '&id=113&Itemid=540&lang=fa')],
-    ]
-    update.message.reply_text(
-        text=txt, parse_mode=ParseMode.HTML,
-        reply_markup=InlineKeyboardMarkup(button)
-    )
-
-
-def college_teach_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text='به زودی فایل های مربوطه در این بخش قرار خواهند '
-                                                                    'گرفت،\n با تشکر🙏🏻 ')
-
-
-def college_masters_handler(update: Update, context: CallbackContext) -> int:
-    chat_id = update.message.chat_id
-    first_name = update.message.chat.first_name
-    last_name = update.message.chat.last_name
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    buttons = [
-        [
-            InlineKeyboardButton('برنامه سازی پیشرفته', callback_data='advance_programming'),
-            InlineKeyboardButton('مدار منطقی', callback_data='logic_circuits'),
-        ], [
-            InlineKeyboardButton('مبانی کامپیوتر و برنامه سازی', callback_data='fundamental_programming'),
-            InlineKeyboardButton('ریاضیات گسسته', callback_data='discrete_math'),
-        ], [
-            InlineKeyboardButton('زبان تخصصی', callback_data='advance_english'),
-            InlineKeyboardButton('طراحی الگوریتم', callback_data='algorithm'),
-            InlineKeyboardButton('ساختمان داده', callback_data='data_structure'),
-        ], [
-            InlineKeyboardButton('معارف', callback_data='maaref'),
-            InlineKeyboardButton('اضافه کردن درس +', callback_data='add_subject')
-        ]
-    ]
-    update.message.reply_text(
-        text='درس مورد نظر را انتخاب کنید:',
-        reply_markup=InlineKeyboardMarkup(buttons)
-    )
-    return FIRST
-
-
-def college_masters_ds_handler(update: Update, context: CallbackContext) -> int:
-    query = update.callback_query
-    # data = query.data
-    chat_id = query.message.chat_id
-    message_id = query.message.message_id
-    buttons = [
-        [
-            InlineKeyboardButton('دکتر غیاثی شیرازی', callback_data='ghiasi'),
-            InlineKeyboardButton('دکتر امین طوسی', callback_data='tosi'),
-        ], [
-            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
-        ]
-    ]
-    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
-                                chat_id=chat_id, message_id=message_id,
-                                reply_markup=InlineKeyboardMarkup(buttons))
-    return SECOND
-
-
-def college_masters_algorithm_handler(update: Update, context: CallbackContext) -> int:
-    query = update.callback_query
-    # data = query.data
-    chat_id = query.message.chat_id
-    message_id = query.message.message_id
-    buttons = [
-        [
-            InlineKeyboardButton('دکتر نوری بایگی', callback_data='noriBaigi'),
-        ], [
-            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
-        ]
-    ]
-    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
-                                chat_id=chat_id, message_id=message_id,
-                                reply_markup=InlineKeyboardMarkup(buttons))
-    return SECOND
-
-
-def college_masters_ap_handler(update: Update, context: CallbackContext) -> int:
-    query = update.callback_query
-    # data = query.data
-    chat_id = query.message.chat_id
-    message_id = query.message.message_id
-    buttons = [
-        [
-            InlineKeyboardButton('دکتر نوری بایگی', callback_data='noriBaigi'),
-            InlineKeyboardButton('دکتر پایدار', callback_data='paydar'),
-        ], [
-            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
-        ]
-    ]
-    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
-                                chat_id=chat_id, message_id=message_id,
-                                reply_markup=InlineKeyboardMarkup(buttons))
-    return SECOND
-
-
-def college_masters_discrete_handler(update: Update, context: CallbackContext) -> int:
-    query = update.callback_query
-    # data = query.data
-    chat_id = query.message.chat_id
-    message_id = query.message.message_id
-    buttons = [
-        [
-            InlineKeyboardButton('دکتر بافقی', callback_data='bafghi'),
-            InlineKeyboardButton('دکتر غیاثی شیرازی', callback_data='ghiasi'),
-        ], [
-            InlineKeyboardButton('مجید میرزاوزیری', callback_data='mirzavaziri'),
-        ], [
-            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
-        ]
-    ]
-    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
-                                chat_id=chat_id, message_id=message_id,
-                                reply_markup=InlineKeyboardMarkup(buttons))
-    return SECOND
-
-
-def college_masters_logic_handler(update: Update, context: CallbackContext) -> int:
-    query = update.callback_query
-    # data = query.data
-    chat_id = query.message.chat_id
-    message_id = query.message.message_id
-    buttons = [
-        [
-            InlineKeyboardButton('یاصر صداقت', callback_data='sedaghat'),
-            InlineKeyboardButton('سارا ارشادی نسب', callback_data='ershadi'),
-        ], [
-            InlineKeyboardButton('مریم زمردی مقدم', callback_data='zomorodi'),
-        ], [
-            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
-        ]
-    ]
-    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
-                                chat_id=chat_id, message_id=message_id,
-                                reply_markup=InlineKeyboardMarkup(buttons))
-    return SECOND
-
-
-def college_masters_fp_handler(update: Update, context: CallbackContext) -> int:
-    query = update.callback_query
-    # data = query.data
-    chat_id = query.message.chat_id
-    message_id = query.message.message_id
-    buttons = [
-        [
-            InlineKeyboardButton('سعید ابریشمی', callback_data='abrishami'),
-            InlineKeyboardButton(' نوری بایگی', callback_data='noriBaigi'),
-        ], [
-            InlineKeyboardButton('احسان فضل ارثی', callback_data='fazlErsi'),
-        ], [
-            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
-        ]
-    ]
-    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
-                                chat_id=chat_id, message_id=message_id,
-                                reply_markup=InlineKeyboardMarkup(buttons))
-    return SECOND
-
-
-def college_masters_advEnglish_handler(update: Update, context: CallbackContext) -> int:
-    query = update.callback_query
-    # data = query.data
-    chat_id = query.message.chat_id
-    message_id = query.message.message_id
-    buttons = [
-        [
-            InlineKeyboardButton('سعید عربان', callback_data='arban'),
-            InlineKeyboardButton('عابدین واحدیان مظلوم', callback_data='vahedian'),
-        ], [
-            InlineKeyboardButton(messages['btn_add_master'], callback_data='add_master')
-        ]
-    ]
-    context.bot.editMessageText(text='برای دریافت اطلاعات، استاد مورد نظر را انخاب کنید:',
-                                chat_id=chat_id, message_id=message_id,
-                                reply_markup=InlineKeyboardMarkup(buttons))
-    return SECOND
-
-
-def college_masters_maaref_handler(update: Update, context: CallbackContext) -> int:
-    query = update.callback_query
-    data = query.data
-    chat_id = query.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id, text=messages['msg_maaref_masters'])
-    return SECOND
-
-
-def end_college_masters_handler(update: Update, context: CallbackContext) -> None:
-    query = update.callback_query
-    data = query.data
-    chat_id = query.message.chat_id
-    first_name = query.message.chat.first_name
-    last_name = query.message.chat.last_name
-    # message_id = query.message.message_id
-    if data == 'abrishami':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://s-abrishami.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_abrishami'], reply_markup=InlineKeyboardMarkup(button))
-        # context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_abrishami'])
-        # context.bot.editMessageText(text=messages['msg_masters_abrishami'], chat_id=chat_id, message_id=message_id)
-    elif data == 'noriBaigi':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://nouribaygi.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_noriBaigi'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'paydar':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://s-paydar.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_paydar'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'fazlErsi':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://fazlersi.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_fazlErsi'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'sedaghat':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://y_sedaghat.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_sedaghat'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'ershadi':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_ershadi'])
-    elif data == 'bafghi':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://ghaemib.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_bafghi'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'ghiasi':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://profsite.um.ac.ir/~k.ghiasi/')]]
-        query.message.reply_text(text=messages['msg_masters_ghiasi'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'harati':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://a.harati.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_harati'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'tosi':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://amintoosi.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_tosi'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'arban':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://araban.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_arban'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'zomorodi':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://m_zomorodi.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_zomorodi'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'vahedian':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        button = [[InlineKeyboardButton('صفحه شخصی', 'http://vahedian.profcms.um.ac.ir/')]]
-        query.message.reply_text(text=messages['msg_masters_vahedian'], reply_markup=InlineKeyboardMarkup(button))
-    elif data == 'mirzavaziri':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text=messages['msg_masters_mirzavaziri'])
-    elif data == 'add_master':
-        context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-        context.bot.send_message(chat_id=update.effective_chat.id, text='اگر استاد مد نظر در لیست وجود ندارد، میتوانید'
-                                                                        'اسم استاد را فقط با فرمت زیر(بین دو خط تیره)'
-                                                                        ' ارسال کنید 🙏🏻: '
-                                                                        '\n -نام استاد-')
-        get_master(update, context)
-    context.bot.send_message(chat_id=131605711, text=str(update))
-    logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
-    # return ConversationHandler.END
-
-
-def get_master(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_message(chat_id, text='نام استاد دریافت شد✅پس از تایید در بات قرار داده میشود')
-    context.bot.send_message(chat_id=131605711, text=update.message.text)
-
-
-def college_masters_add_subject(update: Update, context: CallbackContext) -> None:
-    query = update.callback_query
-    chat_id = query.message.chat_id
-    message_id = query.message.message_id
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.editMessageText(chat_id=update.effective_chat.id, message_id=message_id,
-                                text='اگر درس مد نظر در لیست وجود ندارد، میتوانید'
-                                     'نام درس را فقط با فرمت زیر(بین دو آندرلاین)'
-                                     ' ارسال کنید 🙏🏻: '
-                                     '\n _نام درس_')
-
-
-def get_subject(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_message(chat_id, text='نام درس دریافت شد✅پس از تایید در بات قرار داده میشود')
-    context.bot.send_message(chat_id=131605711, text=update.message.text)
-
-
-def college_contact_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    URL = BASE_URL
-    response = requests.get(URL)
-    soup = BeautifulSoup(response.content, 'html.parser')
-    contact_result = soup.find_all('ul', attrs={'class': 'contact-info'})
-    contact_info = [item.li.text for item in contact_result]
-    txt = '📍آدرس : {}'.format(contact_info) + '\n\n' + messages['msg_college_contact']
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text=txt)
-    buttons = [
-        [InlineKeyboardButton('سایت مهندسی کامپیوتر', 'http://ce.um.ac.ir/index.php?lang=fa')],
-        [InlineKeyboardButton('شماره تلفن های گروه کامپیوتر', 'http://118.um.ac.ir/%D8%AF%D8%A7%D9%86%D8%B4%DA%A9%D8%AF'
-                                                              '%D9%87-%D9%87%D8%A7/%D8%AF%D8%A7%D9%86%D8%B4%DA%A9%D8%AF'
-                                                              '%D9%87-%D9%85%D9%87%D9%86%D8%AF%D8%B3%DB%8C.html')],
-    ]
-    update.message.reply_text(text='پیوندها: ', reply_markup=InlineKeyboardMarkup(buttons))
-
-
-def college_about_handler(update, context):
-    # todo fix web scraping
-    # url = BASE_URL
-    # response = requests.get(url)
-    # soup = BeautifulSoup(response.content, 'html.parser')
-    # about_result = soup.find_all('div', attrs={'class': 'item-page'})
-    # about_txt = [item.text for item in about_result]
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    button = [
-        [InlineKeyboardButton('اطلاعات بیشتر', 'http://ce.um.ac.ir/index.php?option=com_content&view=article&id=134&'
-                                               'Itemid=521&lang=fa')],
-    ]
-    update.message.reply_text(text=messages['msg_college_about'], reply_markup=InlineKeyboardMarkup(button))
 
 
 def contact_handler(update, context):
@@ -1002,215 +585,6 @@ def back_home_handler(update: Update, context: CallbackContext) -> None:
 
 def back_college_handler(update: Update, context: CallbackContext) -> None:
     college_handler(update, context)
-
-
-def src_fp_file_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIOJ2EvuoLom5UGUamAJyt1Vh-jKhrw'
-                                                                         'AAJ4DAACvnOBUVgDsjQ4o52yIAQ',
-                              filename='Fundamental Programming Sources.zip',
-                              caption='کناب دایتل و جزوات', timeout=300)
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIONGEvvpe8Ed50EiOROx9N9kq6'
-                                                                         '1sNdAAJ6DAACvnOBUc5tmQ3nPxXFIAQ',
-                              filename='Sample Codes.zip',
-                              caption='نمونه کد های مسائل کارگاه', timeout=300)
-    # with open('./slides-abrishami.zip') as f:
-    #     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    #     print(context.bot.send_document(chat_id=update.effective_chat.id, document=f,
-    #                                     filename='Slides DR.Abrishami',
-    #                                     caption='اسلاید های استاد ابریشمی', timeout=3000))
-
-
-def src_discrete_file_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIONmEvv79XY_bXBpIhlnDNMqbMNm9'
-                                                                         'EAAJ7DAACvnOBUeySzm0kBgeOIAQ',
-                              filename='Rosen Discrete Mathematics.pdf',
-                              caption='منبع اصلی - روزن', timeout=3000)
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAION2EvwEM1JXSHvis_Pl9MHo'
-                                                                         'DbwkNDAAJ9DAACvnOBUcV2FFEF0FoPIAQ',
-                              filename='Solution Manual for Discrete Mathematics Rosen.pdf',
-                              caption='پاسخنامه روزن', timeout=3000)
-
-
-def src_ap_file_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text='این بخش در حال بروزرسانی است، به زودی فایل های'
-                                                                    ' مربوطه قرار خواهند گرفت')
-
-
-def src_ds_file_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    first_name = update.message.chat.first_name
-    last_name = update.message.chat.last_name
-    #  buttons for linking DS videos to programming telegram channel
-    buttons = [
-        [  # first row
-            InlineKeyboardButton('قسمت1', 'https://t.me/Azad_Developers/17205'),
-            InlineKeyboardButton('قسمت2', 'https://t.me/Azad_Developers/17209'),
-            InlineKeyboardButton('قسمت3', 'https://t.me/Azad_Developers/17214'),
-        ], [
-            InlineKeyboardButton('قسمت4', 'https://t.me/Azad_Developers/17229'),
-            InlineKeyboardButton('قسمت5', 'https://t.me/Azad_Developers/17235'),
-            InlineKeyboardButton('قسمت6', 'https://t.me/Azad_Developers/17243'),
-        ], [
-            InlineKeyboardButton('قسمت7', 'https://t.me/Azad_Developers/17248'),
-            InlineKeyboardButton('قسمت8', 'https://t.me/Azad_Developers/17264'),
-            InlineKeyboardButton('قسمت9', 'https://t.me/Azad_Developers/17279'),
-        ], [
-            InlineKeyboardButton('قسمت10', 'https://t.me/Azad_Developers/17298'),
-            InlineKeyboardButton('قسمت11', 'https://t.me/Azad_Developers/17318'),
-            InlineKeyboardButton('قسمت12', 'https://t.me/Azad_Developers/17328'),
-        ], [
-            InlineKeyboardButton('قسمت13', 'https://t.me/Azad_Developers/17344'),
-            InlineKeyboardButton('قسمت14', 'https://t.me/Azad_Developers/17361'),
-            InlineKeyboardButton('قسمت15', 'https://t.me/Azad_Developers/17373'),
-        ], [
-            InlineKeyboardButton('قسمت16', 'https://t.me/Azad_Developers/17386'),
-            InlineKeyboardButton('قسمت17', 'https://t.me/Azad_Developers/17401'),
-            InlineKeyboardButton('قسمت18', 'https://t.me/Azad_Developers/17415'),
-        ], [
-            InlineKeyboardButton('قسمت19', 'https://t.me/Azad_Developers/17428'),
-            InlineKeyboardButton('قسمت20', 'https://t.me/Azad_Developers/17448'),
-            InlineKeyboardButton('قسمت21', 'https://t.me/Azad_Developers/17464'),
-        ], [
-            InlineKeyboardButton('قسمت22', 'https://t.me/Azad_Developers/17479'),
-            InlineKeyboardButton('قسمت23', 'https://t.me/Azad_Developers/17493'),
-            InlineKeyboardButton('قسمت24', 'https://t.me/Azad_Developers/17505'),
-        ], [
-            InlineKeyboardButton('قسمت25', 'https://t.me/Azad_Developers/17537'),
-            InlineKeyboardButton('قسمت26', 'https://t.me/Azad_Developers/17584'),
-            InlineKeyboardButton('قسمت27', 'https://t.me/Azad_Developers/17595'),
-        ], [
-            InlineKeyboardButton('قسمت28', 'https://t.me/Azad_Developers/17602'),
-            InlineKeyboardButton('قسمت29', 'https://t.me/Azad_Developers/17629'),
-            InlineKeyboardButton('قسمت30', 'https://t.me/Azad_Developers/17633'),
-        ], [
-            InlineKeyboardButton('قسمت31', 'https://t.me/Azad_Developers/17647'),
-            InlineKeyboardButton('قسمت32', 'https://t.me/Azad_Developers/17660'),
-            InlineKeyboardButton('قسمت33', 'https://t.me/Azad_Developers/17670'),
-        ], [
-            InlineKeyboardButton('قسمت34', 'https://t.me/Azad_Developers/17727'),
-            InlineKeyboardButton('قسمت35', 'https://t.me/Azad_Developers/17738'),
-            InlineKeyboardButton('قسمت36', 'https://t.me/Azad_Developers/17755'),
-        ],
-        # [
-        #     InlineKeyboardButton('قسمت37', 'https://t.me/Azad_Developers/17765'),
-        #     InlineKeyboardButton('قسمت38', 'https://t.me/Azad_Developers/17773'),
-        # ]
-    ]
-    update.message.reply_text(
-        text='آموزش ساختمان داده(مدرس : سعید شهریوری):\n',
-        reply_markup=InlineKeyboardMarkup(buttons)
-    )
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIOIWEvqc_csllZ8y0oKN-rIQg'
-                                                                         'LW8qhAAKZCwACvnOBUctL9li_jBvzIAQ',
-                              filename='DS & Algorithm by Weiss',
-                              caption='منبع درس ساختمان داده', timeout=11)
-
-    logging.info('{} {}({}): {}\n'.format(first_name, last_name, chat_id, update))
-    # with open('./sources/DS/The Art of Computer Programming (vol. 3_ Sorting and Searching) (2nd ed.) [Knuth '
-    #           '1998-05-04].pdf') as f:
-    #     context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    #     print(context.bot.send_document(chat_id=update.effective_chat.id, document=f,
-    #                                     filename='The Art of Computer Programming',
-    #                                     caption='منبع در ساختمان داده', timeout=300))
-
-
-def src_ai_abrishami_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAAIUSWE1woC5Hbb05QH22qiZoYz-'
-                                                                         'lN0SAAKwCQACUYl4USxYqCkiFX8gIAQ',
-                              file_name='AI(abrishami)',
-                              caption='فایل های درس هوش مصنوعی استاد ابریشمی بهار 1400')
-
-
-def src_os_allah_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAAMNYTUlPxO9KFaay6vLcNKSEU-xmUwAA'
-                                                                         'qYJAAJRiXhR3fEWYGFDKTYgBA',
-                              file_name='OS(allah bakhsh)',
-                              caption='فایل های درس سیستم عامل الله بخش بهار 1400')
-
-
-def src_differential_equation(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAANAYTuhePSMSrMZU89512Jr-hnyK'
-                                                                         'gADSQkAAiwg4VGEWVkaYkOiHyAE',
-                              file_name='معادلات دیفرانسیل ادوارز و پتی')
-    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAANCYTuiCtYpXKvCyNvLaEIYtD4X84Y'
-                                                                         'AAkoJAAIsIOFRWMo8c14kmQsgBA',
-                              file_name='پاسخ نامه معادلات دیفرانسیل ادوارز و پتی')
-
-
-# Start exam file handlers
-def exam_ap_file_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    try:
-        context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-        context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIOA2EvpGPuvMDrLtioE7S4d'
-                                                                             'plwkDZtAAKGCwACvnOBURIJI-dSD7TGIAQ',
-                                  filename='AP exams.zip',
-                                  caption='سوالات امتحانی برنامه سازی پیشرفته دکتر پایدار', timeout=60)
-    except error.NetworkError as e:
-        update.message.reply_text(text=messages['msg_network_error'])
-
-
-def exam_discrete_bafghi_file_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    try:
-        context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT, timeout=300)
-        context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIOGWEvqEl-8BKckRp3oqlRQZE'
-                                                                             'fettOAAKWCwACvnOBUQP4XT_T7-rsIAQ',
-                                  filename='Discrete exams & exe (Bafghi)',
-                                  caption='تمرینات و امتحانات ریاضیات گسسته استاد بافقی', timeout=200)
-    except error.NetworkError as e:
-        update.message.reply_text(text=messages['msg_network_error'])
-
-
-def exam_discrete_structure_file_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    try:
-        context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT, timeout=300)
-        context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkDAAIOF2Evp3rOZ4ILOBWni6xh3Y97y'
-                                                                             'ud6AAKUCwACvnOBUdfT2nMzrPC9IAQ',
-                                  filename='Discrete Structure', caption='تمرینات ساختمان گسسته', timeout=300)
-
-    except error.NetworkError as e:
-        update.message.reply_text(text=messages['msg_network_error'])
-
-
-def exam_fp_file_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text='این بخش در حال بروزرسانی است، به زودی فایل های'
-                                                                    ' مربوطه قرار خواهند گرفت')
-
-
-def exam_ds_file_handler(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
-    context.bot.send_document(chat_id=update.effective_chat.id, document='BQACAgQAAxkBAAIUVWE1xLqU2lUhw1O_toh68mkaFXe'
-                                                                         '2AAKRCwAC5miwUTynOJTv3cEYIAQ',
-                              filename='DS Ghiasi',
-                              caption='فایل درس ساختمان داده غیاثی 99', timeout=60)
-
-
-def exam_differential_equation(update: Update, context: CallbackContext) -> None:
-    chat_id = update.message.chat_id
-    context.bot.send_chat_action(chat_id, ChatAction.TYPING)
-    context.bot.send_message(chat_id=update.effective_chat.id, text='کانال حل تمرین نمونه سوالات(محمدیان):\n'
-                                                                    'https://t.me/tamrin_moadelat_fum')
 
 
 # TODO InlineQueryResultGif
@@ -1278,19 +652,24 @@ def sendpost(update: Update, context: CallbackContext) -> None:
 
 def doc_sender(update: Update, context: CallbackContext) -> None:
     if update.channel_post.document:
-        context.bot.send_document(chat_id=-1001342044227, document=update.channel_post.document.file_id, caption=update.channel_post.caption)
+        context.bot.send_document(chat_id=-1001342044227, document=update.channel_post.document.file_id,
+                                  caption=update.channel_post.caption)
     elif update.channel_post.photo:
-        context.bot.send_photo(chat_id=-1001342044227, photo=update.channel_post.photo[0].file_id, caption=update.channel_post.caption)
+        context.bot.send_photo(chat_id=-1001342044227, photo=update.channel_post.photo[0].file_id,
+                               caption=update.channel_post.caption)
     elif update.channel_post.video:
-        context.bot.send_video(chat_id=-1001342044227, video=update.channel_post.video.file_id, caption=update.channel_post.caption)
+        context.bot.send_video(chat_id=-1001342044227, video=update.channel_post.video.file_id,
+                               caption=update.channel_post.caption)
     elif update.channel_post.voice:
-        context.bot.send_voice(chat_id=-1001342044227, voice=update.channel_post.voice.file_id, caption=update.channel_post.caption)
+        context.bot.send_voice(chat_id=-1001342044227, voice=update.channel_post.voice.file_id,
+                               caption=update.channel_post.caption)
     elif update.channel_post.poll:
         context.bot.send_poll(chat_id=-1001342044227, question=update.channel_post.poll.question,
                               options=[item['text'] for item in update.channel_post.poll.options],
                               is_anonymous=update.channel_post.poll.question)
     elif update.channel_post.audio:
-        context.bot.send_audio(chat_id=-1001342044227, audio=update.channel_post.audio, caption=update.channel_post.caption)
+        context.bot.send_audio(chat_id=-1001342044227, audio=update.channel_post.audio,
+                               caption=update.channel_post.caption)
 
 
 def main() -> None:
