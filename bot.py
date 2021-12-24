@@ -52,6 +52,7 @@ from telegram.chataction import ChatAction
 from bs4 import BeautifulSoup
 from uuid import uuid4
 import requests
+import os
 from telegram.utils.helpers import escape_markdown
 
 # TODO memari computer
@@ -675,7 +676,7 @@ def doc_sender(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Run the Bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater(token='1914222564:AAE4nRZZZin810LKiGgw1woavSdVKvkDy9s', use_context=True)
+    updater = Updater(token=os.environ['CEFUM_TOKEN'], use_context=True)
     # request_kwargs={'proxy_url': 'https://t.me/proxy?server=162.55.171.113&port=443&secret=EE00000'
     #                                                    '000000000000000000000000000646c2e676f6f676c652e636f6d'}
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
