@@ -1,3 +1,3 @@
 # CEFUMbot
-this is bot for Computer Engeeniers group of Ferdowsi University of Mashhad
+this is bot for Computer Engineers group of Ferdowsi University of Mashhad
 address : http://t.me/CEFUMbot
