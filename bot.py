@@ -776,9 +776,3 @@ def main() -> None:
 
 
 main()
-
-# token = '1914222564:AAFl7vn1ESo3oT9_65IicNKEWntq5RFuJOc'
-# base_url = 'https://api.telegram.org/bot{}/getMe'.format(token)
-# print(base_url)
-# resp = requests.get(base_url)
-# print(resp.text)
